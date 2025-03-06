@@ -43,7 +43,7 @@ Realize os seguintes ajustes para padronização:
 
 Após a refatoração, a estrutura deverá ficar assim:
 <div align="center">
-  <img src="Aula02/img10.png" alt="Estrutura Refatorada">
+  <img src="img/Aula02/img10.png" alt="Estrutura Refatorada">
 </div>
 
 ---
