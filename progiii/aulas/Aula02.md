@@ -5,30 +5,30 @@
 1. **Iniciar um Novo Projeto**  
    Clique em **New Project**.
    <div align="center">
-     <img src="Aula02/img1.png" alt="New Project">
+     <img src="img/Aula02/img1.png" alt="New Project">
    </div>
 
 2. **Selecionar a Tecnologia**  
    Escolha **Java with Ant**.
    <div align="center">
-     <img src="Aula02/img2.png" alt="Java with Ant">
+     <img src="img/Aula02/img2.png" alt="Java with Ant">
    </div>
 
 3. **Definir o Nome do Projeto**  
    Informe o nome desejado para o projeto.
    <div align="center">
-     <img src="Aula02/img3.png" alt="Nome do Projeto">
+     <img src="img/Aula02/img3.png" alt="Nome do Projeto">
    </div>
 
 4. **Criar a Estrutura Básica**  
    A estrutura inicial do projeto será criada conforme ilustrado:
    <div align="center">
-     <img src="Aula02/img4.png" alt="Estrutura do Projeto 1">
-     <img src="Aula02/img5.png" alt="Estrutura do Projeto 2">
-     <img src="Aula02/img6.png" alt="Estrutura do Projeto 3">
-     <img src="Aula02/img7.png" alt="Estrutura do Projeto 4">
-     <img src="Aula02/img8.png" alt="Estrutura do Projeto 5">
-     <img src="Aula02/img9.png" alt="Estrutura do Projeto 6">
+     <img src="img/Aula02/img4.png" alt="Estrutura do Projeto 1">
+     <img src="img/Aula02/img5.png" alt="Estrutura do Projeto 2">
+     <img src="img/Aula02/img6.png" alt="Estrutura do Projeto 3">
+     <img src="img/Aula02/img7.png" alt="Estrutura do Projeto 4">
+     <img src="img/Aula02/img8.png" alt="Estrutura do Projeto 5">
+     <img src="img/Aula02/img9.png" alt="Estrutura do Projeto 6">
    </div>
 
 ---
@@ -54,16 +54,16 @@ Após a refatoração, a estrutura deverá ficar assim:
 
 Inicie a criação do código clicando com o botão direito do mouse na pasta desejada:
 <div align="center">
-  <img src="Aula02/img11.png" alt="Menu de contexto">
-  <img src="Aula02/img12.png" alt="Opção de criação">
-  <img src="Aula02/img13.png" alt="Criando arquivo">
-  <img src="Aula02/img14.png" alt="Novo código">
+  <img src="img/Aula02/img11.png" alt="Menu de contexto">
+  <img src="img/Aula02/img12.png" alt="Opção de criação">
+  <img src="img/Aula02/img13.png" alt="Criando arquivo">
+  <img src="img/Aula02/img14.png" alt="Novo código">
 </div>
 
 #### Dica de Formatação
 Utilize o atalho **Shift + Alt + F** para formatar o código automaticamente.
 <div align="center">
-  <img src="Aula02/img15.png" alt="Atalho de formatação">
+  <img src="img/Aula02/img15.png" alt="Atalho de formatação">
 </div>
 
 ---
@@ -102,14 +102,14 @@ public void imprimir() {
 
 Crie o controlador conforme a imagem a seguir:
 <div align="center">
-  <img src="Aula02/img16.png" alt="Controlador">
+  <img src="img/Aula02/img16.png" alt="Controlador">
 </div>
 
 ### Método Main para Teste
 
 Implemente o método `main` para testar o funcionamento do projeto:
 <div align="center">
-  <img src="Aula02/img17.png" alt="Método Main">
+  <img src="img/Aula02/img17.png" alt="Método Main">
 </div>
 
 ```java
@@ -129,7 +129,7 @@ public class ContoladorTeste {
 
 Após a implementação, execute o projeto (pressione **F6**). O resultado final deverá ser semelhante ao demonstrado abaixo:
 <div align="center">
-  <img src="Aula02/img18.png" alt="Resultado Final">
+  <img src="img/Aula02/img18.png" alt="Resultado Final">
 </div>
 
 ---

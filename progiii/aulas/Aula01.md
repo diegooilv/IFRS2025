@@ -32,11 +32,11 @@ Hoje aprendi como criar um projeto no _Apache NetBeans_. Abaixo, deixo um resumo
 
 - **Realizando Alterações:**  
   Após algumas modificações, minha estrutura ficou assim:  
-  ![Alteração 1](Aula01/p6.png)  
-  ![Alteração 2](Aula01/p7.png)  
-  ![Alteração 3](Aula01/p8.png)  
-  ![Alteração 4](Aula01/p9.png)  
-  ![Alteração 5](Aula01/p10.png)
+  ![Alteração 1](img/Aula01/p6.png)  
+  ![Alteração 2](img/Aula01/p7.png)  
+  ![Alteração 3](img/Aula01/p8.png)  
+  ![Alteração 4](img/Aula01/p9.png)  
+  ![Alteração 5](img/Aula01/p10.png)
 
 ---
 
@@ -47,7 +47,7 @@ Hoje aprendi como criar um projeto no _Apache NetBeans_. Abaixo, deixo um resumo
 
 - **Recuperando a Aba de Propriedades:**  
   Caso a aba de propriedades desapareça, utilizei a função de busca para recuperá-la.  
-  ![Recuperar Propriedades](Aula01/p11.png)
+  ![Recuperar Propriedades](img/Aula01/p11.png)
 
 - **Componentes Adicionados:**  
   Ao final, adicionei:
@@ -57,7 +57,7 @@ Hoje aprendi como criar um projeto no _Apache NetBeans_. Abaixo, deixo um resumo
   - Um Botão (com background customizado)
 
   O layout final ficou assim:  
-  ![Layout Final](Aula01/p12.png)
+  ![Layout Final](img/Aula01/p12.png)
 
 ---
 
@@ -65,11 +65,11 @@ Hoje aprendi como criar um projeto no _Apache NetBeans_. Abaixo, deixo um resumo
 
 - **Configurando o Evento no Botão:**  
   Cliquei no botão para adicionar um evento.  
-  ![Adicionar Evento](Aula01/p13.png)
+  ![Adicionar Evento](img/Aula01/p13.png)
 
 - **Definindo a Ação do Evento:**  
   Configurei a ação que será executada ao clicar no botão.  
-  ![Configurar Ação](Aula01/p14.png)
+  ![Configurar Ação](img/Aula01/p14.png)
 
 ### Exemplo de Código do Evento
 
@@ -90,19 +90,19 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 
 - **Rodando o Projeto:**  
   Para testar, pressione `F6`.  
-  ![Executar Projeto](Aula01/p15.png)
+  ![Executar Projeto](img/Aula01/p15.png)
 
 - **Resolvendo Erro "Sem Classe main":**  
   Se aparecer o erro "sem classe main", clique em `<default config>`.
-  ![Configuração Padrão](Aula01/p16.png)
+  ![Configuração Padrão](img/Aula01/p16.png)
 
 - **Testando a Interface:**  
   Ao clicar no botão, a mensagem deverá ser exibida na tela.  
-  ![Mensagem Exibida](Aula01/p17.png)
+  ![Mensagem Exibida](img/Aula01/p17.png)
 
 - **Finalizando a Execução:**  
   Para encerrar, utilize `Shift+F11` ou o botão correspondente ao lado do _Run_.  
-  ![Finalizando Execução](Aula01/p18.png)
+  ![Finalizando Execução](img/Aula01/p18.png)
 
 ---
 
