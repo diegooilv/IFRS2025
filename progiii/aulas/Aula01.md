@@ -8,11 +8,11 @@ Hoje aprendi como criar um projeto no _Apache NetBeans_. Abaixo, deixo um resumo
 
 - **Iniciando o Programa:**  
   Primeiro, abri o Apache NetBeans.  
-  ![Abrir NetBeans](Aula01/p1.png)
+  ![Abrir NetBeans](img/Aula01/p1.png)
 
 - **Criando um Novo Projeto:**  
   Em seguida, selecionei a opção para criar um novo projeto.  
-  ![Criar Projeto](Aula01/p2.png)
+  ![Criar Projeto](img/Aula01/p2.png)
 
 ---
 
@@ -20,15 +20,15 @@ Hoje aprendi como criar um projeto no _Apache NetBeans_. Abaixo, deixo um resumo
 
 - **Selecionando o Template:**  
   Escolhi a opção **Java with Ant**.  
-  ![Selecionar Java with Ant](Aula01/p3.png)
+  ![Selecionar Java with Ant](img/Aula01/p3.png)
 
 - **Definindo Nome e Configurações Iniciais:**  
   Dei um nome ao projeto e desmarquei a criação automática da classe `main` (não há necessidade, conforme explicado na aula).  
-  ![Configurar Projeto](Aula01/p4.png)
+  ![Configurar Projeto](img/Aula01/p4.png)
 
 - **Visualizando a Estrutura Inicial:**  
   Essa é a estrutura inicial do meu projeto:  
-  ![Estrutura Inicial](Aula01/p5.png)
+  ![Estrutura Inicial](img/Aula01/p5.png)
 
 - **Realizando Alterações:**  
   Após algumas modificações, minha estrutura ficou assim:  
