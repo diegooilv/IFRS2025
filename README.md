@@ -1,12 +1,4 @@
-# 📚 Repositório de Estudos 2025 - IFRS 
-
-## 🌟 Conteúdo do Repositório
-- [Estrutura do Projeto](#-estrutura-do-repositorio)
-- [Trilha Acadêmica](#-trilha-academica)
-- [Disciplinas 2025](#-disciplinas-2025)
-- [Como Utilizar](#-como-utilizar-este-repositorio)
-
----
+# 📚 Repositório de Estudos 2025 - IFRS
 
 ## 🗂 Estrutura do Repositório
 
@@ -30,21 +22,21 @@ Cada disciplina possui um README específico com:
 ### Anos Anteriores
 | Ano | Repositório | Destaques |
 |-----|-------------|-----------|
-| 2023 | [IFRS2023](https://github.com/diegooilv/IFRS2023) | Fundamentos de Programação |
-| 2024 | [IFRS2024](https://github.com/diegooilv/IFRS2024) | Projeto Integrador, Banco de Dados I |
-| 2024 | [Projeto Integrador](https://basesnumericas.pages.dev/) | 🏆 **Destaque:** Sistema completo com frontend/backend |
+| 2023 | [IFRS2023](https://github.com/diegooilv/IFRS2023) | Programação I |
+| 2024 | [IFRS2024](https://github.com/diegooilv/BancoDeDados-I-IFRS) | Banco de Dados I |
+| 2024 | [IFRS2024](https://github.com/diegooilv/IFRS2024) | Programação II |
+| 2024 | [Projeto Integrador](https://basesnumericas.pages.dev/) | 🏆 |
 
 ---
 
 ## 📌 Disciplinas 2025
 
-### Redes de Computadores ([Ver Conteúdo](cn/))
-
-### Banco de Dados ([Ver Conteúdo](db/))
-
-### Programação III ([Ver Conteúdo](progiii/))
-
-### Programação Web ([Ver Conteúdo](progweb/))
+| Disciplina              | Conteúdo              |
+|-------------------------|-----------------------|
+| Redes de Computadores   | [Ver Conteúdo](cn/)   |
+| Banco de Dados          | [Ver Conteúdo](db/)   |
+| Programação III         | [Ver Conteúdo](progiii/) |
+| Programação Web         | [Ver Conteúdo](progweb/) |
 
 ---
 
@@ -54,9 +46,9 @@ Cada disciplina possui um README específico com:
    ```bash
    git clone https://github.com/diegooilv/IFRS2025.git
    ```
-2. Navegue pelas pastas das disciplinas
-3. Consulte os READMEs específicos para instruções detalhadas
-4. Para contribuições:
+2. Navegue pelas pastas das disciplinas.
+3. Consulte os READMEs específicos para instruções detalhadas.
+4. Para contribuições básicas, você pode criar uma nova branch:
    ```bash
    git checkout -b minha-feature
    git push origin minha-feature
@@ -64,14 +56,32 @@ Cada disciplina possui um README específico com:
 
 ---
 
+## 🤝 Como Contribuir
+
+Se você quiser ajudar a melhorar este repositório, é super simples!
+
+- **Crie um Fork:**  
+  Clique no botão “Fork” para criar uma cópia do repositório na sua conta.
+
+- **Faça as Alterações:**  
+  Modifique o que desejar! Corrija algum erro, melhore a documentação ou adicione novos conteúdos – fique à vontade para explorar e editar.
+
+- **Envie Suas Modificações:**  
+  Depois de testar suas mudanças, abra um *pull request* no repositório original. 
+
+- **Dúvidas ou Sugestões:**  
+  Se algo não estiver claro ou se você tiver alguma ideia para melhorar o repositório, abra uma *issue*. Assim, podemos conversar e alinhar as melhorias juntos!
+
+---
+
 ## 🎯 Objetivos
 
 - Centralizar o conhecimento adquirido
-- Criar portfólio técnico evolutivo
-- Facilitar revisão de conteúdos
-- Promover aprendizagem colaborativa
+- Criar um portfólio técnico evolutivo
+- Facilitar a revisão de conteúdos
+- Promover a aprendizagem colaborativa
 
 ---
 
 #### **Aviso Importante:** ❗  
-Este material é de uso pessoal. Utilize como referência, mas sempre desenvolva suas próprias soluções acadêmicas.
+Este material é de uso pessoal. Utilize-o como referência, mas sempre desenvolva suas próprias soluções.
