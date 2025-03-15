@@ -7,3 +7,8 @@
 ## Segunda aula: 28/02/25
 *   [Aula](aulas/Aula02.md)
 *   [Exercícios](exercicios/Exercicio01.md)
+## Terceira aula: 07/03/25
+*   [Aula](aulas/Aula03.md)
+## Quarta aula: 14/03/25
+*   [Aula](aulas/Aula04.md)
+*   [Projeto](aulas/Projects/ProjetoComida/)
