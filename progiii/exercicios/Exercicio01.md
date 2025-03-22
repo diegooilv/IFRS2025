@@ -388,4 +388,4 @@ public class Materias {
 ```
 
 **Nota:** Essa resolução do exercício não leva em conta o requisito de "Possuir um Atributo ID".  
-Com essa consideração, veja em [Exercício 01](Exercicio01v2.md) ou [Pasta Exercício 01](Exercicio01v2/)
+Com essa consideração, veja em [Exercício 01](Exercicio01v2.md)
