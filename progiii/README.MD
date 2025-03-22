@@ -12,3 +12,7 @@
 ## Quarta aula: 14/03/25
 *   [Aula](aulas/Aula04.md)
 *   [Projeto](aulas/Projects/ProjetoComida/)
+## Quinta aula: 21/03/25
+*   [Aula](aulas/Aula05.md)
+*   [Projeto.zip](aulas/Projects/Aula05.zip)
+*   [Projeto.jar](aulas/Dist/Aula05/Aula05.jar)
