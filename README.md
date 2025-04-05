@@ -1,6 +1,11 @@
-# 📚 Repositório de Estudos 2025 - IFRS
+# 📚 Repositório de Estudos – IFRS 2025
 
-## 🗂 Estrutura do Repositório
+Bem-vindo ao repositório central dos meus estudos de 2025 no IFRS!  
+Aqui estão reunidos os materiais e anotações organizados por disciplina, com foco na construção de um portfólio técnico sólido e progressivo.
+
+---
+
+## 🗂 Estrutura de Pastas
 
 ```bash
 ├── cn/         # Redes de Computadores
@@ -9,79 +14,58 @@
 └── progweb/    # Programação Web
 ```
 
-Cada disciplina possui um README específico com:
-- 📅 Cronograma de atividades
-- 🛠 Tecnologias utilizadas
-- 📖 Recursos de aprendizagem
-- ✅ Lista de projetos concluídos
+Cada pasta contém:
+
+- 📄 README específico da disciplina
+- 📚 Conteúdos organizados por aulas
+- 🔗 Referências e arquivos complementares
 
 ---
 
-## 🚀 Trilha Acadêmica
+## 📌 Disciplinas Atuais – 2025
 
-### Anos Anteriores
-| Ano | Repositório | Destaques |
-|-----|-------------|-----------|
-| 2023 | [IFRS2023](https://github.com/diegooilv/IFRS2023) | Programação I |
-| 2024 | [IFRS2024](https://github.com/diegooilv/BancoDeDados-I-IFRS) | Banco de Dados I |
-| 2024 | [IFRS2024](https://github.com/diegooilv/IFRS2024) | Programação II |
-| 2024 | [Projeto Integrador](https://basesnumericas.pages.dev/) | 🏆 |
-
----
-
-## 📌 Disciplinas 2025
-
-| Disciplina              | Conteúdo              |
-|-------------------------|-----------------------|
-| Redes de Computadores   | [Ver Conteúdo](cn/)   |
-| Banco de Dados          | [Ver Conteúdo](db/)   |
-| Programação III         | [Ver Conteúdo](progiii/) |
-| Programação Web         | [Ver Conteúdo](progweb/) |
+| 💡 Disciplina         | 📂 Acesso ao Conteúdo    |
+| --------------------- | ------------------------ |
+| Redes de Computadores | [Ver conteúdo](cn/)      |
+| Banco de Dados        | [Ver conteúdo](db/)      |
+| Programação III       | [Ver conteúdo](progiii/) |
+| Programação Web       | [Ver conteúdo](progweb/) |
 
 ---
 
-## 🛠 Como Utilizar Este Repositório
+## 🚀 Trilha Acadêmica – Anos Anteriores
 
-1. Clone o projeto:
-   ```bash
-   git clone https://github.com/diegooilv/IFRS2025.git
-   ```
-2. Navegue pelas pastas das disciplinas.
-3. Consulte os READMEs específicos para instruções detalhadas.
-4. Para contribuições básicas, você pode criar uma nova branch:
-   ```bash
-   git checkout -b minha-feature
-   git push origin minha-feature
-   ```
+| 📅 Ano | 🔗 Repositório                                                       | 🌟 Destaques     |
+| ------ | -------------------------------------------------------------------- | ---------------- |
+| 2023   | [IFRS2023](https://github.com/diegooilv/IFRS2023)                    | Programação I    |
+| 2024   | [Banco de Dados I](https://github.com/diegooilv/BancoDeDados-I-IFRS) | Banco de Dados I |
+| 2024   | [IFRS2024](https://github.com/diegooilv/IFRS2024)                    | Programação II   |
+| 2024   | [Projeto Integrador](https://basesnumericas.pages.dev/)              | 🏆 Projeto       |
 
 ---
 
-## 🤝 Como Contribuir
+## 🎯 Objetivos do Repositório
 
-Se você quiser ajudar a melhorar este repositório, é super simples!
-
-- **Crie um Fork:**  
-  Clique no botão “Fork” para criar uma cópia do repositório na sua conta.
-
-- **Faça as Alterações:**  
-  Modifique o que desejar! Corrija algum erro, melhore a documentação ou adicione novos conteúdos – fique à vontade para explorar e editar.
-
-- **Envie Suas Modificações:**  
-  Depois de testar suas mudanças, abra um *pull request* no repositório original. 
-
-- **Dúvidas ou Sugestões:**  
-  Se algo não estiver claro ou se você tiver alguma ideia para melhorar o repositório, abra uma *issue*. Assim, podemos conversar e alinhar as melhorias juntos!
+- 🧠 Consolidar o conhecimento adquirido em aula
+- 🛠 Criar um portfólio técnico pessoal e evolutivo
+- 🔄 Facilitar a revisão e reutilização de conteúdos
+- 🤝 Estimular a aprendizagem independente e colaborativa
 
 ---
 
-## 🎯 Objetivos
+## ⚠️ Aviso Importante
 
-- Centralizar o conhecimento adquirido
-- Criar um portfólio técnico evolutivo
-- Facilitar a revisão de conteúdos
-- Promover a aprendizagem colaborativa
+Todo o conteúdo deste repositório foi criado por mim, de forma autônoma, como parte dos meus estudos — sem auxílio direto de professores.
+
+Sempre que utilizei materiais de terceiros ou referências externas, citei a fonte de forma clara e respeitosa.
+
+📚 Você pode usar este conteúdo livremente para fins didáticos e pessoais.  
+🚫 Apenas evite redistribuir sem dar os devidos créditos ou fingir autoria.
+
+A ideia aqui é compartilhar conhecimento, organizar meus aprendizados e, quem sabe, ajudar outras pessoas também.
+
+### 📄 Licença: [MIT License](./LICENSE)
 
 ---
 
-#### **Aviso Importante:** ❗  
-Este material é de uso pessoal. Utilize-o como referência, mas sempre desenvolva suas próprias soluções.
+✨ _Estudar também é um projeto de vida. Organize, documente e aprenda cada vez mais._ 💻📖
