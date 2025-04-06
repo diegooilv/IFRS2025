@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Exemplo de Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .input-group button {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .input-group button:hover {
+            background-color: #45a049;
+        }
+
+        .code-box {
+            font-family: monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-top: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .input-group button.copy-btn {
+            background-color: #2196F3;
+        }
+
+        .input-group button.copy-btn:hover {
+            background-color: #0b7dda;
+        }
+
+        .input-group input[type="file"] {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2196F3;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Exemplo Inputs</h1>
+        <nav><a href="/">Voltar</a></nav>
+        <div class="input-group">
+            <label for="text">Texto:</label>
+            <input type="text" id="text" name="text">
+            <div class="code-box" id="text-code">&lt;input type="text" id="text" name="text"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('text-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password">
+            <div class="code-box" id="password-code">&lt;input type="password" id="password" name="password"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('password-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div class="code-box" id="email-code">&lt;input type="email" id="email" name="email"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('email-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="number">Número:</label>
+            <input type="number" id="number" name="number">
+            <div class="code-box" id="number-code">&lt;input type="number" id="number" name="number"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('number-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" name="tel">
+            <div class="code-box" id="tel-code">&lt;input type="tel" id="tel" name="tel"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('tel-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url">
+            <div class="code-box" id="url-code">&lt;input type="url" id="url" name="url"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('url-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="search">Busca:</label>
+            <input type="search" id="search" name="search">
+            <div class="code-box" id="search-code">&lt;input type="search" id="search" name="search"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('search-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date">
+            <div class="code-box" id="date-code">&lt;input type="date" id="date" name="date"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('date-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time">
+            <div class="code-box" id="time-code">&lt;input type="time" id="time" name="time"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('time-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="datetime-local">Data e Hora:</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local">
+            <div class="code-box" id="datetime-local-code">&lt;input type="datetime-local" id="datetime-local"
+                name="datetime-local"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('datetime-local-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="month">Mês:</label>
+            <input type="month" id="month" name="month">
+            <div class="code-box" id="month-code">&lt;input type="month" id="month" name="month"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('month-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="week">Semana:</label>
+            <input type="week" id="week" name="week">
+            <div class="code-box" id="week-code">&lt;input type="week" id="week" name="week"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('week-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="range">Intervalo:</label>
+            <input type="range" id="range" name="range" min="1" max="100">
+            <div class="code-box" id="range-code">&lt;input type="range" id="range" name="range" min="1" max="100"&gt;
+            </div>
+            <button class="copy-btn" onclick="copyCode('range-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="color">Cor:</label>
+            <input type="color" id="color" name="color">
+            <div class="code-box" id="color-code">&lt;input type="color" id="color" name="color"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('color-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="file">Arquivo:</label>
+            <input type="file" id="file" name="file">
+            <div class="code-box" id="file-code">&lt;input type="file" id="file" name="file"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('file-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="checkbox">Aceito os Termos:</label>
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <div class="code-box" id="checkbox-code">&lt;input type="checkbox" id="checkbox" name="checkbox"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('checkbox-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <label for="radio1">Opção 1:</label>
+            <input type="radio" id="radio1" name="radio" value="1">
+            <label for="radio2">Opção 2:</label>
+            <input type="radio" id="radio2" name="radio" value="2">
+            <div class="code-box" id="radio-code">&lt;input type="radio" id="radio1" name="radio"
+                value="1"&gt;<br>&lt;input type="radio" id="radio2" name="radio" value="2"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('radio-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <input type="hidden" id="hidden" name="hidden" value="hidden-value">
+            <div class="code-box" id="hidden-code">&lt;input type="hidden" id="hidden" name="hidden"
+                value="hidden-value"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('hidden-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Enviar">
+            <div class="code-box" id="submit-code">&lt;input type="submit" value="Enviar"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('submit-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <input type="reset" value="Limpar">
+            <div class="code-box" id="reset-code">&lt;input type="reset" value="Limpar"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('reset-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <button type="button">Botão Genérico</button>
+            <div class="code-box" id="button-code">&lt;button type="button"&gt;Botão Genérico&lt;/button&gt;</div>
+            <button class="copy-btn" onclick="copyCode('button-code')">Copiar Código</button>
+        </div>
+        <div class="input-group">
+            <input type="image" src="https://via.placeholder.com/150" alt="Imagem" width="150" height="150">
+            <div class="code-box" id="image-code">&lt;input type="image" src="https://via.placeholder.com/150"
+                alt="Imagem" width="150" height="150"&gt;</div>
+            <button class="copy-btn" onclick="copyCode('image-code')">Copiar Código</button>
+        </div>
+    </div>
+    <script>
+        function copyCode(id) {
+            const codeElement = document.getElementById(id);
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            alert('Código copiado!');
+        }
+    </script>
+</body>
+
+</html>
