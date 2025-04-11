@@ -17,6 +17,7 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 05 – 21/03/2025](#-aula-05--21032025)
     - [🧱 Aula 06 – 28/03/2025](#-aula-06--28032025)
     - [🧱 Aula 07 – 04/04/2025](#-aula-07--04042025)
+    - [🧱 Aula 08 – 11/04/2025](#-aula-08--11042025)
   - [🔎 Observações](#-observações)
 
 ---
@@ -78,6 +79,14 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 - 📝 [Anotações da Aula](aulas/Aula07.md)
 - 📁 [Projeto: Proj4 (.zip)](aulas/Projects/Proj4.zip)
 - 🔧 [Projeto Executável (.jar)](aulas/Dist/Aula07/Proj4.jar)
+
+---
+
+### 🧱 Aula 08 – 11/04/2025
+
+- 📝 [Anotações da Aula](aulas/Aula08.md)
+- 📁 [Projeto: Rgb (.zip)](aulas/Projects/Rgb.zip)
+- 🔧 [Projeto Executável (.jar)](aulas/Dist/Aula08/Rgb.jar)
 
 ---
 
