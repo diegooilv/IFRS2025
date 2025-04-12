@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags HTML</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background: #f8f9fa;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            background: var(--background);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .category {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .element {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary-color);
+            background: #f8fafc;
+        }
+
+        .tag-example {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        code {
+            background: #f1f3f5;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .deprecated {
+            opacity: 0.7;
+            border-color: #e74c3c !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Estrutura Básica -->
+        <section class="category">
+            <h2>📄 Estrutura Básica</h2>
+            <div class="element">
+                <h3><code>&lt;!DOCTYPE html&gt;</code></h3>
+                <div class="tag-example">
+                    <!DOCTYPE html>
+                </div>
+                <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                <p>Declaração do tipo de documento (HTML5)</p>
+            </div>
+            <div class="element">
+                <h3><code>&lt;html&gt;</code></h3>
+                <div class="tag-example">
+                    <html>
+                    <!-- Conteúdo da página -->
+
+                    </html>
+                </div>
+                <pre><code>&lt;html lang="pt-br"&gt;...&lt;/html&gt;</code></pre>
+            </div>
+        </section>
+        <!-- Texto e Formatação -->
+        <section class="category">
+            <h2>📝 Texto e Formatação</h2>
+            <div class="element">
+                <h3><code>&lt;strong&gt; e &lt;em&gt;</code></h3>
+                <div class="tag-example">
+                    <p><strong>Texto importante</strong> e <em>ênfase</em></p>
+                </div>
+                <pre><code>&lt;strong&gt;Texto importante&lt;/strong&gt;
+&lt;em&gt;Texto com ênfase&lt;/em&gt;</code></pre>
+            </div>
+            <div class="element">
+                <h3><code>&lt;mark&gt;</code></h3>
+                <div class="tag-example">
+                    <p>Texto <mark>destacado</mark></p>
+                </div>
+                <pre><code>&lt;mark&gt;destacado&lt;/mark&gt;</code></pre>
+            </div>
+        </section>
+        <!-- Formulários -->
+        <section class="category">
+            <h2>📋 Formulários</h2>
+            <div class="element">
+                <h3><code>&lt;input&gt;</code></h3>
+                <div class="tag-example">
+                    <input type="text" placeholder="Digite algo">
+                    <input type="color">
+                </div>
+                <pre><code>&lt;input type="text" placeholder="Texto"&gt;
+&lt;input type="color"&gt;</code></pre>
+            </div>
+        </section>
+        <!-- Tags Obsoletas -->
+        <section class="category">
+            <h2>⏳ Tags Obsoletas</h2>
+            <div class="element deprecated">
+                <h3><code>&lt;marquee&gt;</code></h3>
+                <div class="tag-example">
+                    <marquee>Texto animado</marquee>
+                </div>
+                <pre><code>&lt;marquee&gt;Não use! Use CSS animation&lt;/marquee&gt;</code></pre>
+                <p class="warning">⚠️ Obsoleto desde HTML5</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Funcionalidade de copiar código
+        document.querySelectorAll('pre').forEach(pre => {
+            pre.addEventListener('click', () => {
+                const range = document.createRange();
+                range.selectNode(pre);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                alert('Código copiado!');
+            });
+        });
+
+        // Alternar modo escuro
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        };
+
+        // Carregar preferência do usuário
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
