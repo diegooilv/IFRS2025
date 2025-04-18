@@ -26,9 +26,7 @@ Este resumo tem como objetivo fornecer uma base prática e rápida para consulta
       - [Estrutura do Projeto](#estrutura-do-projeto)
       - [Próximos Passos](#próximos-passos)
     - [Vídeo de Apoio 📹](#vídeo-de-apoio-)
-  - [Veja como criar um projeto](#veja-como-criar-um-projeto)
-  - [Estrutura base](#estrutura-base)
-  - [App Simples](#app-simples)
+  - [App JList](#app-jlist)
   - [Observações 📝](#observações-)
 
 ---
@@ -198,17 +196,9 @@ Para complementar os estudos, assista ao vídeo explicativo:
 
 ---
 
-## Veja como criar um projeto
+## App JList
 
-<video src="img/ResumoProva1/CriacaoProjeto.mp4" controls width="100%"></video>
-
-## Estrutura base
-
-<video src="img/ResumoProva1/EstruturaBase.mp4" controls width="100%"></video>
-
-## App Simples
-
-<video src="img/ResumoProva1/ProjetoAppSimples.mp4" controls width="100%"></video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JcbALSW-Okc?si=L_Ei7eqy2TtkJG6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > Houve um pequeno erro no aplicativo de gravação, mas nada muito grave. Assista em tela cheia!  
 > **Dica:** Ver os vídeos em sequência pode ajudar a fixar melhor o conteúdo apresentado nas aulas.
