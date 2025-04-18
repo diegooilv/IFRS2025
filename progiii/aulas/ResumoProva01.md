@@ -198,7 +198,7 @@ Para complementar os estudos, assista ao vídeo explicativo:
 
 ## App JList
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JcbALSW-Okc?si=L_Ei7eqy2TtkJG6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Assista ao vídeo](https://www.youtube.com/watch?v=JcbALSW-Okc)
 
 > Houve um pequeno erro no aplicativo de gravação, mas nada muito grave. Assista em tela cheia!  
 > **Dica:** Ver os vídeos em sequência pode ajudar a fixar melhor o conteúdo apresentado nas aulas.
