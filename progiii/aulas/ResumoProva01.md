@@ -1,218 +1,180 @@
-# Resumo para Estudos – Prova 1 de Programação III 🎓
+# Resumo para Estudos – Prova 1 de Programação III 🎯
 
-Este resumo tem como objetivo fornecer uma base prática e rápida para consulta antes da prova. A estrutura foi organizada para facilitar a compreensão dos principais tópicos abordados.
+Este resumo foi organizado para otimizar a revisão dos conceitos principais. Utilize esta estrutura para consulta rápida e prática antes da prova.
 
 ---
 
-## Índice 📚
+## Índice 📖
 
-- [Resumo para Estudos – Prova 1 de Programação III 🎓](#resumo-para-estudos--prova-1-de-programação-iii-)
-  - [Índice 📚](#índice-)
-  - [Base do Java 💻](#base-do-java-)
-    - [Tipos de Variáveis 📝](#tipos-de-variáveis-)
-      - [Tipos Primitivos](#tipos-primitivos)
-      - [Tipos Não Primitivos](#tipos-não-primitivos)
-    - [Estruturas de Controle 🔄](#estruturas-de-controle-)
-      - [Condicional (if...else) ❓](#condicional-ifelse-)
-      - [Laço de Repetição (for) 🔁](#laço-de-repetição-for-)
-    - [Conceitos de POO Utilizados 🏗️](#conceitos-de-poo-utilizados-️)
-      - [Polimorfismo](#polimorfismo)
-      - [Encapsulamento 🔒](#encapsulamento-)
-  - [Modelo MVC 🎨](#modelo-mvc-)
-    - [Estrutura Sugerida do Projeto 🗂️](#estrutura-sugerida-do-projeto-️)
-  - [Guia Prático 🚀](#guia-prático-)
-    - [Passo a Passo 🛠️](#passo-a-passo-️)
-      - [Criação do Projeto](#criação-do-projeto)
-      - [Estrutura do Projeto](#estrutura-do-projeto)
-      - [Próximos Passos](#próximos-passos)
-    - [Vídeo de Apoio 📹](#vídeo-de-apoio-)
-  - [App JList](#app-jlist)
-  - [Observações 📝](#observações-)
+- [Base do Java](#base-do-java-)
+- [Modelo MVC](#modelo-mvc-)
+- [Guia Prático](#guia-prático-)
+- [Boas Práticas](#boas-práticas-)
+- [Recursos Adicionais](#recursos-adicionais-)
 
 ---
 
 ## Base do Java 💻
 
-Nesta seção são apresentados os fundamentos do Java, com ênfase nos conteúdos iniciais e na sintaxe básica.
-
-### Tipos de Variáveis 📝
+### Tipos de Variáveis 🧮
 
 #### Tipos Primitivos
 
-Utilizados para armazenar valores simples:
+| Tipo      | Exemplo                 | Descrição                     |
+| --------- | ----------------------- | ----------------------------- |
+| `int`     | `int idade = 25;`       | Números inteiros (32 bits)    |
+| `double`  | `double pi = 3.1415;`   | Números decimais (64 bits)    |
+| `float`   | `float altura = 1.75f;` | Números decimais (32 bits) \* |
+| `char`    | `char letra = 'A';`     | Caractere único               |
+| `boolean` | `boolean ativo = true;` | Valores lógicos               |
 
-```java
-String string = "Frase"; // Use aspas duplas para strings (lembre-se: char usa aspas simples)
-int numero = 0;          // Números inteiros
-char letra = 'w';        // Caracteres individuais
-float numeroFlutuante = 2.4f;   // Números com ponto flutuante (lembre do 'f' no final)
-double numeroDecimal = 13.1415; // Números decimais (geralmente preferido ao float)
-boolean verdadeiro = true;      // Valores lógicos: true ou false
-```
-
-> **Observação:**
+> ⚠️ **Importante:**
 >
-> - Existem outros tipos, mas os apresentados foram os trabalhados em aula.
-> - _String_ não é um tipo primitivo, mas foi incluído por questões didáticas. 😉
+> - O sufixo `f` é obrigatório em literais float
+> - `String` **não é tipo primitivo** (mas é amplamente utilizado)
 
-#### Tipos Não Primitivos
-
-Utilizados para criar objetos e representar conceitos mais complexos:
+#### Tipos de Referência
 
 ```java
 public class Pessoa {
-    String nome;
-    // Outros atributos e métodos podem ser adicionados
-}
-```
+    private String nome;
 
-Exemplo de criação e uso de um objeto:
+    // Construtor
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
 
-```java
-public class Main {
-    public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa(); // Instanciando um objeto do tipo Pessoa
+    // Getter
+    public String getNome() {
+        return nome;
     }
 }
 ```
 
-### Estruturas de Controle 🔄
+### Estruturas de Controle 🎛️
 
-#### Condicional (if...else) ❓
-
-Utilizado para decisões baseadas em condições:
+#### Condicional if-else
 
 ```java
-int variavel = 2;
-if (variavel == 1) {
-    // Código para quando variavel for igual a 1
-} else if (variavel == 3) {
-    // Código para quando variavel for igual a 3
+int nota = 85;
+if (nota >= 90) {
+    System.out.println("Excelente!");
+} else if (nota >= 70) {
+    System.out.println("Bom!");  // Este será executado
 } else {
-    // Código para as demais condições
+    System.out.println("Precisa melhorar");
 }
 ```
 
-#### Laço de Repetição (for) 🔁
-
-Exemplo de laço para imprimir valores de 0 a 9:
+#### Loop for
 
 ```java
-for (int i = 0; i < 10; i++) {
-    System.out.println(i); // Saída: 0 1 2 3 4 5 6 7 8 9
+// Imprime números pares de 0 a 8
+for(int i = 0; i < 10; i += 2) {
+    System.out.println(i);  // 0 2 4 6 8
 }
 ```
 
-> **Nota:**  
-> Outros laços como _while_, _do-while_ e _switch_ existem, mas foram ignorados por não terem sido utilizados em Programação III. 🤷‍♂️
+### POO em Java 🏗️
 
-### Conceitos de POO Utilizados 🏗️
+#### Encapsulamento
 
-#### Polimorfismo
+```java
+public class ContaBancaria {
+    private double saldo;  // Atributo privado
 
-- **Sobrescrita (Override)** e **Sobrecarga (Overload)** de métodos.
-  > _Embora não tenha tido uso intensivo, foi mencionado durante as aulas._
+    public void depositar(double valor) {
+        if(valor > 0) {
+            saldo += valor;
+        }
+    }
 
-#### Encapsulamento 🔒
-
-- **Setters e Getters:** Gerenciam o acesso aos atributos das classes.
-- **Modificadores de Acesso:** `private` e `public` (o `protected` ainda não foi explorado).
-
-> **Observação:**  
-> Outros pilares da Programação Orientada a Objetos tiveram participação reduzida nesta disciplina, conforme abordado em aula.
+    public double getSaldo() {
+        return saldo;
+    }
+}
+```
 
 ---
 
-## Modelo MVC 🎨
+## Modelo MVC 🖼️
 
-O **Modelo MVC** (Model – View – Controller) organiza o desenvolvimento de aplicações de forma modular, atribuindo responsabilidades específicas a cada parte:
+### Estrutura Recomendada
 
-- **M (Model / Modelo):** Representa as entidades do sistema, como _Pessoa_, _Carro_, etc.
-- **V (View / Visão):** Responsável pela interface gráfica (por exemplo, um JFrame).
-- **C (Controller / Controlador):** Atua como intermediário, manipulando eventos e interligando o model e a view.
-
-### Estrutura Sugerida do Projeto 🗂️
-
-```
-Projeto
-└── Source Package
-    ├── control
-    │    └── Controlador.java
-    ├── model
-    │    └── Modelo.java
-    └── view
-         └── View.java (JFrame)
+```plaintext
+src/
+├── controller/
+│   ├── UsuarioController.java
+│   └── ...
+├── model/
+│   ├── Usuario.java
+│   └── ...
+└── view/
+    ├── LoginView.java
+    └── ...
 ```
 
-> **Função de Cada Componente:**
->
-> - **Controlador:** Gerencia a comunicação entre o model e a view, manipulando eventos e a lógica da aplicação.
-> - **Modelo:** Define a estrutura dos dados (ex: Pessoa, Carro, etc.).
-> - **View:** Cria a interface visual através de componentes gráficos (por exemplo, JFrame). 😃
+### Responsabilidades
+
+| Componente     | Função Principal                    | Exemplo                  |
+| -------------- | ----------------------------------- | ------------------------ |
+| **Model**      | Gerenciar dados e regras de negócio | Classe `Produto`         |
+| **View**       | Exibir informações e coletar inputs | `JFrame` com formulários |
+| **Controller** | Mediar interações Model-View        | Tratar eventos de botão  |
 
 ---
 
-## Guia Prático 🚀
+## Guia Prático 🛠️
 
-Esta seção é um roteiro prático para criar um projeto Java com a estrutura MVC.
+### Criação de Projeto MVC
 
-### Passo a Passo 🛠️
+1. **Novo Projeto**
 
-#### Criação do Projeto
+   - `File > New Project > Java with Ant > Java Application`
+   - Desmarque "Create Main Class"
 
-1. **Local:** Vá ao canto superior esquerdo → **File > Create New Project**
-2. **Selecionar:** _Java With Ant > Java Application_
-3. **Configurar:**
-   - Clique em _Next_.
-   - Defina o nome do projeto.
-   - Desmarque a opção **Create Main**.
-4. **Finalizar:** Clique em _Finish_.
+2. **Estrutura de Pastas**
 
-#### Estrutura do Projeto
-
-Organize a estrutura conforme abaixo:
-
-```
-Projeto
-└── Source Package
-    ├── control (Java Package)
-    │    └── Controlador.java (Java Class)
-    ├── model (Java Package)
-    │    └── Modelo.java (Java Class)
-    └── view (Java Package)
-         └── View.java (JFrame)
-```
-
-#### Próximos Passos
-
-- Defina a lógica do seu modelo conforme o problema.
-- Implemente o controle dos eventos na classe _Controlador_.
-- Desenvolva a interface visual na classe _View_ e integre com o _Controlador_.
-- **Compilar & Executar:** Utilize _Shift+F11_ para compilar e _F6_ para executar.
-
-### Vídeo de Apoio 📹
-
-Para complementar os estudos, assista ao vídeo explicativo:
+   ```plaintext
+   src/
+   ├── controller/
+   ├── model/
+   └── view/
+   ```
 
 ---
 
-## App JList
+## Boas Práticas ✅
 
-[Assista ao vídeo](https://www.youtube.com/watch?v=JcbALSW-Okc)
+### Convenções de Nomenclatura
 
-> Houve um pequeno erro no aplicativo de gravação, mas nada muito grave. Assista em tela cheia!  
-> **Dica:** Ver os vídeos em sequência pode ajudar a fixar melhor o conteúdo apresentado nas aulas.
+| Elemento | Exemplo Correto     | Exemplo Incorreto    |
+| -------- | ------------------- | -------------------- |
+| Classe   | `UsuarioController` | `usuario_controller` |
+| Variável | `numeroConta`       | `NumeroConta`        |
+| Método   | `calcularSaldo()`   | `Calcular_Saldo()`   |
+| Pacote   | `model.utils`       | `ModelUtils`         |
+
+### Dicas de Implementação
+
+1. Sempre encapsule atributos com `private`
+2. Use `@Override` para métodos sobrescritos
+3. Mantenha a view o mais "burra" possível
+4. Teste cada componente separadamente
 
 ---
 
-## Observações 📝
+## Recursos Adicionais 📚
 
-- **Nomenclatura:**
-  - Nome do projeto: **P**rojeto
-  - Nome das pastas: **p**asta
-  - Nome das classes: **C**lasse
-  - Nome das variáveis: **n**ome**C**ompleto
-  - Nome dos métodos: **m**ostrar**R**esultados
+### **Vídeos Recomendados**
 
-> **Nota Final:**  
-> Este material foi desenvolvido de forma autônoma, com base nos conteúdos apresentados em aula. Aprofunde-se nos tópicos e pratique os exemplos para fixar melhor os conceitos! 🚀
+1. [Introdução ao MVC](https://youtube.com/watch?v=35h8DURLCe8)
+2. [Trabalhando com JList](https://youtube.com/watch?v=JcbALSW-Okc)
+3. [Gerenciamento de Telas](https://youtube.com/watch?v=Lf0dposBsNY)
+4. [Alterando o Background de um JDesktopPane](https://www.youtube.com/watch?v=9UTWKN01rLA)
+
+### Material Complementar
+
+- [Documentação Oficial Java](https://docs.oracle.com/javase/8/docs/api/)
+- [Exemplos de MVC](https://www.javatpoint.com/mvc-in-java)
+````
