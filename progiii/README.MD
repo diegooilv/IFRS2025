@@ -18,6 +18,7 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 06 – 28/03/2025](#-aula-06--28032025)
     - [🧱 Aula 07 – 04/04/2025](#-aula-07--04042025)
     - [🧱 Aula 08 – 11/04/2025](#-aula-08--11042025)
+    - [✨ Resumo I - 25/04/2025](#-resumo-i---25042025)
   - [🔎 Observações](#-observações)
 
 ---
@@ -87,6 +88,13 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 - 📝 [Anotações da Aula](aulas/Aula08.md)
 - 📁 [Projeto: Rgb (.zip)](aulas/Projects/Rgb.zip)
 - 🔧 [Projeto Executável (.jar)](aulas/Dist/Aula08/Rgb.jar)
+
+---
+
+### ✨ Resumo I - 25/04/2025
+
+- 📝 [Resumo](aulas/ResumoProva01.md)
+- 📼 [Playlist de Videos](https://www.youtube.com/watch?v=JcbALSW-Okc&list=PLnkE84qDhDXIM_uaCU91s0kti4DmkK0E6)
 
 ---
 
