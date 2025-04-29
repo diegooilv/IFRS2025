@@ -152,6 +152,21 @@ Outras ajudam a **organizar** a página:
 
 - `<div>` → divisão genérica (tipo uma caixa invisível)
 - `<span>` → destaque dentro de uma linha
+- `<section>` → separa blocos de conteúdo relacionado
+- `<article>` → conteúdo independente (como um produto, notícia ou post)
+- `<nav>` → agrupamento de links de navegação
+- `<aside>` → conteúdo secundário (como uma barra lateral, publicidade, sugestões)
+- `<header>` → cabeçalho de uma página ou de uma seção
+- `<footer>` → rodapé da página ou de uma seção
+- `<main>` → conteúdo principal único da página
+- `<address>` → informações de contato
+- `<figure>` → agrupa uma imagem com sua legenda
+- `<figcaption>` → legenda de uma `<figure>`
+- `<dl>` → lista de definições (pares de termo e descrição)
+- `<dt>` → termo da lista de definições
+- `<dd>` → descrição do termo em uma lista de definições
+- `<fieldset>` → agrupa campos de formulário relacionados
+- `<legend>` → legenda para um `<fieldset>`
 
 ---
 
