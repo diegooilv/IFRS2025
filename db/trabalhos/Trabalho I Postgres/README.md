@@ -51,4 +51,4 @@ O trabalho consiste em:
 
 ---
 
-> Mais informações em [Trabalho.md](../Trabalho%20I%20MySql/README.md)
+> Mais informações em [Trabalho.md](../Trabalho%20I%20Postgres/md/Trabalho.md)

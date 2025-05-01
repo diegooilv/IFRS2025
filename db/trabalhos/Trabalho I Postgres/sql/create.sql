@@ -1,71 +1,42 @@
--- Tabela de usuários
-CREATE TABLE usuarios (
-  id          SERIAL       PRIMARY KEY,
-  nome        VARCHAR(100) NOT NULL,
-  email       VARCHAR(100) NOT NULL UNIQUE,
-  senha       VARCHAR(100) NOT NULL,
-  criado_em   TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+-- 1. TIME
+CREATE TABLE "Time" (
+  codTime      SERIAL PRIMARY KEY,
+  nome         VARCHAR(100) NOT NULL,
+  sigla        VARCHAR(10)  UNIQUE NOT NULL
 );
 
--- Tabela de filmes
-CREATE TABLE filmes (
-  id          SERIAL       PRIMARY KEY,
-  nome        VARCHAR(100) NOT NULL,
-  genero      VARCHAR(50)  NOT NULL,
-  descricao   TEXT,
-  criado_em   TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+-- 2. TORNEIO
+CREATE TABLE "Torneio" (
+  codTorneio   SERIAL PRIMARY KEY,
+  premio       NUMERIC(12,2),
+  data         DATE         NOT NULL,
+  nome         VARCHAR(100) NOT NULL
 );
 
--- Tabela de séries
-CREATE TABLE series (
-  id          SERIAL       PRIMARY KEY,
-  nome        VARCHAR(100) NOT NULL,
-  temporadas  INT          NOT NULL,
-  genero      VARCHAR(50)  NOT NULL,
-  descricao   TEXT,
-  criado_em   TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+-- 3. JOGADOR
+CREATE TABLE "Jogador" (
+  codJogador   SERIAL PRIMARY KEY,
+  nome         VARCHAR(100) NOT NULL,
+  email        VARCHAR(255) UNIQUE NOT NULL,
+  apelido      VARCHAR(50),
+  codTime      INT REFERENCES "Time"(codTime)    -- NULL permitido: 0..1
 );
 
--- Avaliações de filmes (1 avaliação → 1 usuário, 1 filme)
-CREATE TABLE avaliacoes_filmes (
-  id            SERIAL       PRIMARY KEY,
-  usuario_id    INT          NOT NULL
-                   REFERENCES usuarios(id)  ON DELETE CASCADE,
-  filme_id      INT          NOT NULL
-                   REFERENCES filmes(id)    ON DELETE CASCADE,
-  nota          REAL         NOT NULL,
-  comentario    TEXT,
-  criado_em     TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+-- 4. PARTICIPACAO
+CREATE TABLE "Participacao" (
+  codParticipacao SERIAL PRIMARY KEY,
+  codTime         INT NOT NULL REFERENCES "Time"(codTime),
+  codTorneio      INT NOT NULL REFERENCES "Torneio"(codTorneio),
+  posicao         INT
 );
 
--- Avaliações de séries (1 avaliação → 1 usuário, 1 série)
-CREATE TABLE avaliacoes_series (
-  id            SERIAL       PRIMARY KEY,
-  usuario_id    INT          NOT NULL
-                   REFERENCES usuarios(id) ON DELETE CASCADE,
-  serie_id      INT          NOT NULL
-                   REFERENCES series(id)   ON DELETE CASCADE,
-  nota          REAL         NOT NULL,
-  comentario    TEXT,
-  criado_em     TIMESTAMPTZ  NOT NULL DEFAULT NOW()
-);
-
--- Favoritos de avaliações de filmes (N:N entre usuários e avaliações de filmes)
-CREATE TABLE favoritos_filmes (
-  usuario_id           INT         NOT NULL
-                          REFERENCES usuarios(id)         ON DELETE CASCADE,
-  avaliacao_filme_id   INT         NOT NULL
-                          REFERENCES avaliacoes_filmes(id) ON DELETE CASCADE,
-  criado_em            TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  PRIMARY KEY (usuario_id, avaliacao_filme_id)
-);
-
--- Favoritos de avaliações de séries (N:N entre usuários e avaliações de séries)
-CREATE TABLE favoritos_series (
-  usuario_id           INT         NOT NULL
-                          REFERENCES usuarios(id)        ON DELETE CASCADE,
-  avaliacao_serie_id   INT         NOT NULL
-                          REFERENCES avaliacoes_series(id) ON DELETE CASCADE,
-  criado_em            TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  PRIMARY KEY (usuario_id, avaliacao_serie_id)
+-- 5. JOGO
+CREATE TABLE "Jogo" (
+  codJogo            SERIAL PRIMARY KEY,
+  codTorneio         INT NOT NULL REFERENCES "Torneio"(codTorneio),
+  codTimeMandante    INT NOT NULL REFERENCES "Time"(codTime),
+  codTimeVisitante   INT NOT NULL REFERENCES "Time"(codTime),
+  ptsTimeMandante    INT,
+  ptsTimeVisitante   INT,
+  nomeJogo           VARCHAR(100) NOT NULL
 );

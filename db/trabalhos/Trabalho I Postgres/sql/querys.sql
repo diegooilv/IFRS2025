@@ -1,52 +1,63 @@
--- Consultas
+--- 1
+SELECT 
+  j.nome   AS jogador, 
+  t.nome   AS equipe
+FROM 
+  "Jogador" j
+  JOIN "Time" t ON j.codTime = t.codTime
+WHERE 
+  t.sigla = 'TQO';
 
--- Consulta 1: avaliações de filmes pelo usuário 'Diego Lima'
+--- 2
 SELECT
-  u.nome    AS usuario,
-  f.nome    AS filme,
-  af.nota,
-  af.comentario
-FROM avaliacoes_filmes af
-JOIN usuarios u ON af.usuario_id = u.id
-JOIN filmes f   ON af.filme_id   = f.id
-WHERE u.nome = 'Diego Lima';
+  t.nome         AS equipe,
+  tor.nome       AS torneio,
+  p.posicao      AS colocacao
+FROM
+  "Participacao" p
+  JOIN "Time"      t   ON p.codTime    = t.codTime
+  JOIN "Torneio"   tor ON p.codTorneio = tor.codTorneio
+WHERE
+  EXTRACT(YEAR FROM tor.data) = 2024;
 
--- Consulta 2: favoritos de avaliações de séries com nota ≥ 4.0
-SELECT
-  u.nome    AS usuario,
-  s.nome    AS serie,
-  asr.nota
-FROM favoritos_series fav
-JOIN avaliacoes_series asr ON fav.avaliacao_serie_id = asr.id
-JOIN series s               ON asr.serie_id          = s.id
-JOIN usuarios u             ON fav.usuario_id        = u.id
-WHERE asr.nota >= 4.0;
 
--- Consulta 3: média e quantidade de avaliações por filme (média > 3.5)
+--- 3
 SELECT
-  f.nome               AS filme,
-  AVG(af.nota)         AS media_nota,
-  COUNT(af.id)         AS qtd_avaliacoes
-FROM filmes f
-JOIN avaliacoes_filmes af ON f.id = af.filme_id
-GROUP BY f.nome
-HAVING AVG(af.nota) > 3.5
-ORDER BY AVG(af.nota) DESC;
+  t.nome               AS equipe_mandante,
+  COUNT(*)             AS partidas_com_2mais_pontos
+FROM
+  "Jogo" j
+  JOIN "Time" t ON j.codTimeMandante = t.codTime
+WHERE
+  j.ptsTimeMandante > 2
+GROUP BY
+  t.nome
+HAVING
+  COUNT(*) >= 2
+ORDER BY
+  partidas_com_2mais_pontos DESC;
 
--- Consulta 4: total de avaliações (filmes + séries) por usuário (>1)
+--- 4
 SELECT
-  u.nome                                   AS usuario,
-  (COALESCE(filmes_qtd,0) + COALESCE(series_qtd,0)) AS total_avaliacoes
-FROM usuarios u
-LEFT JOIN (
-  SELECT usuario_id, COUNT(*) AS filmes_qtd
-  FROM avaliacoes_filmes
-  GROUP BY usuario_id
-) fm ON u.id = fm.usuario_id
-LEFT JOIN (
-  SELECT usuario_id, COUNT(*) AS series_qtd
-  FROM avaliacoes_series
-  GROUP BY usuario_id
-) ss ON u.id = ss.usuario_id
-WHERE (COALESCE(fm.filmes_qtd,0) + COALESCE(ss.series_qtd,0)) > 1
-ORDER BY total_avaliacoes DESC;
+  t.codTime,
+  t.nome,
+  ROUND(AVG(total_pts),2) AS media_pontos
+FROM (
+  -- soma dos pontos como mandante
+  SELECT 
+    codTimeMandante AS codTime,
+    ptsTimeMandante + 0 AS total_pts
+  FROM "Jogo"
+  UNION ALL
+  -- soma dos pontos como visitante
+  SELECT
+    codTimeVisitante AS codTime,
+    ptsTimeVisitante + 0 AS total_pts
+  FROM "Jogo"
+) AS all_pts
+JOIN "Time" t ON all_pts.codTime = t.codTime
+GROUP BY
+  t.codTime, t.nome
+ORDER BY
+  media_pontos DESC
+LIMIT 5;

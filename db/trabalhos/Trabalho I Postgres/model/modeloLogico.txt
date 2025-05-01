@@ -1,0 +1,18 @@
+Jogador(codJogador, nome, email, apelido, codTime)
+    codTime referencia Time
+
+Time(codTime, nome, sigla)
+
+Participacao(codParticipacao, codTime, codTorneio, posicao)
+    codTime referencia Time
+    codTorneio referencia Torneio
+
+Jogo(codJogo, codTorneio, codTimeMandante, codTimeVisitante, ptsTimeMandante, ptsTimeVisitante, nomeJogo)
+    codTorneio referencia Torneio
+    codTimeMandante referencia Time
+    codTimeVisitante referencia Time
+
+Torneio(codTorneio, premio, data, nome)
+
+
+
