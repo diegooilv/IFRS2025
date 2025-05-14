@@ -19,7 +19,7 @@ public class Controlador {
     JTextField jtextFieldID;
     JTextField jtextFieldNome;
     JTextField jtextFieldCpf;
-    JList jListPessoas;
+    JList<String> jListPessoas;
 
     Pessoa pe;
 
