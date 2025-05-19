@@ -13,18 +13,21 @@ Todo o material foi elaborado de forma **autônoma**, com base em **fontes públ
 
 📁 Conteúdos disponíveis na pasta [`html/`](html/)
 
-- [Introdução](html/Introdução.md)  
-- [Tags](html/Tags.md)  
-- [Listas](html/Listas.md)  
-- [Formulários](html/Formularios.md)  
-- [Inputs](html/Input.md)  
+- [Introdução](html/Introdução.md)
+- [Tags](html/Tags.md)
+- [Listas](html/Listas.md)
+- [Formulários](html/Formularios.md)
+- [Inputs](html/Input.md)
 - [MetaTags](html/MetaTags.md)
 
 ---
 
 ## 🎨 Segundo Trimestre: CSS
 
-📌 Os materiais referentes a CSS serão adicionados conforme o andamento das aulas.
+📁 Conteúdos disponíveis na pasta [`css/`](css/)
+
+- [Introdução](css/Introdução.md)
+- [Tipos](css/Tipos.md)
 
 ---
 

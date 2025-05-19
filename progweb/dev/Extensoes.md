@@ -1,20 +1,5 @@
 # 📦 Extensões para Desenvolvimento Web no VS Code
 
-## ✅ Instalação Rápida
-
-1. Salve o arquivo [`Extensoes.txt`](Extensoes.txt) com a lista de extensões.
-2. Execute o seguinte comando no terminal:
-
-```bash
-for ext in $(grep -v '^#' extensoes-web.txt); do
-  code --install-extension $ext
-done
-```
-
-> 💡 Esse comando instala todas as extensões listadas, ignorando os comentários (`#`).
-
----
-
 ## 🧩 Lista de Extensões Explicada
 
 | Extensão                                                     | Função                                                      |

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19/05</title>
+    <!--Pra reiniciar/reset o CSS-->
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <!--CSS Incorporado-->
+    <style>
+        nav {
+            background-color: bisque;
+        }
+    </style>
+    <!--CSS Externo-->
+    <link rel="stylesheet" href="./style/aula20250519.css">
+</head>
+
+<body>
+    <div id="principal">
+        <header>
+            <!--CSS Interno-->
+            <h1 style="font-size: 40px;">Loja Genérica</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="produtos">
+            <h2>Produtos em promoção</h2>
+            <div class="produto">
+                <p class="nome-produto">Produto Genérico A</p>
+                <p class="preco-produto">R$ 39,90</p>
+                <a href="#">Mais informações</a>
+            </div>
+            <div class="produto">
+                <p class="nome-produto">Produto Genérico B</p>
+                <p class="preco-produto">R$ 59,90</p>
+                <a href="#">Mais informações</a>
+            </div>
+            <div class="produto">
+                <p class="nome-produto">Produto Genérico C</p>
+                <p class="preco-produto">R$ 99,90</p>
+                <a href="#">Mais informações</a>
+            </div>
+            <div class="produto">
+                <p class="nome-produto">Produto Genérico D</p>
+                <p class="preco-produto">R$ 19,90</p>
+                <a href="#">Mais informações</a>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Loja Genérica. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <hr>
+    <h1 style="font-size: 50px; text-align: center;">Aula:</h1>
+    <pre
+        style="background-color: #222; color: #f8f8f2; padding: 20px; border-radius: 8px; max-width: 900px; overflow-x: auto; font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.5; box-shadow: 0 0 15px rgba(0,0,0,0.4); text-align: center; margin: auto;">
+<code>
+/* CSS Externo:
+   É um arquivo .css separado, que você linka no HTML usando a tag &lt;link&gt;.
+   Exemplo:
+   &lt;link rel="stylesheet" href="./estilos.css"&gt;
+
+/* CSS Interno:
+   É um bloco de estilos dentro do próprio HTML, colocado dentro da tag &lt;style&gt; no &lt;head&gt;.
+   Exemplo:
+   &lt;style&gt;
+       body { background-color: #eee; }
+   &lt;/style&gt;
+
+/* CSS Incorporado (Inline):
+   É o estilo aplicado direto no atributo style da tag HTML.
+   Exemplo:
+   &lt;p style="color: red;"&gt;Texto vermelho&lt;/p&gt;
+*/
+</code>
+    </pre>
+</body>
+
+</html>
