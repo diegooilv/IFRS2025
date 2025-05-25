@@ -28,6 +28,11 @@ Todo o material foi elaborado de forma **autônoma**, com base em **fontes públ
 
 - [Introdução](css/Introdução.md)
 - [Tipos](css/Tipos.md)
+- [Seletores](css/Seletores.md)
+- [Especificidade](css/Especificidade.md)
+- [Herança](css/Herança.md)
+- [Modelo Caixa](css/Modelo%20Caixa.md)
+- [Flexbox](css/Flexbox.md)
 
 ---
 
