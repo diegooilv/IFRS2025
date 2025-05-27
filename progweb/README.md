@@ -24,15 +24,20 @@ Todo o material foi elaborado de forma **autônoma**, com base em **fontes públ
 
 ## 🎨 Segundo Trimestre: CSS
 
-📁 Conteúdos disponíveis na pasta [`css/`](css/)
+### 📁 Conteúdos disponíveis na pasta [`css/`](css/)
 
 - [Introdução](css/Introdução.md)
-- [Tipos](css/Tipos.md)
+- [Tipos de CSS](css/Tipos.md)
 - [Seletores](css/Seletores.md)
 - [Especificidade](css/Especificidade.md)
 - [Herança](css/Herança.md)
-- [Modelo Caixa](css/Modelo%20Caixa.md)
+- [Modelo de Caixa (Box Model)](css/Modelo%20Caixa.md)
 - [Flexbox](css/Flexbox.md)
+
+#### Extras
+
+- [Fontes](guia/Fonte.md)
+- [Espaçamento e Layout](guia/Espacamentos-e-Layout.md)
 
 ---
 
@@ -49,6 +54,9 @@ Todo o material foi elaborado de forma **autônoma**, com base em **fontes públ
 
 - [🧩 Extensões recomendadas](dev/Extensoes.md)  
   Lista de ferramentas úteis para desenvolvimento web no VS Code, e usadas por mim.
+
+- [🐙 Git e Fluxos de Trabalho](dev/Git.md)  
+  Guia completo para usar Git, desde comandos básicos no terminal, GitHub Desktop, até boas práticas, workflows, resolução de conflitos e integração com CI/CD.
 
 ---
 
