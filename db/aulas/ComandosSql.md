@@ -1,133 +1,221 @@
-# Comandos SQL
+# 💻 Comandos SQL
+
+Este guia apresenta as quatro “linguagens” do SQL de forma clara e prática: DDL, DML, DCL e TCL. Cada seção traz:
+
+- 🎯 **Objetivos** – o que você vai aprender
+- 📖 **Contexto** – quando e por que usar
+- 🔤 **Sintaxe & Destaques** – estrutura genérica
+- 💡 **Exemplos Comentados** – passo a passo no código
+- ⚠️ **Dicas & Boas Práticas** – cuidados essenciais
 
 ---
 
-## Data Definition Language (DDL)
+## 🏗️ Data Definition Language (DDL)
 
-A **Data Definition Language (DDL)** é utilizada para definir, modificar e remover estruturas de banco de dados. Esses comandos afetam diretamente o esquema (estrutura) do banco de dados.
+🎯 **Objetivos**
 
-### Principais Comandos DDL
+- Entender como criar, alterar e apagar objetos de banco.
+- Aplicar `IF NOT EXISTS` / `IF EXISTS` para evitar erros.
 
-- **CREATE:** Cria objetos no banco de dados, como tabelas, índices, ou views.  
-  *Exemplo:*
-  ```sql
-  CREATE TABLE clientes (
-      id INT PRIMARY KEY,
-      nome VARCHAR(100),
-      email VARCHAR(100)
-  );
-  ```
+📖 **Contexto**  
+Define a **estrutura**: tabelas, índices, views, schemas…
 
-- **ALTER:** Modifica a estrutura de objetos existentes no banco de dados.  
-  *Exemplo:*
-  ```sql
-  ALTER TABLE clientes ADD COLUMN telefone VARCHAR(20);
-  ```
+> Caso prático: montar a base de um sistema de clientes.
 
-- **DROP:** Remove objetos do banco de dados.  
-  *Exemplo:*
-  ```sql
-  DROP TABLE clientes;
-  ```
+🔤 **Sintaxe & Destaques**
 
-- **TRUNCATE:** Remove todos os registros de uma tabela, mantendo sua estrutura para reutilização.  
-  *Exemplo:*
-  ```sql
-  TRUNCATE TABLE clientes;
-  ```
+```sql
+COMANDO objeto
+  nome_objeto
+  [definições | modificações]
+  [opções_adicionais];
+```
 
----
+- **COMANDO**: `CREATE` / `ALTER` / `DROP` / `TRUNCATE`
+- **objeto**: `TABLE`, `INDEX`, `VIEW`, etc.
+- **opções_adicionais**: `IF NOT EXISTS`, `CASCADE`, `RESTRICT`
 
-## Data Manipulation Language (DML)
+💡 **Exemplos Comentados**
 
-A **Data Manipulation Language (DML)** é empregada para manipular os dados armazenados nas tabelas. Esses comandos permitem inserir, atualizar, excluir e consultar dados.
+```sql
+-- Criação de tabela “clientes”
+CREATE TABLE IF NOT EXISTS clientes (
+  id SERIAL PRIMARY KEY,                 -- chave única
+  nome VARCHAR(100) NOT NULL,            -- não nulo
+  email VARCHAR(100) UNIQUE              -- único
+);
 
-### Principais Comandos DML
+-- Adiciona coluna telefone
+ALTER TABLE clientes
+  ADD COLUMN telefone VARCHAR(20);
 
-- **INSERT:** Insere novos registros em uma tabela.  
-  *Exemplo:*
-  ```sql
-  INSERT INTO clientes (id, nome, email) VALUES (1, 'João Silva', 'joao@example.com');
-  ```
+-- Remove todos os registros, mantém estrutura
+TRUNCATE TABLE clientes;
 
-- **SELECT:** Consulta dados, permitindo extrair informações armazenadas no banco de dados.  
-  *Exemplo:*
-  ```sql
-  SELECT * FROM clientes;
-  ```
+-- Apaga tabela (e objetos dependentes)
+DROP TABLE IF EXISTS clientes CASCADE;
+```
 
-- **UPDATE:** Atualiza os dados existentes em uma tabela.  
-  *Exemplo:*
-  ```sql
-  UPDATE clientes SET email = 'joao.novo@example.com' WHERE id = 1;
-  ```
+⚠️ **Dicas & Boas Práticas**
 
-- **DELETE:** Remove registros de uma tabela.  
-  *Exemplo:*
-  ```sql
-  DELETE FROM clientes WHERE id = 1;
-  ```
+- Use `IF NOT EXISTS` / `IF EXISTS` em scripts de implantação.
+- Prefira `_snake_case_` e nomes significativos.
+- Documente com `COMMENT ON …`.
 
 ---
 
-## Data Control Language (DCL)
+## 🔄 Data Manipulation Language (DML)
 
-A **Data Control Language (DCL)** é utilizada para definir e controlar o acesso aos dados no banco de dados. Esses comandos gerenciam permissões e privilégios dos usuários.
+🎯 **Objetivos**
 
-### Principais Comandos DCL
+- Consultar e modificar dados: `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+- Filtrar, ordenar e agrupar resultados.
 
-- **GRANT:** Concede permissões a usuários ou roles para acessar e manipular objetos do banco de dados.  
-  *Exemplo:*
-  ```sql
-  GRANT SELECT, INSERT ON clientes TO usuario_exemplo;
-  ```
+📖 **Contexto**
+Coloca os dados em **movimento**: insere, atualiza, apaga, lê.
 
-- **REVOKE:** Remove permissões concedidas anteriormente.  
-  *Exemplo:*
-  ```sql
-  REVOKE INSERT ON clientes FROM usuario_exemplo;
-  ```
+> Caso prático: buscar pedidos de clientes no e-commerce.
 
----
+🔤 **Sintaxe & Destaques**
 
-## Transaction Control Language (TCL)
+```sql
+COMANDO tabela
+  [colunas]
+  [WHERE condição]
+  [GROUP BY …]
+  [HAVING …]
+  [ORDER BY …]
+  [LIMIT …];
+```
 
-A **Transaction Control Language (TCL)** gerencia as transações no banco de dados, garantindo a integridade e consistência dos dados durante operações que envolvem múltiplas instruções.
+💡 **Exemplos Comentados**
 
-### Principais Comandos TCL
+```sql
+-- Consulta todos os clientes ativos
+SELECT id, nome
+FROM clientes
+WHERE status = 'ativo'
+ORDER BY nome;
 
-- **COMMIT:** Confirma todas as alterações realizadas durante a transação corrente, tornando-as permanentes.  
-  *Exemplo:*
-  ```sql
-  BEGIN;
-  INSERT INTO clientes (id, nome, email) VALUES (2, 'Maria Souza', 'maria@example.com');
-  COMMIT;
-  ```
+-- Insere novo cliente
+INSERT INTO clientes (nome, email)
+VALUES ('Ana Silva', 'ana@exemplo.com');
 
-- **ROLLBACK:** Desfaz todas as alterações realizadas durante a transação corrente, revertendo o estado do banco de dados para o último COMMIT.  
-  *Exemplo:*
-  ```sql
-  BEGIN;
-  INSERT INTO clientes (id, nome, email) VALUES (3, 'Pedro Lima', 'pedro@example.com');
-  ROLLBACK;
-  ```
+-- Atualiza email de um cliente
+UPDATE clientes
+SET email = 'ana.silva@exemplo.com'
+WHERE id = 1;
 
-- **SAVEPOINT:** Define pontos de salvaguarda dentro de uma transação, permitindo reverter parte das operações sem cancelar toda a transação.  
-  *Exemplo:*
-  ```sql
-  BEGIN;
-  INSERT INTO clientes (id, nome, email) VALUES (4, 'Ana Paula', 'ana@example.com');
-  SAVEPOINT sp1;
-  UPDATE clientes SET email = 'ana.nova@example.com' WHERE id = 4;
-  ROLLBACK TO SAVEPOINT sp1;
-  COMMIT;
-  ```
+-- Remove clientes inativos
+DELETE FROM clientes
+WHERE status = 'inativo';
+```
 
-- **SET TRANSACTION:** Define propriedades da transação, como o nível de isolamento.  
-  *Exemplo:*
-  ```sql
-  SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
-  ```
+⚠️ **Dicas & Boas Práticas**
+
+- Nunca faça `DELETE` sem `WHERE`.
+- Use transações para operações críticas.
+- Previna SQL Injection com _prepared statements_.
 
 ---
 
+## 🔐 Data Control Language (DCL)
+
+🎯 **Objetivos**
+
+- Gerenciar **permissões** com `GRANT` e `REVOKE`.
+- Criar roles e aplicar o princípio do menor privilégio.
+
+📖 **Contexto**
+Define **quem** pode fazer **o quê** no banco.
+
+> Caso prático: dar acesso de leitura ao time de suporte.
+
+🔤 **Sintaxe & Destaques**
+
+```sql
+GRANT permissão ON objeto TO usuário;
+REVOKE permissão ON objeto FROM usuário;
+```
+
+- **permissão**: `SELECT`, `INSERT`, `ALL PRIVILEGES`…
+- **objeto**: tabela, view, schema…
+
+💡 **Exemplos Comentados**
+
+```sql
+-- Concede leitura e escrita em clientes
+GRANT SELECT, INSERT ON clientes TO analista;
+
+-- Remove permissão de inserção
+REVOKE INSERT ON clientes FROM analista;
+
+-- Dá todas as permissões e permite repassar
+GRANT ALL ON vendas TO gerente WITH GRANT OPTION;
+```
+
+⚠️ **Dicas & Boas Práticas**
+
+- Conceda somente o necessário (princípio do menor privilégio).
+- Use _roles_ para agrupar permissões.
+- Audite mudanças críticas.
+
+---
+
+## 🔁 Transaction Control Language (TCL)
+
+🎯 **Objetivos**
+
+- Controlar transações com `BEGIN`, `COMMIT`, `ROLLBACK`.
+- Usar `SAVEPOINT` para pontos de restauração.
+- Ajustar níveis de isolamento.
+
+📖 **Contexto**
+Garante **consistência** em operações atômicas.
+
+> Caso prático: transferir valores entre contas bancárias.
+
+🔤 **Sintaxe & Destaques**
+
+```sql
+BEGIN;
+  -- operações DML/DDL
+COMMIT;
+
+-- ou
+
+BEGIN;
+  …
+ROLLBACK;
+```
+
+- **SAVEPOINT nome** / **ROLLBACK TO nome** / **RELEASE SAVEPOINT nome**
+- **SET TRANSACTION ISOLATION LEVEL**: `READ COMMITTED`, `SERIALIZABLE`…
+
+💡 **Exemplos Comentados**
+
+```sql
+BEGIN;
+  UPDATE contas SET saldo = saldo - 100 WHERE id = 1;
+  UPDATE contas SET saldo = saldo + 100 WHERE id = 2;
+COMMIT;
+
+BEGIN;
+  SAVEPOINT antes_debito;
+  UPDATE contas SET saldo = saldo - 100 WHERE id = 3;
+  -- se falhar:
+  ROLLBACK TO antes_debito;
+COMMIT;
+```
+
+⚠️ **Dicas & Boas Práticas**
+
+- Mantenha transações curtas para evitar bloqueios.
+- Use `SAVEPOINT` em processos complexos.
+- Defina nivel de isolamento adequado.
+
+> Para mais detalhes, confira o guia completo em [Comandos SQL](ComandosSql/README.md).
+
+---
+
+✨ **Bons estudos!**
