@@ -20,7 +20,8 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 08 – 11/04/2025](#-aula-08--11042025)
     - [✨ Resumo I - 25/04/2025](#-resumo-i---25042025)
     - [🧱 Aula 09 – 16/05/2025](#-aula-09--16052025)
-    - [🧱 Aula 10 – 23/05/25](#-aula-10--230525)
+    - [🧱 Aula 10 – 23/05/2025](#-aula-10--23052025)
+    - [🧱 Aula 11 – 30/05/2025](#-aula-11--30052025)
   - [🔎 Observações](#-observações)
 
 ---
@@ -108,10 +109,18 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 
 ---
 
-### 🧱 Aula 10 – 23/05/25
+### 🧱 Aula 10 – 23/05/2025
 
 - 📝 [Anotações da Aula](aulas/Aula10.md)
 - 🔧 [Projeto Executável (.jar)](aulas/Dist/Aula10/Pessoa.jar)
+
+---
+
+### 🧱 Aula 11 – 30/05/2025
+
+- 📝 [Anotações da Aula](aulas/Aula11.md)
+- 📁 [Projeto: AlterarArray01 (.zip)](aulas/Projects/AlterarArray01.zip)
+- 🔧 [Projeto Executável (.jar)](aulas/Dist/Aula11/AlterarArray.jar)
 
 ---
 
