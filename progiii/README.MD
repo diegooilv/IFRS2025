@@ -22,6 +22,7 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 09 – 16/05/2025](#-aula-09--16052025)
     - [🧱 Aula 10 – 23/05/2025](#-aula-10--23052025)
     - [🧱 Aula 11 – 30/05/2025](#-aula-11--30052025)
+    - [🧱 Aula 12 – 06/06/2025](#-aula-12--06062025)
   - [🔎 Observações](#-observações)
 
 ---
@@ -123,6 +124,10 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 - 🔧 [Projeto Executável (.jar)](aulas/Dist/Aula11/AlterarArray.jar)
 
 ---
+
+### 🧱 Aula 12 – 06/06/2025
+
+- 📝 [Anotações da Aula](aulas/Aula12.md)
 
 ## 🔎 Observações
 
