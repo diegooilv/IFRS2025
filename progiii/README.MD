@@ -130,6 +130,8 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 
 - 📝 [Anotações da Aula](aulas/Aula12.md)
 
+---
+
 ### 🧱 Aulas 14-16
 
 - 📝 [Trabalhos](aulas/Aulas13-16.md)
