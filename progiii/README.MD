@@ -23,6 +23,7 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 10 – 23/05/2025](#-aula-10--23052025)
     - [🧱 Aula 11 – 30/05/2025](#-aula-11--30052025)
     - [🧱 Aula 12 – 06/06/2025](#-aula-12--06062025)
+    - [🧱 Aula 13-16 – 06/06/2025](#-aulas-14-16)
   - [🔎 Observações](#-observações)
 
 ---
@@ -128,6 +129,10 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 ### 🧱 Aula 12 – 06/06/2025
 
 - 📝 [Anotações da Aula](aulas/Aula12.md)
+
+### 🧱 Aulas 14-16
+
+- 📝 [Trabalhos](aulas/Aulas13-16.md)
 
 ## 🔎 Observações
 
