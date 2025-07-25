@@ -1,0 +1,223 @@
+
+# FTP (File Transfer Protocol)
+1. Qual a porta padrão usada pelo FTP?
+A) 20
+B) 21
+C) 22
+D) 23
+
+2. Em qual camada do modelo OSI o FTP opera?
+A) Transporte
+B) Rede
+C) Aplicação
+D) Enlace
+
+3. Qual protocolo de transporte o FTP utiliza?
+A) UDP
+B) TCP
+C) ICMP
+D) SCTP
+
+4. Qual destas opções descreve melhor o FTP?
+A) Protocolo de criptografia
+B) Protocolo de transferência de arquivos
+C) Protocolo de e-mail
+D) Protocolo de autenticação
+
+5. Qual é uma limitação do FTP?
+A) Não suporta criptografia
+B) Funciona apenas com UDP
+C) Não permite transferência de arquivos
+D) Só funciona no Linux
+
+
+# SMB (Server Message Block)
+6. Qual a porta padrão usada pelo SMB?
+A) 139
+B) 445
+C) 3389
+D) 21
+
+7. Qual camada do modelo OSI o SMB pertence?
+A) Aplicação
+B) Rede
+C) Enlace
+D) Transporte
+
+8. Qual sistema é mais associado ao SMB?
+A) Linux
+B) Windows
+C) macOS
+D) Android
+
+9. Qual é um uso comum do SMB?
+A) Compartilhamento de arquivos e impressoras
+B) Transferência de e-mails
+C) Controle de roteadores
+D) Streaming de vídeo
+
+10. Qual vulnerabilidade famosa afetou SMBv1?
+A) Heartbleed
+B) WannaCry
+C) Spectre
+D) Meltdown
+
+
+# NAS & SAN
+11. Qual característica define NAS?
+A) Armazenamento em blocos
+B) Armazenamento por arquivos
+C) Protocolo HTTP
+D) Baseado em fibra óptica
+
+12. Qual protocolo é usado frequentemente em SAN?
+A) FTP
+B) iSCSI
+C) HTTP
+D) SMB
+
+13. Qual vantagem do NAS?
+A) Alta latência
+B) Fácil compartilhamento de arquivos em rede
+C) Depende exclusivamente de fibra
+D) Não permite RAID
+
+14. SAN é ideal para:
+A) Backup local simples
+B) Alta performance em servidores e bancos de dados
+C) Conexões Wi-Fi
+D) Streaming casual
+
+15. Qual tecnologia é comum em SAN?
+A) Fibre Channel
+B) Bluetooth
+C) ZigBee
+D) NFC
+
+
+# TeamViewer
+16. Qual porta principal o TeamViewer utiliza?
+A) 22
+B) 80
+C) 5938
+D) 445
+
+17. O TeamViewer é:
+A) Open source
+B) Proprietário
+C) Exclusivo para Linux
+D) Exclusivo para Windows
+
+18. Qual recurso é oferecido pelo TeamViewer?
+A) Somente transferência de arquivos
+B) Acesso remoto seguro
+C) Apenas chat de texto
+D) Criação de VPNs
+
+19. O TeamViewer usa criptografia:
+A) AES 256 + RSA 2048
+B) DES 64
+C) MD5
+D) Não usa criptografia
+
+20. Qual é uma vantagem do TeamViewer?
+A) Funciona sem internet
+B) Funciona via NAT sem configuração adicional
+C) Apenas via VPN
+D) Sem suporte a áudio
+
+
+# VNC (Virtual Network Computing)
+21. Qual a porta padrão do VNC?
+A) 5900
+B) 445
+C) 3389
+D) 80
+
+22. O VNC é:
+A) Exclusivo do Windows
+B) Open source em diversas implementações
+C) Proprietário apenas
+D) Um protocolo de e-mail
+
+23. Qual é uma limitação do VNC?
+A) Não existe suporte gráfico
+B) Sem criptografia nativa
+C) Funciona apenas com cabo coaxial
+D) Não roda em rede local
+
+24. VNC é usado para:
+A) Acesso remoto gráfico
+B) Transferência de arquivos apenas
+C) Impressão de documentos
+D) Hospedagem de sites
+
+25. Qual alternativa NÃO é uma implementação de VNC?
+A) TightVNC
+B) RealVNC
+C) TigerVNC
+D) WinRAR
+
+
+# RDP (Remote Desktop Protocol)
+26. Qual a porta padrão do RDP?
+A) 445
+B) 3389
+C) 5900
+D) 80
+
+27. O RDP foi desenvolvido por:
+A) Microsoft
+B) IBM
+C) Apple
+D) Google
+
+28. O RDP oferece:
+A) Acesso remoto via interface gráfica
+B) Somente linha de comando
+C) Apenas transferência de arquivos
+D) Apenas monitoramento de rede
+
+29. Qual recurso está presente no RDP?
+A) Criptografia nativa
+B) Ausência de compressão
+C) Não suporta som
+D) Não suporta múltiplas sessões
+
+30. Qual camada do modelo OSI o RDP pertence?
+A) Rede
+B) Transporte
+C) Aplicação
+D) Física
+
+
+# SSH (Secure Shell)
+31. Qual a porta padrão do SSH?
+A) 21
+B) 22
+C) 23
+D) 3389
+
+32. O SSH é usado para:
+A) Acesso remoto seguro em linha de comando
+B) Transferência via HTTP
+C) Criação de páginas web
+D) Conexão Bluetooth
+
+33. Qual protocolo é substituído pelo SSH por questões de segurança?
+A) Telnet
+B) FTP
+C) HTTP
+D) SMTP
+
+34. O SSH oferece:
+A) Criptografia ponta a ponta
+B) Nenhuma segurança
+C) Apenas autenticação por senha sem criptografia
+D) Exclusivamente GUI
+
+35. Qual implementação popular do SSH?
+A) WinRAR
+B) OpenSSH
+C) Apache
+D) FileZilla

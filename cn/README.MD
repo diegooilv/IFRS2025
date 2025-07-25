@@ -53,6 +53,12 @@ Define como os endereços IP são divididos em rede e host, possibilitando a org
 
 ---
 
+## 📡 Seminário
+
+📂 [Seminário Protocolos/Programas](./seminario/)
+
+---
+
 ## 📘 Observações
 
 - Cada arquivo `.md` contém explicações detalhadas, exemplos práticos e referências confiáveis.
