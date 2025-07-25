@@ -79,8 +79,8 @@ Este roadmap reúne os principais tópicos estudados ao longo do ano nas discipl
 - [x] HTTP / HTTPS
 - [x] DNS
 - [x] DHCP
-- [ ] FTP
-- [ ] Ferramentas de Acesso Remoto
+- [x] FTP
+- [x] Ferramentas de Acesso Remoto
 
 ### Camada de Transporte
 
