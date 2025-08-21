@@ -1,0 +1,13 @@
+#produtos {
+    border:1px red solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.produto {
+    border:1px yellow solid;
+    width: 47%;
+    padding:10px;
+    margin: 10px 0; /*10px top bottom, 0 left right*/
+}
