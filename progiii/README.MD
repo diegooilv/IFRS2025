@@ -25,7 +25,7 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 12 – 06/06/2025](22/08/2025)
     - [🧱 Aula 13-16 – 04/07/2025](#-aulas-13-16--04072025)
     - [🧱 Aula 17-22 - 22/08/2025](#-aulas-17-22---22082025)
-    - [✨ Resumo II - 29/08/2025](#-resumo-ii---29082025)
+    - [✨ Resumo II — 29/08/2025](#-resumo-ii--29082025)
   - [🔎 Observações](#-observações)
 
 ---
