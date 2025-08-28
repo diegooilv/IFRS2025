@@ -22,8 +22,10 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 09 – 16/05/2025](#-aula-09--16052025)
     - [🧱 Aula 10 – 23/05/2025](#-aula-10--23052025)
     - [🧱 Aula 11 – 30/05/2025](#-aula-11--30052025)
-    - [🧱 Aula 12 – 06/06/2025](#-aula-12--06062025)
-    - [🧱 Aula 13-16 – 06/06/2025](#-aulas-14-16)
+    - [🧱 Aula 12 – 06/06/2025](22/08/2025)
+    - [🧱 Aula 13-16 – 04/07/2025](#-aulas-13-16--04072025)
+    - [🧱 Aula 17-22 - 22/08/2025](#-aulas-17-22---22082025)
+    - [✨ Resumo II - 29/08/2025](#-resumo-ii---29082025)
   - [🔎 Observações](#-observações)
 
 ---
@@ -132,9 +134,28 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
 
 ---
 
-### 🧱 Aulas 14-16
+### 🧱 Aulas 13-16 – 04/07/2025
 
 - 📝 [Trabalhos](aulas/Aulas13-16.md)
+
+---
+
+### 🧱 Aulas 17-22 - 22/08/2025
+
+- Em breve!
+
+---
+
+### ✨ Resumo II — 29/08/2025
+
+- 🏫 **Resumo I** — [Mais difícil](aulas/ResumoProva02.md)
+  _Para quem quer estudar profundamente e entender todos os detalhes._
+- 📘 **Resumo II** — [Necessário](aulas/ResumoProva02Necessario.md)
+  _O essencial para não perder nada importante._
+- 👀 **Resumo III** — [Fácil & Visual](aulas/ResumoProva02Visual.md)
+  _Explicações simplificadas com fluxos e exemplos visuais._
+- 🌟 **Resumo IV** — [Super Fácil & Super Visual](aulas/ResumoProva02Visual2.md)
+  _Versão para quem precisa de máxima clareza e aprendizado rápido._
 
 ## 🔎 Observações
 
