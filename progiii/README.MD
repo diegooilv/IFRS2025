@@ -26,6 +26,7 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
     - [🧱 Aula 13-16 – 04/07/2025](#-aulas-13-16--04072025)
     - [🧱 Aula 17-22 - 22/08/2025](#-aulas-17-22---22082025)
     - [✨ Resumo II — 29/08/2025](#-resumo-ii--29082025)
+  - [❗ Terceiro Trimestre](#-terceiro-trimestre)
   - [🔎 Observações](#-observações)
 
 ---
@@ -156,6 +157,13 @@ Este repositório reúne o material produzido ao longo das aulas da disciplina *
   _Explicações simplificadas com fluxos e exemplos visuais._
 - 🌟 **Resumo IV** — [Super Fácil & Super Visual](aulas/ResumoProva02Visual2.md)
   _Versão para quem precisa de máxima clareza e aprendizado rápido._
+
+## ❗ Terceiro Trimestre
+
+📌 O **terceiro trimestre** será avaliado através de um **projeto prático**:  
+uma aplicação **Java Desktop** que valerá a **nota final do trimestre**.
+
+👉 Acesse os arquivos do projeto aqui: [📂 projeto/](projeto/)
 
 ## 🔎 Observações
 
