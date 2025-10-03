@@ -4,7 +4,7 @@ Projeto de um jogo casual de captura de Pokémons, com progressão por coleção
 
 [![status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](#sumário)
 [![stack](https://img.shields.io/badge/stack-Java-5382a1)](#sumário)
-[![versão](https://img.shields.io/badge/versão-0.1-blue)](#changelog)
+[![versão](https://img.shields.io/badge/versão-0.2-blue)](#changelog)
 
 ---
 
@@ -19,6 +19,9 @@ Projeto de um jogo casual de captura de Pokémons, com progressão por coleção
   - [Roadmap e Cronograma](#roadmap-e-cronograma)
   - [Arquitetura e Camadas](#arquitetura-e-camadas)
   - [Estrutura de Dados](#estrutura-de-dados)
+    - [Pokemon](#pokemon)
+    - [Treinador](#treinador)
+    - [Raridade](#raridade)
   - [Controladores](#controladores)
   - [Como Executar](#como-executar)
   - [Imagem das Telas](#imagem-das-telas)
@@ -36,9 +39,9 @@ O PokéDraw é um jogo em que cada rodada apresenta 3 opções de Pokémons. O j
 - Cada Pokémon possui chance própria de captura.
 - A pontuação varia por Pokémon e por dificuldade.
 - Os Pokémons capturados podem ser vendidos para comprar novas Pokébolas.
-- Há rankings competitivos de melhor coleção atual e melhor histórico.
+- Há rankings competitivo.
 
-Objetivo: maximizar sua coleção e/ou seu histórico de capturas, equilibrando risco, recompensa e recursos.
+Objetivo: maximizar sua coleção, equilibrando risco, recompensa e recursos.
 
 ---
 
@@ -51,11 +54,8 @@ Objetivo: maximizar sua coleção e/ou seu histórico de capturas, equilibrando 
   - Multiplicadores por streak, perfeição de jogada ou eventos in-game (a definir).
 - Economia:
   - Venda Pokémons repetidos/estratégicos para obter moedas.
-  - Compre Pokébolas (diferentes efeitos e chances).
 - Progressão:
   - Coleção ativa (inventário atual).
-  - Histórico global (somatório de tudo que já capturou).
-- Falha na captura: não pontua, mas pode gerar pequenas recompensas ou aumentar chance futura (a confirmar em balanceamento).
 
 ---
 
@@ -99,7 +99,28 @@ Em breve!
 
 ## Estrutura de Dados
 
-Em breve!
+### Pokemon
+
+Gerador: [Pokemons.java](./java/utils/Pokemons.java)
+
+```cmd
+Iniciando criação de Pokémons de 1 a 100...
+Processo concluído. Total válido: 100
+Pok�mons salvos no banco: 100
+```
+
+Modelo do Pokemon: [Pokemon.java](./java/model/Pokemon.java)
+![pikachu](./img/pikachu.png)
+
+### Treinador
+
+Modelo: [Treinador.java](./java/model/Treinador.java)
+![treinador](./img/treinador.png)
+
+### Raridade
+
+Modelo: [Raridade.java](./java/model/Raridade.java)
+![raridade](./img/raridades.png)
 
 ---
 
@@ -135,9 +156,10 @@ Possivelmente haverá diversas mudanças ao longo do projeto, mas a ideia é man
 
 ## Changelog
 
-Versão atual: 0.1
+Versão atual: 0.2
 
 - 0.1 – Definição da base (visão geral, arquitetura proposta, cronograma)
+- 0.2 - Estruturação dos Dados (Pokemon, Treinador, Raridades)
 
 ---
 
