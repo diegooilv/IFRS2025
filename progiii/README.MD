@@ -165,6 +165,8 @@ uma aplicação **Java Desktop** que valerá a **nota final do trimestre**.
 
 👉 Acesse os arquivos do projeto aqui: [📂 projeto/](projeto/)
 
+👉 Acesse alguns templates de base pra criação do projeto[**📘 Templates**](./aulas/Templates.md)
+
 ## 🔎 Observações
 
 > Todos os materiais presentes neste repositório — incluindo códigos-fonte, estruturas de projeto e arquivos de documentação — foram desenvolvidos de forma **autônoma**, com base nos conteúdos teóricos apresentados em aula.
