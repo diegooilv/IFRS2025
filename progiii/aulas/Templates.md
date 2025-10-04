@@ -108,7 +108,7 @@ Neste método, o ícone inicial é definido nas propriedades do componente.
 Este método **redimensiona a imagem** para um tamanho fixo, usando o ícone que _já está carregado_ no `JLabel`.
 
 ```java
-private void setSizeImage(int width, int height) {
+private void setSizeImage(int width, int height, JLabel jLabelImage) {
     // É crucial verificar se o JLabel possui um ícone para evitar NullPointerException.
     if (jLabelImagem.getIcon() != null) {
 
