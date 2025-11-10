@@ -41,9 +41,20 @@ Todo o material foi elaborado de forma **autônoma**, com base em **fontes públ
 
 ---
 
-## 🧠 Terceiro Trimestre: JavaScript
+## 🧠 Terceiro Trimestre: JavaScript + JQuery
 
-📌 Em breve.
+### JS
+
+- [Manipulando HTML com JavaScript](js/extra/Manipulando-html-com-js.md)
+
+### JQuery
+
+- [Introdução](js/JQuery01.md)
+- [Manipulando DOM](js/JQuery02.md)
+- [Eventos de Formulário](js/JQuery03.md)
+- [Tratamento de Arquivos (FileReader)](js/JQuery04.md)
+- [Remoção Dinâmica de Elementos](js/JQuery05.md)
+- [Filtro](js/JQuery06.md)
 
 ---
 

@@ -233,10 +233,6 @@ public void mudarTela() {
 
 ---
 
-Este é um template **excelente** para persistência de dados via serialização em Java. A lógica está completa, é robusta (com verificação de arquivo/diretório) e segue o padrão **DAO**.
-
----
-
 ## 💾 Persistência de Dados via Serialização (Padrão DAO)
 
 Existem diversas maneiras de persistir (salvar) dados em Java. Para projetos de desktop que não exigem um banco de dados completo, a **serialização** é uma solução simples e eficaz.

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Itens com jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        :root {
+            --primary: #0077cc;
+            --danger: #d33;
+            --border: #ddd;
+            --bg-light: #f9f9f9;
+            --text-muted: #666;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            background: var(--bg-light);
+        }
+
+        h1,
+        h2 {
+            color: var(--primary);
+        }
+
+        form,
+        .controls {
+            margin-bottom: 16px;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        input[type="text"],
+        select {
+            padding: 6px 8px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 720px;
+        }
+
+        li {
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 6px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            transition: transform 0.1s ease;
+        }
+
+        li:hover {
+            transform: scale(1.01);
+        }
+
+        .meta {
+            color: var(--text-muted);
+            margin-left: 6px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        a.remove {
+            color: var(--danger);
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 12px;
+        }
+
+        a.remove:hover {
+            text-decoration: underline;
+        }
+
+        .item-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .empty {
+            color: var(--text-muted);
+            font-style: italic;
+            padding: 10px;
+        }
+
+        pre {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            max-width: 720px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript (jQuery)</h1>
+        <p>Exemplo prático: sistema simples de gerenciamento de itens com adicionar, remover e filtro por categoria.</p>
+    </header>
+    <section class="controls">
+        <form id="add-form">
+            <input type="text" id="item-name" placeholder="Nome do item" required>
+            <select id="item-category" required>
+                <option value="">Selecione categoria</option>
+                <option value="frutas">Frutas</option>
+                <option value="verduras">Verduras</option>
+                <option value="laticinios">Laticínios</option>
+                <option value="bebidas">Bebidas</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+        <label for="filter">Filtrar por categoria:</label>
+        <select id="filter">
+            <option value="all">Mostrar todos</option>
+        </select>
+    </section>
+    <ul id="item-list">
+        <li data-category="frutas">
+            <div class="item-left">
+                <strong>Maçã</strong><span class="meta">(frutas)</span>
+            </div>
+            <a href="#" class="remove">Remover</a>
+        </li>
+        <li data-category="verduras">
+            <div class="item-left">
+                <strong>Alface</strong><span class="meta">(verduras)</span>
+            </div>
+            <a href="#" class="remove">Remover</a>
+        </li>
+        <li data-category="laticinios">
+            <div class="item-left">
+                <strong>Leite</strong><span class="meta">(laticínios)</span>
+            </div>
+            <a href="#" class="remove">Remover</a>
+        </li>
+    </ul>
+    <p id="empty-msg" class="empty" style="display:none;">Nenhum item para exibir.</p>
+    <hr>
+    <section>
+        <h2>Exemplo Básico de jQuery</h2>
+        <p>Para usar jQuery, basta incluir a biblioteca e manipular elementos de forma simples. Exemplo:</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Exemplo jQuery&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").toggle();
+      });
+    });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;button&gt;Clique para mostrar/ocultar o parágrafo&lt;/button&gt;
+  &lt;p&gt;Este é um parágrafo que pode ser mostrado ou ocultado.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+        <p> Neste exemplo, o método <code>toggle()</code> é usado para alternar a exibição do parágrafo ao clicar no
+            botão. </p>
+    </section>
+    <script src="js/20102025.js"></script>
+</body>
+
+</html>

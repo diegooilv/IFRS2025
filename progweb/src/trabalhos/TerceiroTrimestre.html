@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f2f4f8;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+
+        input[type="file"] {
+            border: none;
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 18px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            transition: background-color 0.2s, transform 0.1s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .lista-produtos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .produto {
+            width: 200px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .produto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .produto img {
+            max-width: 150px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .produto p {
+            margin: 6px 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .produto button {
+            background-color: #dc3545;
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 8px 0;
+            margin-top: 10px;
+        }
+
+        .produto button:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container" role="region" aria-labelledby="add-product-heading">
+            <h2 id="add-product-heading">Adicionar Produto</h2>
+            <form action="#" method="post"> <label for="nome-produto">Nome do produto:</label>
+                <input type="text" id="nome-produto" placeholder="Digite o nome do produto" required>
+                <label for="imagem-produto">Imagem do produto:</label>
+                <input type="file" id="imagem-produto" accept="image/*">
+                <label for="preco-produto">Preço do produto (R$):</label>
+                <input type="number" id="preco-produto" step="0.01" min="0.01" placeholder="Ex: 49.90" required>
+                <label for="categoria-cadastro">Categoria do produto:</label>
+                <select id="categoria-cadastro" title="Selecione a categoria para cadastro" required>
+                    <option value="todos">Todos</option>
+                    <optgroup label="💻 Tecnologia">
+                        <option value="eletronicos">Eletrônicos</option>
+                        <option value="informatica">Informática</option>
+                        <option value="celulares">Celulares</option>
+                        <option value="eletrodomesticos">Eletrodomésticos</option>
+                        <option value="games">Games</option>
+                    </optgroup>
+                    <optgroup label="👕 Moda e Estilo">
+                        <option value="roupas">Roupas</option>
+                        <option value="calcados">Calçados</option>
+                        <option value="acessorios">Acessórios</option>
+                        <option value="beleza">Beleza e Cuidados Pessoais</option>
+                    </optgroup>
+                    <optgroup label="🏠 Casa e Jardim">
+                        <option value="moveis">Móveis</option>
+                        <option value="decoracao">Decoração</option>
+                        <option value="jardinagem">Jardinagem</option>
+                        <option value="limpeza">Produtos de Limpeza</option>
+                    </optgroup>
+                    <optgroup label="🛒 Supermercado">
+                        <option value="alimentos">Alimentos</option>
+                        <option value="bebidas">Bebidas</option>
+                        <option value="saude">Saúde</option>
+                    </optgroup>
+                    <optgroup label="🚗 Utilidades e Serviços">
+                        <option value="automotivo">Automotivo</option>
+                        <option value="ferramentas">Ferramentas</option>
+                        <option value="petshop">Pet Shop</option>
+                    </optgroup>
+                    <optgroup label="📚 Cultura e Lazer">
+                        <option value="livros">Livros</option>
+                        <option value="papelaria">Papelaria</option>
+                        <option value="brinquedos">Brinquedos</option>
+                        <option value="filmes">Filmes e Séries</option>
+                        <option value="musica">Música</option>
+                        <option value="esportes">Esportes e Lazer</option>
+                    </optgroup>
+                </select>
+                <button type="submit">Adicionar Produto</button>
+            </form>
+        </div>
+        <br>
+        <div class="produtos" role="region" aria-labelledby="product-list-heading">
+            <h2 id="product-list-heading">Produtos Cadastrados</h2>
+            <label for="categoria-filtro">Mostrar produtos da categoria:</label>
+            <select id="categoria-filtro" title="Filtrar produtos por categoria">
+                <option value="todos">Todos</option>
+                <optgroup label="💻 Tecnologia">
+                    <option value="eletronicos">Eletrônicos</option>
+                    <option value="informatica">Informática</option>
+                    <option value="celulares">Celulares</option>
+                    <option value="eletrodomesticos">Eletrodomésticos</option>
+                    <option value="games">Games</option>
+                </optgroup>
+                <optgroup label="👕 Moda e Estilo">
+                    <option value="roupas">Roupas</option>
+                    <option value="calcados">Calçados</option>
+                    <option value="acessorios">Acessórios</option>
+                    <option value="beleza">Beleza e Cuidados Pessoais</option>
+                </optgroup>
+                <optgroup label="🏠 Casa e Jardim">
+                    <option value="moveis">Móveis</option>
+                    <option value="decoracao">Decoração</option>
+                    <option value="jardinagem">Jardinagem</option>
+                    <option value="limpeza">Produtos de Limpeza</option>
+                </optgroup>
+                <optgroup label="🛒 Supermercado">
+                    <option value="alimentos">Alimentos</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="saude">Saúde</option>
+                </optgroup>
+                <optgroup label="🚗 Utilidades e Serviços">
+                    <option value="automotivo">Automotivo</option>
+                    <option value="ferramentas">Ferramentas</option>
+                    <option value="petshop">Pet Shop</option>
+                </optgroup>
+                <optgroup label="📚 Cultura e Lazer">
+                    <option value="livros">Livros</option>
+                    <option value="papelaria">Papelaria</option>
+                    <option value="brinquedos">Brinquedos</option>
+                    <option value="filmes">Filmes e Séries</option>
+                    <option value="musica">Música</option>
+                    <option value="esportes">Esportes e Lazer</option>
+                </optgroup>
+            </select>
+            <div class="lista-produtos"></div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
