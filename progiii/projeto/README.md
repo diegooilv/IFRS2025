@@ -1,170 +1,212 @@
-# PokéDraw
+# 🎴 PokéDraw
 
-Projeto de um jogo casual de captura de Pokémons, com progressão por coleção, economia simples e rankings competitivos.
+Projeto de um **jogo casual de captura de Pokémons**, focado em progressão por coleção, economia simplificada e rankings competitivos.
+O jogo combina **sorte, estratégia e gerenciamento de recursos**, oferecendo partidas rápidas e rejogáveis.
 
-[![status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](#sumário)
-[![stack](https://img.shields.io/badge/stack-Java-5382a1)](#sumário)
-[![versão](https://img.shields.io/badge/versão-0.2-blue)](#changelog)
+[![stack](https://img.shields.io/badge/stack-Java-5382a1)](#arquitetura-e-camadas)
 
 ---
 
-## Sumário
+## 📌 Sumário
 
-- [PokéDraw](#pokédraw)
-  - [Sumário](#sumário)
-  - [Visão Geral](#visão-geral)
-  - [Mecânicas Principais](#mecânicas-principais)
-  - [Conteúdo](#conteúdo)
-  - [Leaderboards](#leaderboards)
-  - [Roadmap e Cronograma](#roadmap-e-cronograma)
-  - [Arquitetura e Camadas](#arquitetura-e-camadas)
-  - [Estrutura de Dados](#estrutura-de-dados)
+- [🎴 PokéDraw](#-pokédraw)
+  - [📌 Sumário](#-sumário)
+  - [🎮 Visão Geral](#-visão-geral)
+  - [🧩 Mecânicas Principais](#-mecânicas-principais)
+  - [📦 Conteúdo](#-conteúdo)
+  - [🏆 Leaderboards](#-leaderboards)
+  - [🗺️ Roadmap e Cronograma](#️-roadmap-e-cronograma)
+  - [🏗️ Arquitetura e Camadas](#️-arquitetura-e-camadas)
+  - [🗃️ Estrutura de Dados](#️-estrutura-de-dados)
     - [Pokemon](#pokemon)
     - [Treinador](#treinador)
     - [Raridade](#raridade)
-  - [Controladores](#controladores)
-  - [Como Executar](#como-executar)
-  - [Imagem das Telas](#imagem-das-telas)
-  - [Imagens do Funcionamento](#imagens-do-funcionamento)
-  - [Mudanças](#mudanças)
-  - [Changelog](#changelog)
-  - [Contribuição](#contribuição)
+  - [🎛️ Controladores](#️-controladores)
+  - [▶️ Como Executar](#️-como-executar)
+  - [🖼️ Imagens das Telas](#️-imagens-das-telas)
 
 ---
 
-## Visão Geral
+## 🎮 Visão Geral
 
-O PokéDraw é um jogo em que cada rodada apresenta 3 opções de Pokémons. O jogador deve lançar uma Pokébola em um deles. A experiência combina sorte e habilidade:
+O **PokéDraw** é um jogo baseado em rodadas onde, a cada turno, o jogador recebe **3 opções de Pokémons**.
+O objetivo é escolher estrategicamente um deles e tentar capturá-lo, equilibrando risco e recompensa.
 
-- Cada Pokémon possui chance própria de captura.
-- A pontuação varia por Pokémon e por dificuldade.
-- Os Pokémons capturados podem ser vendidos para comprar novas Pokébolas.
-- Há rankings competitivo.
+Características centrais:
 
-Objetivo: maximizar sua coleção, equilibrando risco, recompensa e recursos.
+- Cada Pokémon possui **chance própria de captura**
+- A **pontuação varia** conforme espécie, raridade e contexto da jogada
+- Pokémons capturados podem ser **vendidos** para financiar novas tentativas
+- Sistema de **ranking competitivo**
 
----
-
-## Mecânicas Principais
-
-- Escolha por rodada: 3 Pokémons exibidos, capture 1.
-- Chances de captura: definidas por espécie/raridade e tipo de Pokébola.
-- Pontuação:
-  - Base por espécie/raridade.
-  - Multiplicadores por streak, perfeição de jogada ou eventos in-game (a definir).
-- Economia:
-  - Venda Pokémons repetidos/estratégicos para obter moedas.
-- Progressão:
-  - Coleção ativa (inventário atual).
+🎯 **Objetivo final:** maximizar sua coleção e pontuação através de decisões inteligentes e boa gestão de recursos.
 
 ---
 
-## Conteúdo
+## 🧩 Mecânicas Principais
 
-- Primeira versão: 10–100 Pokémons.
-- Tipos de Pokébolas: padrão + variações.
-- Raridades: Comum, Incomum, Raro, Épico, Lendário.
-- Loja simples: compra de Pokébolas; venda de Pokémons da coleção.
+- **Escolha por rodada**
+  A cada rodada, o jogador pode tentar capturar **1 entre 3 Pokémons** exibidos.
 
----
+- **Chances de captura**
 
-## Leaderboards
+  - Definidas por:
 
-Em breve!
+    - Espécie do Pokémon
+    - Raridade
+    - Tipo de Pokébola utilizada
 
----
+- **Sistema de Pontuação**
 
-## Roadmap e Cronograma
+  - Pontuação base por Pokémon
+  - Multiplicadores por:
 
-Início: 19/09/2025  
-Previsão de término: primeiros 10 dias de novembro
+    - Streaks de captura
+    - Jogadas perfeitas
+    - Eventos in-game _(a definir)_
 
-- Semana I: Criação das telas
-- Semana II: Organização das estruturas de dados (gerar lista de Pokémons e estruturar dados dos treinadores)
-- Semana III: Criação dos modelos e integração dos dados (JSON → objetos Java)
-- Semana IV: Mecânica do jogo + controller da tela (regras de negócio)
-- Semana V: Aprimoramento do controller + controller dos leaderboards
-- Semana VI: Testes e balanceamentos
-- Semana VII: Finalização do projeto (hardening, empacotamento e entrega)
+- **Economia**
 
-Status de cada item será marcado ao longo do desenvolvimento.
+  - Venda de Pokémons repetidos ou estratégicos
+  - Compra de novas Pokébolas
 
----
+- **Progressão**
 
-## Arquitetura e Camadas
-
-Em breve!
+  - Coleção ativa de Pokémons capturados
+  - Evolução focada em consistência e eficiência
 
 ---
 
-## Estrutura de Dados
+## 📦 Conteúdo
+
+- **Quantidade inicial:** 10–100 Pokémons
+
+- **Tipos de Pokébolas:** padrão + variações
+
+- **Sistema de raridade:**
+
+  - Comum
+  - Incomum
+  - Raro
+  - Épico
+  - Lendário
+
+- **Loja básica**
+
+  - Compra de Pokébolas (Automático)
+  - Venda de Pokémons da coleção
+
+---
+
+## 🏆 Leaderboards
+
+🔜 Implementação futura.
+
+Os rankings terão foco em:
+
+- Pontuação total
+- Eficiência de captura
+- Progressão ao longo do tempo
+
+---
+
+## 🗺️ Roadmap e Cronograma
+
+**Início:** 19/09/2025
+**Previsão de entrega:** primeiros 10 dias de novembro
+
+| Semana | Atividade                                  |
+| ------ | ------------------------------------------ |
+| I      | Criação das telas                          |
+| II     | Organização das estruturas de dados        |
+| III    | Modelos e integração (JSON → objetos Java) |
+| IV     | Mecânica principal do jogo                 |
+| V      | Controllers avançados e leaderboards       |
+| VI     | Testes e balanceamento                     |
+| VII    | Finalização, hardening e empacotamento     |
+
+O status de cada etapa será atualizado ao longo do desenvolvimento.
+
+---
+
+## 🏗️ Arquitetura e Camadas
+
+O projeto segue o padrão **MVC (Model–View–Controller)**:
+
+- **Model**
+  Representação das entidades e regras de domínio
+
+- **View**
+  Camada responsável pela interface gráfica
+
+- **Controller**
+  Coordenação da lógica do jogo e fluxo entre Model e View
+
+---
+
+## 🗃️ Estrutura de Dados
 
 ### Pokemon
 
-Gerador: [Pokemons.java](./java/utils/Pokemons.java)
+Gerador automático:
+📄 [`Pokemons.java`](./java/utils/Pokemons.java)
 
-```cmd
+```text
 Iniciando criação de Pokémons de 1 a 100...
 Processo concluído. Total válido: 100
-Pok�mons salvos no banco: 100
+Pokémons salvos no banco: 100
 ```
 
-Modelo do Pokemon: [Pokemon.java](./java/model/Pokemon.java)
+Modelo:
+📄 [`Pokemon.java`](./java/model/Pokemon.java)
+
 ![pikachu](./img/pikachu.png)
+
+---
 
 ### Treinador
 
-Modelo: [Treinador.java](./java/model/Treinador.java)
+Modelo responsável pelos dados do jogador:
+📄 [`Treinador.java`](./java/model/Treinador.java)
+
 ![treinador](./img/treinador.png)
+
+---
 
 ### Raridade
 
-Modelo: [Raridade.java](./java/model/Raridade.java)
+Enumeração de raridades e seus modificadores:
+📄 [`Raridade.java`](./java/model/Raridade.java)
+
 ![raridade](./img/raridades.png)
 
 ---
 
-## Controladores
+## 🎛️ Controladores
 
-Em breve!
+🔜 Em desenvolvimento.
 
----
+Responsáveis por:
 
-## Como Executar
-
-Em breve!
-
----
-
-## Imagem das Telas
-
-Em breve!
+- Controle das rodadas
+- Aplicação das regras de captura
+- Atualização da economia e pontuação
+- Integração com os rankings
 
 ---
 
-## Imagens do Funcionamento
+## ▶️ Como Executar
 
-Em breve!
-
----
-
-## Mudanças
-
-Possivelmente haverá diversas mudanças ao longo do projeto, mas a ideia é manter o que há na primeira versão deste arquivo como base e refinar de forma incremental.
+```bash
+java -jar PokeEscolha.jar
+```
 
 ---
 
-## Changelog
+## 🖼️ Imagens das Telas
 
-Versão atual: 0.2
-
-- 0.1 – Definição da base (visão geral, arquitetura proposta, cronograma)
-- 0.2 - Estruturação dos Dados (Pokemon, Treinador, Raridades)
-
----
-
-## Contribuição
-
-Em breve!
-
----
+![Tela Inicial](img/img1.png)
+![Tela Login](img/img2.png)
+![Tela Jogo](img/img3.png)
+![Tela Ranking](img/img4.png)
+![Tela Adivinhação](img/img5.png)

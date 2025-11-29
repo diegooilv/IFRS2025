@@ -165,7 +165,7 @@ uma aplicação **Java Desktop** que valerá a **nota final do trimestre**.
 
 👉 Acesse os arquivos do projeto aqui: [📂 projeto/](projeto/)
 
-👉 Acesse alguns templates de base pra criação do projeto[**📘 Templates**](./aulas/Templates.md)
+👉 Acesse alguns templates de base pra criação do projeto [📘 Templates](./aulas/Templates.md)
 
 ## 🔎 Observações
 
