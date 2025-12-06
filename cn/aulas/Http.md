@@ -1,126 +1,73 @@
-# Protocolo HTTP
+# 🔗 Protocolo HTTP
 
-## Introdução
-
-O **HTTP (Hypertext Transfer Protocol)** é o protocolo padrão da Web, utilizado para a comunicação entre **clientes** (como navegadores) e **servidores web**. Ele permite a troca de recursos como páginas HTML, imagens, vídeos, arquivos e dados em geral.
-
-HTTP opera na **camada de aplicação** do modelo TCP/IP e usa o **protocolo TCP** como transporte. É um protocolo **sem estado**, baseado no modelo **cliente-servidor**, e geralmente utiliza a **porta 80**.
+## 1. Visão Geral
+O **HTTP (Hypertext Transfer Protocol)** é um protocolo de camada de aplicação para sistemas de informação distribuídos e colaborativos. É a base da comunicação de dados na World Wide Web.
 
 ---
 
-## Características do HTTP
+## 2. Ciclo de Vida da Requisição
 
-- **Texto puro (legível):** As mensagens HTTP são baseadas em texto, facilitando a leitura e o uso por desenvolvedores.
-- **Sem estado (stateless):** O protocolo não mantém informações entre requisições. Cada requisição é independente.
-- **Cliente-servidor:** O cliente faz a requisição; o servidor processa e responde.
-- **Flexível:** Suporta diferentes métodos, formatos de dados e extensões como cookies e cache.
+```mermaid
+sequenceDiagram
+    participant Cliente (Browser)
+    participant Servidor
 
----
-
-## Estrutura da Comunicação
-
-### Requisição HTTP (cliente → servidor)
-
-Uma requisição típica contém:
-
-```
-[Método] [Recurso/URI] [Versão do HTTP]
-Cabeçalhos
-[Corpo - opcional]
-```
-
-**Exemplo:**
-
-```
-GET /index.html HTTP/1.1
-Host: www.exemplo.com
-User-Agent: Mozilla/5.0
+    Cliente->>Servidor: TCP SYN
+    Servidor-->>Cliente: TCP SYN-ACK
+    Cliente->>Servidor: TCP ACK
+    Note right of Cliente: Conexão Estabelecida (3-Way Handshake)
+    
+    Cliente->>Servidor: HTTP GET /index.html
+    Servidor-->>Cliente: HTTP 200 OK (Conteúdo HTML)
+    
+    Cliente->>Servidor: HTTP GET /style.css
+    Servidor-->>Cliente: HTTP 200 OK (Conteúdo CSS)
 ```
 
 ---
 
-### Resposta HTTP (servidor → cliente)
+## 3. Métodos e Status
 
-```
-[Versão do HTTP] [Código de Status] [Mensagem]
-Cabeçalhos
-[Corpo - opcional]
-```
+### 3.1. Métodos Principais
+- **GET:** Recupera dados. Idempotente (pode repetir sem efeito colateral).
+- **POST:** Envia dados para processamento (ex: formulário). Não idempotente.
+- **PUT:** Substitui o recurso alvo.
+- **DELETE:** Remove o recurso.
+- **HEAD:** Igual ao GET, mas sem corpo (só headers).
 
-**Exemplo:**
-
-```
-HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 512
-
-<html>...</html>
-```
+### 3.2. Códigos de Status
+- **2xx (Sucesso):** 200 OK, 201 Created.
+- **3xx (Redirecionamento):** 301 Moved Permanently, 304 Not Modified (Cache).
+- **4xx (Erro Cliente):** 400 Bad Request, 401 Unauthorized, 404 Not Found.
+- **5xx (Erro Servidor):** 500 Internal Server Error, 503 Service Unavailable.
 
 ---
 
-## Métodos HTTP
+## 4. Cache e Cookies
 
-| Método      | Uso Principal                                                             |
-| ----------- | ------------------------------------------------------------------------- |
-| **GET**     | Solicita dados do servidor. Usado para recuperar recursos.                |
-| **POST**    | Envia dados ao servidor, geralmente para criação ou envio de formulários. |
-| **PUT**     | Atualiza completamente um recurso.                                        |
-| **PATCH**   | Atualiza parcialmente um recurso.                                         |
-| **DELETE**  | Remove um recurso.                                                        |
-| **HEAD**    | Igual ao GET, mas retorna apenas os cabeçalhos.                           |
-| **OPTIONS** | Descobre os métodos suportados para um recurso.                           |
+### 4.1. Cache HTTP
+Mecanismo para armazenar cópias de respostas para reuso.
+- **Cache-Control:** Header principal.
+    - `no-store`: Não armazenar nada.
+    - `no-cache`: Validar com servidor antes de usar (ETag).
+    - `max-age=3600`: Válido por 1 hora.
 
----
-
-## Códigos de Status HTTP
-
-| Código | Categoria        | Significado Básico                      |
-| ------ | ---------------- | --------------------------------------- |
-| 1xx    | Informativo      | Processamento iniciado                  |
-| 2xx    | Sucesso          | A requisição foi bem-sucedida           |
-| 3xx    | Redirecionamento | Recurso movido ou redirecionado         |
-| 4xx    | Erro do Cliente  | Requisição mal formulada ou inválida    |
-| 5xx    | Erro do Servidor | Falha interna ao processar a requisição |
-
-**Exemplos comuns:**
-
-- **200 OK**: Requisição bem-sucedida.
-- **301 Moved Permanently**: Redirecionamento permanente.
-- **404 Not Found**: Recurso não encontrado.
-- **500 Internal Server Error**: Erro interno no servidor.
+### 4.2. Cookies
+Pequenos dados armazenados no navegador para manter estado (Sessão).
+- **Set-Cookie:** Servidor envia para o cliente.
+- **Cookie:** Cliente envia de volta em toda requisição subsequente.
+- **HttpOnly:** Impede acesso via JavaScript (segurança XSS).
+- **Secure:** Só envia via HTTPS.
 
 ---
 
-## Versões do HTTP
-
-| Versão       | Principais Características                                                 |
-| ------------ | -------------------------------------------------------------------------- |
-| **HTTP/1.0** | Conexões encerradas a cada requisição.                                     |
-| **HTTP/1.1** | Suporte a conexões persistentes (`keep-alive`), cache, headers otimizados. |
-| **HTTP/2**   | Multiplexação de requisições, compressão de cabeçalhos, binário.           |
-| **HTTP/3**   | Utiliza o protocolo **QUIC** ao invés de TCP para reduzir latência.        |
+## 5. Versões
+- **HTTP/1.1:** Persistência (Keep-Alive), Pipelining.
+- **HTTP/2:** Multiplexação (vários requests na mesma conexão TCP), Compressão de Header (HPACK), Server Push.
+- **HTTP/3:** Baseado em QUIC (UDP), elimina Head-of-Line Blocking do TCP.
 
 ---
 
-## Ferramentas para Trabalhar com HTTP
-
-- **curl** – Faz requisições HTTP via terminal:
-  ```bash
-  curl -v http://www.exemplo.com
-  ```
-- **Inspecionar Elemento no Navegador** – Aba "Network" mostra todas as requisições HTTP.
-- **Postman** – Interface gráfica para testar APIs.
-
----
-
-## Conclusão
-
-O protocolo HTTP é a base da comunicação na Web. Apesar de ser simples, ele é extremamente poderoso, permitindo uma ampla gama de aplicações, desde páginas estáticas até APIs REST complexas. O conhecimento detalhado de como HTTP funciona é fundamental para qualquer desenvolvedor, administrador de redes ou profissional da área de tecnologia.
-
----
-
-## Nota Final
-
-> Este material foi produzido de forma autônoma com base em conhecimentos amplamente disponíveis na literatura técnica e em fontes públicas da internet, como RFCs (Request for Comments), documentação oficial, artigos educativos e materiais didáticos de livre acesso.  
-Seu uso é livre para fins de estudo e disseminação do conhecimento.
+## 6. Referências
+- **RFC 7230-7235:** HTTP/1.1.
+- **RFC 7540:** HTTP/2.

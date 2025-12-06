@@ -1,160 +1,62 @@
-# Entendendo o IP (Internet Protocol)
+# 📦 Protocolo IP (Internet Protocol)
 
-O **Internet Protocol (IP)** é um protocolo da **Camada de Rede** do modelo OSI, responsável pelo **endereçamento**, **fragmentação** e **roteamento** de pacotes de dados entre dispositivos em uma rede.
-
----
-
-## 📚 Índice
-
-- [Entendendo o IP (Internet Protocol)](#entendendo-o-ip-internet-protocol)
-  - [📚 Índice](#-índice)
-  - [🧩 O que é o IP?](#-o-que-é-o-ip)
-  - [🧱 Camada de Rede](#-camada-de-rede)
-  - [🌐 Versões do IP: IPv4 vs IPv6](#-versões-do-ip-ipv4-vs-ipv6)
-    - [IPv4](#ipv4)
-    - [IPv6](#ipv6)
-  - [🧭 Endereçamento IP](#-endereçamento-ip)
-  - [🧮 Sub-redes e Máscara de Sub-rede](#-sub-redes-e-máscara-de-sub-rede)
-  - [🔢 CIDR (Classless Inter-Domain Routing)](#-cidr-classless-inter-domain-routing)
-  - [🔁 NAT (Network Address Translation)](#-nat-network-address-translation)
-  - [🧭 Roteamento IP](#-roteamento-ip)
-  - [🛡️ IP e Segurança](#️-ip-e-segurança)
-  - [📌 Resumo](#-resumo)
-  - [🔗 Recursos adicionais](#-recursos-adicionais)
+## 1. Visão Geral
+O IP (RFC 791) é o protocolo de datagrama da camada de rede da Internet. Ele define o esquema de endereçamento e o formato dos pacotes. É um protocolo de **melhor esforço** (best effort), ou seja, não garante entrega.
 
 ---
 
-## 🧩 O que é o IP?
+## 2. Cabeçalho IPv4
 
-O **IP** é usado para:
+O cabeçalho IPv4 tem tamanho variável (mínimo 20 bytes).
 
-- Identificar dispositivos em uma rede (através de **endereços IP**);
-- **Roteamento** de pacotes entre redes diferentes;
-- Gerenciamento de pacotes (fragmentação e remontagem).
+| Bit 0-3 | Bit 4-7 | Bit 8-15 | Bit 16-31 |
+| :---: | :---: | :---: | :---: |
+| **Versão** (4) | **IHL** (Tam. Cabeçalho) | **TOS** (Tipo de Serviço) | **Comprimento Total** (Bytes) |
+| **Identificação** (16 bits) | | **Flags** (3 bits) | **Offset do Fragmento** (13 bits) |
+| **TTL** (Time to Live) | **Protocolo** (TCP=6, UDP=17) | **Checksum do Cabeçalho** | |
+| **Endereço IP de Origem** (32 bits) | | | |
+| **Endereço IP de Destino** (32 bits) | | | |
+| **Opções** (se IHL > 5) | | | **Padding** |
 
----
-
-## 🧱 Camada de Rede
-
-No modelo **OSI**, o IP se encontra na **Camada 3 (Rede)**:
-
-- Camada 1 – Física
-- Camada 2 – Enlace de Dados
-- **Camada 3 – Rede (IP, ICMP, ARP)**
-- Camada 4 – Transporte (TCP, UDP)
-- Camada 5–7 – Sessão, Apresentação, Aplicação
+### 2.1. Campos Importantes
+- **TTL:** Contador decrementado a cada roteador. Se chegar a 0, o pacote é descartado (evita loops infinitos).
+- **Protocolo:** Indica qual protocolo da camada superior deve receber os dados (6=TCP, 17=UDP, 1=ICMP).
+- **Checksum:** Verifica apenas a integridade do cabeçalho (não dos dados).
 
 ---
 
-## 🌐 Versões do IP: IPv4 vs IPv6
+## 3. Endereçamento IPv4
 
-### IPv4
+Um endereço IPv4 tem 32 bits, geralmente representado em notação decimal pontuada (ex: `192.168.1.1`).
 
-- Tamanho: 32 bits (4 bytes)
-- Formato: decimal, ex: `192.168.1.1`
-- Espaço total: ~4,3 bilhões de endereços
-- Fragmentação: permitida
+### 3.1. Classes de Endereços (Histórico)
+Originalmente, os IPs eram divididos em classes fixas:
+- **Classe A:** `0.0.0.0` - `127.255.255.255` (/8) - Grandes redes.
+- **Classe B:** `128.0.0.0` - `191.255.255.255` (/16) - Redes médias.
+- **Classe C:** `192.0.0.0` - `223.255.255.255` (/24) - Pequenas redes.
+- **Classe D:** Multicast.
+- **Classe E:** Experimental.
 
-### IPv6
+*Hoje, utiliza-se CIDR (Classless Inter-Domain Routing) em vez de classes fixas.*
 
-- Tamanho: 128 bits
-- Formato: hexadecimal, ex: `2001:0db8:85a3::8a2e:0370:7334`
-- Espaço total: ~3.4×10³⁸ endereços
-- Fragmentação: não feita por roteadores (responsabilidade do host)
-
----
-
-## 🧭 Endereçamento IP
-
-Cada dispositivo em uma rede possui um **endereço IP único**. Estrutura:
-
-- **Endereço de Rede**: identifica a rede
-- **Endereço de Host**: identifica o dispositivo dentro da rede
-
-Exemplo IPv4:  
-Com máscara `255.255.255.0` (ou `/24`), o IP `192.168.1.10` tem:
-
-- Rede: `192.168.1.0`
-- Host: `.10`
+### 3.2. Endereços Especiais
+- **Loopback:** `127.0.0.0/8` (ex: `127.0.0.1` - localhost).
+- **Privados (RFC 1918):** Não roteáveis na Internet pública.
+    - `10.0.0.0/8`
+    - `172.16.0.0/12`
+    - `192.168.0.0/16`
 
 ---
 
-## 🧮 Sub-redes e Máscara de Sub-rede
+## 4. Fragmentação e Remontagem
 
-A **máscara de sub-rede** define a divisão entre os bits da rede e os bits do host.
-
-Exemplo:
-
-- IP: `192.168.1.10`
-- Máscara: `255.255.255.0` (ou `/24`)
-- Intervalo possível de hosts: `192.168.1.1` a `192.168.1.254`
-
-A sub-rede ajuda a segmentar redes grandes, reduzir tráfego e melhorar segurança.
+Se um datagrama for maior que o MTU (Maximum Transmission Unit) do enlace (ex: Ethernet = 1500 bytes), ele deve ser fragmentado.
+- **Identificação:** Identifica a qual datagrama original os fragmentos pertencem.
+- **Flags:** Bit "More Fragments" indica se há mais pedaços.
+- **Offset:** Indica a posição dos dados deste fragmento no datagrama original.
+- **Remontagem:** Ocorre **apenas no destino final**, para não sobrecarregar roteadores intermediários.
 
 ---
 
-## 🔢 CIDR (Classless Inter-Domain Routing)
-
-O **CIDR** substitui o antigo sistema de **classes A/B/C**.
-
-- Notação: `192.168.0.0/16`
-- Significa: os **16 primeiros bits** são da rede, os **16 últimos** são para hosts
-- Mais flexível que classes tradicionais (como Classe C: /24)
-
----
-
-## 🔁 NAT (Network Address Translation)
-
-O **NAT** permite que vários dispositivos em uma rede local compartilhem um **único IP público**.
-
-Tipos de NAT:
-
-- **Static NAT**: mapeamento 1:1 entre IP privado e IP público
-- **Dynamic NAT**: mapeia um IP privado para um IP público disponível
-- **PAT (Port Address Translation)**: mapeia múltiplos IPs privados para um único IP público, diferenciando por **portas**
-
-Exemplo:  
-Dispositivo local `192.168.1.10:1234` → NAT → Internet como `201.10.20.30:54321`
-
----
-
-## 🧭 Roteamento IP
-
-O **roteamento** determina como um pacote sai de uma rede local para atingir seu destino final. É feito por **roteadores** que mantêm tabelas de rotas.
-
-Algoritmos comuns:
-
-- RIP (Routing Information Protocol)
-- OSPF (Open Shortest Path First)
-- BGP (Border Gateway Protocol)
-
----
-
-## 🛡️ IP e Segurança
-
-- **Firewalls** controlam o tráfego baseado em IPs de origem/destino.
-- **VPNs** ocultam seu IP real e criam um túnel criptografado.
-- **IP Spoofing**: técnica maliciosa de falsificação de IP para enganar sistemas.
-- **GeoIP**: sistemas que estimam localização com base no IP.
-
----
-
-## 📌 Resumo
-
-| Conceito        | IPv4               | IPv6                        |
-| --------------- | ------------------ | --------------------------- |
-| Tamanho         | 32 bits            | 128 bits                    |
-| Notação         | Decimal com pontos | Hexadecimal com dois-pontos |
-| Endereços       | ~4,3 bilhões       | ~340 undecilhões            |
-| Fragmentação    | Sim                | Não (feito pelo host)       |
-| Compatibilidade | Amplamente usado   | Crescente adoção            |
-
----
-
-## 🔗 Recursos adicionais
-
-- [RFC 791 - IPv4](https://datatracker.ietf.org/doc/html/rfc791)
-- [RFC 8200 - IPv6](https://datatracker.ietf.org/doc/html/rfc8200)
-- [IP Subnet Calculator](https://www.subnet-calculator.com/)
-
----
+## 5. Referências
+- **RFC 791:** Internet Protocol.

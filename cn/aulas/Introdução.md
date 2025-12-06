@@ -1,177 +1,126 @@
-# Redes de Computadores
+# 🌐 Introdução às Redes de Computadores
 
-## Introdução
+## 1. Visão Geral
+A Internet é um sistema global de redes de computadores interconectadas que utilizam o conjunto de protocolos padrão da Internet (TCP/IP) para servir bilhões de usuários em todo o mundo. É uma *rede de redes* que consiste em milhões de redes privadas, públicas, acadêmicas, comerciais e governamentais, de escopo local a global.
 
-A Internet é, hoje, a espinha dorsal da comunicação e da informação no mundo moderno. Ela conecta bilhões de dispositivos ao redor do planeta, permitindo o funcionamento de serviços como redes sociais, videoconferências, e-commerce, jogos online, e uma infinidade de aplicações.
-
-Para entender como isso é possível, é essencial compreender os fundamentos das redes de computadores e os protocolos que permitem essa comunicação distribuída e coordenada.
-
-### Objetivos da Aula
-
-- **Compreender o que é a Internet:**  
-  Discutir a Internet como um **serviço global de comunicação** e também como uma **infraestrutura complexa** formada por dispositivos interconectados.
-- **Visão Geral do Funcionamento da Internet:**  
-  Analisar como a comunicação ocorre entre sistemas, desde os **enlaces físicos** até os **protocolos de comunicação** que permitem a troca confiável de informações.
-
-- **Organização da Internet:**  
-  Apresentar os principais conceitos de **borda e núcleo da rede**, além da importância da **organização em camadas**, utilizando os modelos **OSI** e **TCP/IP** como referência.
+### 1.1. Definição Técnica
+Uma rede de computadores é um conjunto de dispositivos autônomos interconectados por uma tecnologia única e capaz de trocar informações. A conexão pode ser feita por fios de cobre, fibra óptica, micro-ondas, infravermelho e satélites de comunicação.
 
 ---
 
-### Explicação de Siglas e Conceitos-Chave
+## 2. Arquitetura da Internet: Borda e Núcleo
 
-- **IP (Internet Protocol):**  
-  Protocolo responsável pelo **endereçamento** e **roteamento** de pacotes de dados na rede. Cada dispositivo conectado à Internet possui um **endereço IP** único, que o identifica.
+A arquitetura da Internet é geralmente dividida em duas partes principais: a **Borda** (Edge) e o **Núcleo** (Core).
 
-- **TCP (Transmission Control Protocol):**  
-  Protocolo da camada de transporte que oferece **entrega confiável** de dados, garantindo que pacotes cheguem na ordem correta e sem perdas. É utilizado em serviços como navegação web (HTTP), email (SMTP) e muitos outros.
+### 2.1. Borda da Rede (Network Edge)
+A borda é composta pelos sistemas finais (hosts) e as redes de acesso.
+- **Hosts:** Clientes (desktops, smartphones, laptops) e Servidores (data centers).
+- **Redes de Acesso:** A infraestrutura que conecta os hosts ao primeiro roteador de borda (ex: Ethernet, Wi-Fi, 4G/5G, FTTH).
 
-- **OSI (Open Systems Interconnection):**  
-  Modelo teórico em **7 camadas**, criado pela ISO (International Organization for Standardization), que serve como uma referência para entender as funções da comunicação entre sistemas em rede.
+### 2.2. Núcleo da Rede (Network Core)
+O núcleo é a malha de roteadores e enlaces de alta capacidade que interconectam as redes de acesso.
+- **Função Principal:** Comutação de pacotes e roteamento.
+- **Características:** Alta velocidade, redundância, topologia em malha.
 
-- **TCP/IP (Transmission Control Protocol / Internet Protocol):**  
-  Conjunto de protocolos utilizado na Internet real. É uma **implementação prática** baseada em 4 ou 5 camadas. Ele substitui o modelo OSI na maioria das redes reais.
+```mermaid
+graph TD
+    subgraph Borda_Cliente
+        A[Laptop] -- Wi-Fi --> B[Access Point]
+        B -- Ethernet --> C[Roteador Residencial]
+        D[Smartphone] -- 5G --> E[Torre Celular]
+    end
 
-- **LAN (Local Area Network):**  
-  Rede local limitada a uma área geográfica pequena, como uma casa, escritório ou escola.
+    subgraph Rede_Acesso
+        C -- HFC/DSL/Fibra --> F[ISP Local]
+        E -- Backhaul --> F
+    end
 
-- **WAN (Wide Area Network):**  
-   Rede de longa distância que interconecta diversas redes locais (LANs), podendo abranger cidades, países ou até o mundo todo.
-  plorar a divisão entre borda e núcleo e a organização em camadas (modelos OSI e TCP/IP).
+    subgraph Nucleo_Internet
+        F -- Fibra 100G --> G[ISP Regional]
+        G -- Fibra --> H[IXP - Ponto de Troca de Tráfego]
+        H -- Fibra --> I[Backbone Tier 1]
+        I -- Fibra --> J[Outro Backbone Tier 1]
+    end
 
----
-
-## O que é a Internet?
-
-### Conceito e Definição
-
-- **Serviço e Infraestrutura:**  
-  A Internet é uma infraestrutura pública de comunicação que possibilita a execução de aplicações distribuídas, interligando bilhões de dispositivos (hospedeiros, sistemas finais ou hosts) que rodam aplicações diversas.
-- **Aspectos Técnicos:**
-  - **Enlaces de Comunicação:**  
-    Incluem fibras ópticas, cabos (UTP, coaxial) e transmissões via rádio. A taxa de transmissão é definida pela largura de banda disponível.
-  - **Roteadores e Protocolos:**  
-    Dispositivos responsáveis por encaminhar pacotes entre redes, utilizando protocolos que definem o formato e a ordem das mensagens trocadas entre entidades comunicantes.
-
-### Protocolos Fundamentais
-
-- **TCP (Transmission Control Protocol):**  
-  Garante a entrega confiável da informação (RFC 793 – 1981).
-- **IP (Internet Protocol):**  
-  Responsável pelo endereçamento, identificando cada host na rede (RFC 791 – 1981).
-
----
-
-## . Redes de Computadores
-
-### Definição
-
-- Uma **rede de computadores** é um conjunto de módulos de processamento interconectados por um sistema de comunicação, com a finalidade de compartilhar recursos e informações.
-
-### Classificação das Redes
-
-- **LAN (Local Area Network):**  
-  Redes locais que conectam dispositivos em uma área limitada, como um escritório ou residência.
-- **WAN (Wide Area Network):**  
-  Redes de longa distância que interligam diversas LANs, abrangendo grandes áreas geográficas.
-
----
-
-## Organização e Arquitetura da Internet
-
-### Composição da Internet
-
-A Internet é formada por múltiplos componentes que colaboram para seu funcionamento:
-
-- **Sistemas Finais e Aplicações:**  
-  Dispositivos e softwares que interagem com os usuários.
-- **Hardware e Software:**  
-  Equipamentos (servidores, roteadores, switches) e programas que gerenciam as comunicações.
-- **Enlaces Físicos:**  
-  Infraestruturas que realizam a transmissão dos sinais (cabos, fibra, rádios).
-- **Protocolos de Comunicação:**  
-  Conjunto de regras que define como os dados são formatados, transmitidos e interpretados.
-
-### Divisão em Borda e Núcleo
-
-- **Borda:**  
-  Onde estão localizados os usuários finais e as aplicações. É a parte complexa e heterogênea da rede.
-- **Núcleo:**  
-  Composto por roteadores e links de alta capacidade, apresenta uma estrutura simples e escalável.
-- **Neutralidade da Rede:**  
-  A ideia de que todos os pacotes devem ser tratados de forma igualitária, sem privilégios.
-
----
-
-## Comutação de Pacotes e Atrasos na Comunicação
-
-### Comutação de Pacotes
-
-- **Definição:**  
-  Técnica utilizada na Internet onde os recursos (enlaces de comunicação) são compartilhados entre múltiplas sessões. Os pacotes de dados são enviados de forma independente, o que pode ocasionar atrasos.
-
-### Fatores que Influenciam a Latência
-
-- **Processamento:**  
-  Tempo que os roteadores levam para analisar e encaminhar os pacotes.
-- **Fila (Queueing):**  
-  Atraso decorrente do tempo de espera em filas para acesso ao enlace.
-- **Transmissão:**  
-  Tempo necessário para enviar os bits pelo meio físico.
-- **Propagação:**  
-  Tempo que o sinal leva para percorrer a distância entre os dispositivos.
-
-_Exemplo:_  
-O comando `traceroute` (em sistemas Unix) ou `tracert` (em Windows) pode ser utilizado para visualizar a rota dos pacotes e identificar possíveis gargalos ou atrasos.
-
-```bash
-# Exemplo de uso no Linux:
-traceroute www.exemplo.com
+    subgraph Borda_Servidor
+        J -- Fibra --> K[Data Center ISP]
+        K -- Ethernet 10G --> L[Servidor Web]
+        K -- Ethernet 10G --> M[Servidor Banco de Dados]
+    end
 ```
 
 ---
 
-## Organização em Camadas
+## 3. Hierarquia de ISPs (Internet Service Providers)
 
-### Vantagens da Organização em Camadas
+A Internet não é uma nuvem única, mas uma coleção hierárquica de redes gerenciadas por ISPs.
 
-- **Modularidade:**  
-  Cada camada executa funções específicas e interage apenas com suas camadas adjacentes. Isso permite a alteração ou atualização de uma camada sem impactar as demais.
-- **Isolamento:**  
-  Facilita a identificação e correção de problemas, visto que cada camada é responsável por um conjunto específico de tarefas.
+### 3.1. Tier 1 (Backbone Global)
+- **Definição:** Redes que possuem cobertura global e se conectam a outras redes Tier 1 sem pagar por trânsito (acordo de *peering* livre).
+- **Exemplos:** AT&T, NTT, Level 3 (Lumen), Tata Communications.
+- **Características:** Altíssima velocidade, infraestrutura de fibra transoceânica.
 
-### Modelos de Referência
+### 3.2. Tier 2 (ISP Regional)
+- **Definição:** Redes que compram trânsito de Tier 1, mas também fazem peering com outros Tier 2 e atendem clientes Tier 3.
+- **Exemplos:** Operadoras nacionais grandes (Vivo, Claro, Comcast).
 
-- **Modelo OSI:**  
-  Um modelo teórico que define 7 camadas para a comunicação de dados.
-- **Modelo TCP/IP:**  
-  O modelo adotado na Internet, geralmente apresentado em 4 camadas (ou 5, se separarmos física e enlace).  
-  A seguir, uma visão detalhada das camadas:
-
-#### Camadas do Modelo TCP/IP
-
-| **Camada**                                                                            | **Descrição**                                                                                                            | **Componentes/Funções**                                             |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| **Aplicação**                                                                         | Interação direta com o usuário e execução de aplicações (e.g., navegadores, clientes de email, redes sociais).           | Protocolos como HTTP, FTP, SMTP, DNS                                |
-| **Transporte**                                                                        | Garante a comunicação confiável entre processos em dispositivos distintos.                                               | Protocolos TCP e UDP; gerenciamento de conexões e controle de fluxo |
-| **Rede**                                                                              | Responsável pelo endereçamento e roteamento dos pacotes entre dispositivos localizados em redes distintas.               | Protocolo IP; roteadores; algoritmos de roteamento                  |
-| **Enlace/Física**                                                                     | **Enlace:** Gerencia a comunicação entre dispositivos em uma mesma rede local (hardware como placas de rede e switches). |
-| **Física:** Define a transmissão de bits através do meio físico (cabos, fibra, etc.). | Envolve dispositivos como switches, access points, conversores ópticos, cabos UTP, fibra óptica                          |
-
-_Observação:_ Em algumas abordagens, as camadas de **Enlace** e **Física** são separadas para detalhar melhor os aspectos de hardware.
+### 3.3. Tier 3 (ISP Local/Acesso)
+- **Definição:** Redes que fornecem acesso direto aos usuários finais (last mile). Compram trânsito de Tier 2.
+- **Exemplos:** Provedores locais de bairro, redes municipais.
 
 ---
 
-## Exemplos de Ferramentas e Comandos
+## 4. Comutação de Pacotes vs. Comutação de Circuitos
 
-- **Traceroute/Tracert:**  
-  Permite rastrear a rota percorrida pelos pacotes até o destino, identificando cada nó (roteador) no caminho.
-- **Netstat:**  
-  Com o comando `netstat -a`, é possível visualizar as conexões ativas e estatísticas da camada de transporte.
+A Internet fundamentalmente utiliza **Comutação de Pacotes**.
 
-```bash
-# Exemplo de uso do netstat no terminal:
-netstat -a
-```
+| Característica | Comutação de Circuitos (Telefonia Clássica) | Comutação de Pacotes (Internet) |
+| :--- | :--- | :--- |
+| **Recursos** | Dedicados (reservados) para a chamada. | Compartilhados sob demanda (multiplexação estatística). |
+| **Eficiência** | Baixa (recursos ociosos no silêncio). | Alta (recursos usados apenas quando há dados). |
+| **Garantias** | Garante taxa constante (QoS implícito). | "Best Effort" (Melhor Esforço), sem garantias nativas de atraso/perda. |
+| **Estabelecimento** | Requer fase de setup de conexão. | Não requer setup (datagramas) ou setup lógico (circuitos virtuais). |
+
+### 4.1. Atrasos na Comutação de Pacotes
+O atraso total ($d_{total}$) em um nó é a soma de quatro componentes:
+
+$$ d_{total} = d_{proc} + d_{fila} + d_{trans} + d_{prop} $$
+
+1.  **Atraso de Processamento ($d_{proc}$):** Tempo para examinar o cabeçalho e determinar a saída (< microsegundos).
+2.  **Atraso de Fila ($d_{fila}$):** Tempo esperando no buffer de saída (depende do congestionamento).
+3.  **Atraso de Transmissão ($d_{trans}$):** Tempo para empurrar os bits para o link ($L/R$, onde $L$ é tamanho do pacote e $R$ é a taxa do link).
+4.  **Atraso de Propagação ($d_{prop}$):** Tempo para o sinal viajar pelo meio físico ($d/s$, onde $d$ é distância e $s$ é velocidade da luz no meio).
 
 ---
+
+## 5. Modelos de Referência
+
+Para padronizar a comunicação, utilizam-se modelos em camadas.
+
+### 5.1. Encapsulamento
+Cada camada adiciona seu próprio cabeçalho (header) aos dados recebidos da camada superior, formando uma PDU (Protocol Data Unit).
+
+- **Camada de Aplicação:** Mensagem
+- **Camada de Transporte:** Segmento (TCP) ou Datagrama (UDP)
+- **Camada de Rede:** Pacote ou Datagrama IP
+- **Camada de Enlace:** Quadro (Frame)
+- **Camada Física:** Bits
+
+### 5.2. Comparativo OSI vs. TCP/IP
+
+| Modelo OSI (7 Camadas) | Modelo TCP/IP (4/5 Camadas) | Protocolos Comuns | PDU |
+| :--- | :--- | :--- | :--- |
+| 7. Aplicação | **Aplicação** | HTTP, DNS, SMTP, SSH | Dados |
+| 6. Apresentação | (Integrado na Aplicação) | SSL/TLS, JPEG, ASCII | Dados |
+| 5. Sessão | (Integrado na Aplicação) | NetBIOS, RPC | Dados |
+| 4. Transporte | **Transporte** | TCP, UDP, QUIC | Segmento |
+| 3. Rede | **Internet (Rede)** | IP, ICMP, OSPF, BGP | Pacote |
+| 2. Enlace | **Enlace (Acesso à Rede)** | Ethernet, Wi-Fi (802.11) | Quadro |
+| 1. Física | **Física** | 1000BASE-T, 802.11ax (PHY) | Bit |
+
+---
+
+## 6. Referências e Leitura Complementar
+- **RFC 1122:** Requirements for Internet Hosts - Communication Layers.
+- **Livro:** Kurose, J. F., & Ross, K. W. *Computer Networking: A Top-Down Approach*.
+- **Livro:** Tanenbaum, A. S. *Computer Networks*.

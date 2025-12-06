@@ -1,72 +1,53 @@
 # 🌐 Aulas de Redes de Computadores – IFRS 2025
 
-Este repositório reúne conteúdos estudados na disciplina de **Redes de Computadores** no IFRS durante o ano de 2025.  
-Cada aula aborda conceitos essenciais sobre o funcionamento da Internet, seus protocolos, modelos e componentes.
+Este repositório reúne conteúdos técnicos estudados na disciplina de **Redes de Computadores** no IFRS. O material cobre desde os fundamentos físicos até as aplicações modernas, seguindo a abordagem Top-Down e Bottom-Up.
 
 ---
 
-## 📅 Aula 01 – 26/02/2025
+## Índice de Conteúdos
 
-🧭 Introdução às Redes de Computadores  
-📄 [Introdução](aulas/Introdução.md)
+### 1. Fundamentos
+- **[Introdução](aulas/Introdução.md):** O que é a Internet, Borda vs Núcleo, Comutação de Pacotes vs Circuitos, Atrasos.
 
-**Conteúdos abordados:**
+### 2. Camada de Aplicação
+*Onde as aplicações de rede residem.*
+- **[Visão Geral](aulas/CamadaAplicacao.md):** Arquiteturas Cliente-Servidor e P2P.
+- **Protocolos Web:**
+    - **[HTTP](aulas/Http.md):** Métodos, Status, Cache, Cookies.
+    - **[HTTPS](aulas/Https.md):** Segurança, TLS/SSL Handshake.
+- **Infraestrutura:**
+    - **[DNS](aulas/Dns.md):** Hierarquia de domínios, Tipos de registros.
+    - **[DHCP](aulas/Dhcp.md):** Processo DORA, Alocação dinâmica de IPs.
 
-- O que é a Internet (infraestrutura + serviço)
-- Modelo OSI (Open Systems Interconnection – Interconexão de Sistemas Abertos)
-- Modelo TCP/IP (Transmission Control Protocol / Internet Protocol – Protocolo de Controle de Transmissão / Protocolo de Internet)
-- Organização da Internet: borda e núcleo
+### 3. Camada de Transporte
+*Comunicação lógica entre processos.*
+- **[Visão Geral](aulas/CamadaTransporte.md):** Multiplexação, Portas, Confiabilidade.
+- **[TCP](aulas/Tcp.md):** Conexão, Controle de Fluxo e Congestionamento (Deep Dive).
+- **[UDP](aulas/Udp.md):** Datagramas leves, Sem conexão, Tempo real.
 
----
+### 4. Camada de Rede
+*Roteamento de pacotes entre hosts.*
+- **[Visão Geral](aulas/CamadaRede.md):** Plano de Dados vs Controle, Datagramas.
+- **[IP (IPv4)](aulas/Ip.md):** Cabeçalho, Endereçamento, Fragmentação.
+- **[IPv6](aulas/Ipv6.md):** O futuro da Internet, Cabeçalho simplificado, Migração.
+- **[Subnet](aulas/Subnet.md):** Cálculo de Sub-redes, CIDR, VLSM.
+- **[Roteamento](aulas/Roteamento.md):** Estático vs Dinâmico, OSPF, BGP.
 
-## 🌍 Protocolos de Comunicação e Infraestrutura
+### 5. Camada de Enlace e Física
+*Conexão entre nós adjacentes e transmissão de bits.*
+- **[Camada de Enlace](aulas/CamadaEnlace.md):** Ethernet, MAC, CSMA/CD, Switches, VLANs.
+- **[Camada Física](aulas/CamadaFisica.md):** Meios de transmissão, Teoremas de Nyquist/Shannon.
 
-### 🔗 [HTTP](aulas/Http.md)
-
-**Hypertext Transfer Protocol – Protocolo de Transferência de Hipertexto**  
-Define como os dados são trocados entre cliente e servidor na web. Utilizado para carregamento de sites, APIs, etc.
-
-### 🔐 [HTTPS](aulas/Https.md)
-
-**Hypertext Transfer Protocol Secure – Protocolo Seguro de Transferência de Hipertexto**  
-Versão segura do HTTP que utiliza criptografia (TLS/SSL) para proteger os dados em trânsito.
-
-### 📦 [IP](aulas/Ip.md)
-
-**Internet Protocol – Protocolo de Internet**  
-Responsável pelo endereçamento e roteamento dos pacotes entre dispositivos em redes distintas.
-
-### 🌐 [DNS](aulas/Dns.md)
-
-**Domain Name System – Sistema de Nomes de Domínio**  
-Traduz nomes de domínios legíveis (ex: ifrs.edu.br) para endereços IP compreensíveis pelos computadores.
-
-### 🧭 [DHCP](aulas/Dhcp.md)
-
-**Dynamic Host Configuration Protocol – Protocolo de Configuração Dinâmica de Hosts**  
-Atribui automaticamente endereços IP e outras configurações de rede para dispositivos.
-
-### 🧮 [Subnet](aulas/Subnet.md)
-
-**Subnet Mask – Máscara de Sub-rede**  
-Define como os endereços IP são divididos em rede e host, possibilitando a organização lógica das redes.
+### 6. Tópicos Avançados
+- **[Segurança de Redes](aulas/Seguranca.md):** Criptografia, Firewalls, VPNs, Ataques comuns.
 
 ---
 
 ## 📡 Seminário
-
 📂 [Seminário Protocolos/Programas](./seminario/)
 
 ---
 
-## 📘 Observações
+## 📘 Sobre
+Este material foi elaborado com foco técnico e didático, utilizando diagramas (Mermaid) e exemplos práticos para facilitar o entendimento de conceitos complexos de redes.
 
-- Cada arquivo `.md` contém explicações detalhadas, exemplos práticos e referências confiáveis.
-- Os materiais foram elaborados com base em fontes técnicas livres disponíveis na internet.
-- Conteúdo voltado para fins **didáticos** e **educacionais**.
-
----
-
-> ✅ Este repositório foi criado de forma **autônoma**, sem auxílio direto do docente, com o objetivo de apoiar os estudos em **Redes de Computadores**.  
-> Todo o conteúdo foi pesquisado, escrito e organizado com base em fontes públicas, confiáveis e de acesso livre na internet.  
-> A intenção é oferecer uma abordagem **clara, moderna e acessível** dos principais conceitos da disciplina, reforçando o aprendizado de forma complementar e independente.
