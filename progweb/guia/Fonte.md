@@ -1,6 +1,6 @@
-# 🖋️ Guia Profissional de Fontes no Desenvolvimento Web
+# 🖋️ Anotações sobre fontes na Web
 
-Este guia ensina como usar fontes de forma profissional em projetos web, abordando boas práticas, legibilidade, responsividade, performance e acessibilidade.
+O que eu costumo revisar quando mexo com fontes: fallback, tamanhos mínimos, responsividade e performance.
 
 ---
 
@@ -16,13 +16,13 @@ Este guia ensina como usar fontes de forma profissional em projetos web, abordan
 font-family: "Inter", "Helvetica Neue", sans-serif;
 ```
 
-> Sempre forneça fontes de fallback e limites de peso para maior compatibilidade e performance.
+> Nota: sempre deixar fallback e evitar “peso demais” sem necessidade.
 
 ---
 
 ## 🌐 Google Fonts e Pré-Conexões
 
-Para otimizar carregamento:
+Pra otimizar carregamento:
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,13 +32,13 @@ Para otimizar carregamento:
   rel="stylesheet" />
 ```
 
-Use apenas os pesos e estilos necessários e considere o parâmetro `display=swap` para evitar flash de texto invisível.
+Eu tento usar só os pesos/estilos que preciso e deixar `display=swap` pra evitar texto sumindo enquanto carrega.
 
 ---
 
 ## 📁 Fontes Locais e @font-face
 
-Armazene arquivos em diversos formatos para compatibilidade:
+Pra compatibilidade, costuma ser útil ter mais de um formato:
 
 ```css
 @font-face {
@@ -51,14 +51,14 @@ Armazene arquivos em diversos formatos para compatibilidade:
 }
 ```
 
-- **Formats**: `.woff2` (preferido), `.woff`, `.ttf`.
-- **font-display: swap**: mantém UX enquanto a fonte carrega.
+- **Formatos**: `.woff2` (preferido), `.woff`, `.ttf`.
+- **font-display: swap**: evita “flash” de texto invisível.
 
 ---
 
 ## 📏 Unidades e Tamanho Mínimo
 
-Defina o `font-size` base no root e use unidades relativas:
+Lembrete: definir `font-size` base no `html` e usar unidades relativas ajuda bastante.
 
 ```css
 html {
@@ -71,7 +71,7 @@ html {
 - **Corpo de texto**: ≥ 1rem (16px)
 - **Legenda/Labels**: ≥ 0.75rem (12px)
 
-Use rem para escalabilidade e media queries para responsividade.
+Eu prefiro `rem` pra escalar melhor e ajusto com media queries quando precisa.
 
 ---
 
@@ -116,14 +116,14 @@ Use rem para escalabilidade e media queries para responsividade.
 }
 ```
 
-Ajuste breakpoints conforme design system do projeto.
+Os breakpoints variam; isso aqui é só um ponto de partida.
 
 ---
 
 ## 🎨 Legibilidade e Line-Height
 
-- **line-height** ideal: de 1.4 a 1.6 para texto corrido.
-- Mais alto melhora legibilidade em blocos longos; mais baixo destaca títulos.
+- **line-height** que geralmente funciona: 1.4–1.6 no texto.
+- Mais alto = mais confortável em textos longos; mais baixo = destaca título.
 
 ```css
 body {
@@ -143,14 +143,14 @@ h1 {
 - **Normal text** (≤ 18pt / ≤ 24px): relação ≥ 4.5:1
 - **Large text** (> 18pt / > 24px): relação ≥ 3:1
 
-Use ferramentas como [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) para validar.
+Se eu tiver dúvida, eu confiro no [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
 ---
 
 ## 🚀 Performance e Subsets de Fontes
 
-- Gere **subsets** contendo apenas caracteres usados (latim básico, números, símbolos) para reduzir peso.
-- Ferramentas: [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/).
+- Dá pra gerar **subsets** (só os caracteres usados) pra reduzir peso.
+- Ferramenta que ajuda: [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/).
 
 ```css
 @font-face {
@@ -158,16 +158,16 @@ Use ferramentas como [WebAIM Contrast Checker](https://webaim.org/resources/cont
 }
 ```
 
-- Prefira `font-display: swap` para performance percebida.
+- `font-display: swap` ajuda na performance percebida.
 
 ---
 
-## 🧠 Boas Práticas de Escolha de Fontes
+## 🧠 Escolha de fontes (minhas regras)
 
-- **Contexto e Marca**: selecione fontes alinhadas ao branding e tom do site.
-- **Legibilidade**: prefira famílias com boa clareza em vários tamanhos.
-- **Limite**: use até 2–3 famílias de fontes distintas.
-- **Combinações clássicas**: serif + sans-serif para contraste sofisticado.
+- **Contexto**: fonte tem “cara” do projeto.
+- **Legibilidade**: tem que ficar boa em vários tamanhos.
+- **Limite**: tento ficar em 2–3 famílias.
+- **Combinações**: serif + sans-serif costuma funcionar.
 
 ---
 

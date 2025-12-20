@@ -139,4 +139,4 @@ O projeto completo pode ser baixado neste link: [Rgb.zip](Projects/Rgb.zip).
 
 ## ⚠️ Observação
 
-Este material foi elaborado de forma independente a partir do conteúdo teórico apresentado em aula, sem a participação direta do docente na elaboração deste documento.
+> ℹ️ **Observação**: Material baseado em conteúdo de aula, reorganizado para fins didáticos.

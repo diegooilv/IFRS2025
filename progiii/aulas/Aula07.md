@@ -38,4 +38,4 @@ Essa separação contribui para um código mais organizado, testável e de fáci
 
 ---
 
-> **Observação:** Tanto o código quanto esta documentação foram desenvolvidos de forma independente, com base no conteúdo teórico apresentado em aula. Não houve participação direta do docente na construção do material.
+> ℹ️ **Observação**: Material baseado em conteúdo de aula, reorganizado para fins didáticos.

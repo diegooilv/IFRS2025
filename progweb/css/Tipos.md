@@ -1,12 +1,12 @@
-# Tipos de CSS: Externo, Interno e Incorporado 🎨
+# 🎨 Anotações: tipos de CSS (externo, interno, inline)
 
-O CSS (Cascading Style Sheets) pode ser aplicado a uma página HTML de três maneiras principais:
+Tem 3 jeitos comuns de colocar CSS no HTML. Eu uso assim:
 
 ---
 
-## CSS Externo 🌐
+## CSS externo 🌐
 
-O CSS externo é um arquivo `.css` separado que você cria e depois vincula ao seu documento HTML usando a tag `<link>` dentro do `<head>`.
+CSS externo = arquivo `.css` separado, ligado no `<head>` com `<link>`.
 
 **Exemplo:**
 
@@ -14,16 +14,16 @@ O CSS externo é um arquivo `.css` separado que você cria e depois vincula ao s
 <link rel="stylesheet" href="estilos.css" />
 ```
 
-**Vantagens:**
+**Por que eu gosto:**
 
 - 🔄 Permite reutilizar o mesmo arquivo CSS em várias páginas.
 - 🧹 Mantém o código CSS separado do HTML, facilitando a organização e manutenção.
 
 ---
 
-## CSS Interno 🏠
+## CSS interno 🏠
 
-O CSS interno é um bloco de estilos que você coloca dentro da própria página HTML, dentro da tag `<style>` no `<head>`.
+CSS interno = `<style>` dentro do `<head>`.
 
 **Exemplo:**
 
@@ -38,16 +38,16 @@ O CSS interno é um bloco de estilos que você coloca dentro da própria página
 </head>
 ```
 
-**Vantagens:**
+**Quando faz sentido:**
 
 - 🎯 Útil para aplicar estilos específicos em uma única página sem criar um arquivo externo.
 - ✍️ Fácil de editar diretamente no HTML.
 
 ---
 
-## CSS Incorporado (Inline) 🖌️
+## CSS inline 🖌️
 
-O CSS incorporado, ou inline, é aplicado diretamente em um elemento HTML usando o atributo `style`.
+CSS inline = `style="..."` direto no elemento.
 
 **Exemplo:**
 
@@ -55,18 +55,18 @@ O CSS incorporado, ou inline, é aplicado diretamente em um elemento HTML usando
 <p style="color: red; font-weight: bold;">Texto vermelho e em negrito.</p>
 ```
 
-**Vantagens:**
+**Serve pra:**
 
 - ⚡ Permite aplicar estilos rápidos e específicos a um único elemento.
 - ⬆️ Pode sobrescrever estilos externos ou internos devido à maior especificidade.
 
 ---
 
-## Considerações 💡
+## Lembretes 💡
 
-- 📂 Para projetos maiores, o CSS externo é o mais recomendado por questões de organização e reaproveitamento.
-- 📝 CSS interno é útil para estilos rápidos em uma única página.
-- ⚠️ CSS incorporado deve ser usado com moderação, para evitar confusão e dificuldade na manutenção.
+- 📂 Projeto maior: eu prefiro externo (organiza e reaproveita).
+- 📝 Interno: quebra um galho pra testes/uma página só.
+- ⚠️ Inline: usar pouco, senão vira difícil de manter.
 
 ---
 
@@ -80,4 +80,4 @@ O CSS incorporado, ou inline, é aplicado diretamente em um elemento HTML usando
 
 ---
 
-> ℹ️ **Observação**: Este material foi desenvolvido com base em boas práticas e conteúdos públicos da web, com o objetivo de ensinar de forma clara e divertida os conceitos fundamentais do HTML. 🚀🌐
+> ℹ️ **Observação**: Material baseado em boas práticas e fontes públicas, reorganizado para fins didáticos.

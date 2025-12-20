@@ -1,6 +1,6 @@
 # **Persistência de Dados - JAVA**
 
-Existem várias maneiras de persistir (salvar) dados em Java! Vamos começar com uma abordagem clássica: **arquivos `.dat`** usando **serialização**.
+Tem várias formas de persistir (salvar) dados em Java. Aqui começo com uma abordagem clássica: **arquivos `.dat`** usando **serialização**.
 
 ---
 

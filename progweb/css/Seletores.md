@@ -1,12 +1,12 @@
-# Seletores no CSS
+# Anotações: seletores no CSS
 
-Seletores são usados para **apontar quais elementos HTML** serão estilizados com CSS. Eles são fundamentais para aplicar estilos corretamente em uma página web.
+Seletor = a parte que “escolhe” quais elementos vão receber o estilo.
 
 ---
 
-## 🔷 Seletor de Tipo
+## 🔷 Seletor de tipo
 
-Aplica estilos diretamente a elementos HTML pelo nome da tag.
+Aponta pela tag (`body`, `main`, `p`, etc.).
 
 ```css
 body {
@@ -20,9 +20,9 @@ main {
 
 ---
 
-## 🟣 Seletor de Classe
+## 🟣 Seletor de classe
 
-Utilizado quando queremos aplicar estilos a **vários elementos** com uma mesma identidade visual. A classe é precedida por um ponto (`.`).
+Uso quando quero repetir estilo em vários elementos. Começa com ponto (`.`).
 
 ```css
 .main {
@@ -38,7 +38,7 @@ Utilizado quando queremos aplicar estilos a **vários elementos** com uma mesma 
 
 ## 🟢 Seletor de ID
 
-Utilizado para estilizar **um único elemento específico**. O ID é precedido por uma cerquilha (`#`).
+Uso pra um elemento específico (idealmente único na página). Começa com `#`.
 
 ```css
 #main {
@@ -80,10 +80,10 @@ Utilizado para estilizar **um único elemento específico**. O ID é precedido p
 | Classe          | `.`      | `.main` |
 | ID              | `#`      | `#main` |
 
-* ✅ Use **classes (`.classe`)** para estilos reutilizáveis.
-* ✅ Use **IDs (`#id`)** para estilizar elementos únicos.
-* ⚠️ Nunca repita o mesmo ID em mais de um elemento na mesma página.
+* ✅ Classes (`.classe`) = reutilizável.
+* ✅ ID (`#id`) = único.
+* ⚠️ Não repetir o mesmo ID na mesma página.
 
 ---
 
-> ℹ️ **Observação**: Este material foi desenvolvido com base em boas práticas e conteúdos públicos da web, com o objetivo de ensinar de forma clara e divertida os conceitos fundamentais do CSS. 🚀🎨
+> ℹ️ **Observação**: Material baseado em boas práticas e fontes públicas, reorganizado para fins didáticos.

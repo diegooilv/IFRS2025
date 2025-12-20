@@ -1,11 +1,11 @@
-## 🖼️ Lidando com imagens e a API FileReader
+## 🖼️ Anotações: imagens e a API FileReader
 
-### 🎯 Objetivos
+Pontos-chave:
 
-- Entender por que usar FileReader para carregar imagens localmente.
-- Conhecer o fluxo assíncrono de leitura de arquivos.
-- Saber o que é um Data URL e como usá-lo no atributo src.
-- Tratar casos em que nenhuma imagem é fornecida.
+- Por que usar FileReader pra carregar imagens localmente.
+- Fluxo assíncrono de leitura de arquivos.
+- Data URL e como usar no atributo `src`.
+- Caso de nenhuma imagem fornecida.
 
 ### 📂 A limitação do acesso a arquivos locais
 

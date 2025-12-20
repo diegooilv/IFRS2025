@@ -1,13 +1,13 @@
-## 💻 Introdução ao JavaScript, jQuery e o evento document.ready
+## 💻 Anotações: JavaScript, jQuery e `document.ready`
 
-### 🎯 Objetivos
+Coisas pra lembrar aqui:
 
-- Entender o papel do JavaScript no desenvolvimento web.
-- Conhecer o que é jQuery e por que é utilizada.
-- Aprender a sintaxe básica e a importância de `$(document).ready()`.
-- Identificar a estrutura inicial de um script.
+- HTML = estrutura
+- CSS = visual
+- JavaScript = comportamento/interação
+- jQuery = biblioteca que facilita várias tarefas comuns no DOM
 
-### 🌐 O papel do JavaScript
+### 🌐 Papel do JavaScript
 
 JavaScript é a linguagem que adiciona comportamento e interatividade às páginas no navegador. Enquanto o HTML fornece a estrutura e o CSS cuida da apresentação, o JavaScript implementa a lógica que torna a página dinâmica.
 
@@ -19,11 +19,11 @@ JavaScript é a linguagem que adiciona comportamento e interatividade às págin
 
 ### 🛠️ O que é jQuery?
 
-jQuery é uma biblioteca JavaScript que simplifica tarefas comuns de manipulação do DOM, tratamento de eventos e animações. Seu objetivo é reduzir o código necessário para operações frequentes, facilitando o desenvolvimento front-end.
+jQuery é uma biblioteca JavaScript que simplifica manipulação do DOM, eventos e animações. A ideia é escrever menos código pra tarefas repetidas.
 
 ### 📖 Estrutura base: `$(document).ready()`
 
-O bloco `$(document).ready()` garante que o código só será executado depois que o DOM estiver pronto. Isso evita tentativas de acessar elementos que ainda não existem na página.
+`$(document).ready()` garante que o código rode depois que o DOM estiver pronto (evita tentar acessar elementos que ainda não existem).
 
 ```javascript
 $(document).ready(function () {

@@ -1,11 +1,11 @@
-## ⚙️ Criando elementos dinâmicos com a função adicionarProdutoAoDOM
+## ⚙️ Anotações: criando elementos dinâmicos com `adicionarProdutoAoDOM`
 
-### 🎯 Objetivos
+Pontos-chave:
 
-- Compreender como gerar elementos a partir de dados do formulário.
-- Entender a relação entre o array de objetos e a interface.
-- Aprender a manipular o DOM com jQuery usando .append().
-- Valorizar o uso de atributos data- no HTML.
+- Gerar elementos a partir de dados do formulário.
+- Relação entre array de objetos e interface.
+- Manipular o DOM com `.append()`.
+- Usar atributos `data-*` no HTML.
 
 ### 🧱 Armazenamento e geração de dados
 

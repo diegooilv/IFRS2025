@@ -1,6 +1,6 @@
 # 💻 Aulas de Programação III – IFRS (2025)
 
-Este repositório reúne o material produzido ao longo das aulas da disciplina **Programação III**, ministrada no IFRS durante o ano de 2025.
+Anotações e materiais da disciplina **Programação III** (IFRS, 2025).
 
 ---
 

@@ -1,11 +1,11 @@
-## 🔎 Filtragem de produtos e o evento change
+## 🔎 Anotações: filtragem de produtos e evento `change`
 
-### 🎯 Objetivos
+Pontos-chave:
 
-- Manipular o evento change em selects.
-- Filtrar elementos usando seletores de atributo (data-categoria).
-- Controlar visibilidade com .show() e .hide().
-- Tratar a opção "todos" para exibir todos os produtos.
+- Evento `change` em selects.
+- Filtrar elementos usando seletores de atributo (`data-categoria`).
+- Controlar visibilidade com `.show()` e `.hide()`.
+- Opção "todos" pra exibir tudo.
 
 ### 📥 Capturando a mudança de filtro
 

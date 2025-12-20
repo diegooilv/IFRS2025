@@ -1,11 +1,11 @@
-## 🗑️ Removendo produtos e delegação de eventos
+## 🗑️ Anotações: removendo produtos e delegação de eventos
 
-### 🎯 Objetivos
+Pontos-chave:
 
-- Entender delegação de eventos com .on() no jQuery.
-- Ver porque delegação é necessária para elementos dinâmicos.
-- Seguir o fluxo de remoção: confirmação, remoção do DOM e atualização do array de dados.
-- Usar .closest() e .data() para localizar itens.
+- Delegação de eventos com `.on()` no jQuery.
+- Por que delegação é necessária pra elementos dinâmicos.
+- Fluxo de remoção: confirmação → DOM → array.
+- Usar `.closest()` e `.data()` pra localizar itens.
 
 ### 🔗 Delegação de eventos
 

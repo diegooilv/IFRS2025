@@ -293,4 +293,4 @@ Modelos de `Carro`, `Moto` e `Aviao` seguem o mesmo padrão.
 
 ---
 
-> **Observação:** Tanto o código quanto esta documentação foram desenvolvidos de forma independente, com base no conteúdo teórico apresentado em aula. Não houve participação direta do docente na construção do material.
+> ℹ️ **Observação**: Material baseado em conteúdo de aula, reorganizado para fins didáticos.

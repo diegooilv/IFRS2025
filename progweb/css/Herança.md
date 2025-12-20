@@ -1,16 +1,16 @@
-# 🌱 Herança no CSS
+# 🌱 Anotações: herança no CSS
 
-A **herança** no CSS permite que **algumas propriedades definidas em um elemento pai sejam automaticamente aplicadas aos seus filhos**. Isso ajuda a manter o código mais limpo e consistente, evitando repetições desnecessárias.
+Herança = algumas propriedades do “pai” passam pros filhos automaticamente (principalmente as de texto).
 
 ---
 
 ## 🧬 O que significa "herdar"?
 
-Quando um elemento **herda uma propriedade**, isso quer dizer que **ele assume o mesmo valor dessa propriedade definido em seu elemento pai**, sem que você precise repetir a regra.
+Se o pai tem um valor, o filho pode acabar usando o mesmo sem eu repetir CSS.
 
 ---
 
-## ✅ Propriedades que herdam por padrão
+## ✅ O que costuma herdar (padrão)
 
 Estas propriedades **são herdadas automaticamente** pelos elementos filhos:
 
@@ -34,9 +34,9 @@ Estas propriedades **são herdadas automaticamente** pelos elementos filhos:
 
 ---
 
-## 🚫 Propriedades que **não** herdam por padrão
+## 🚫 O que normalmente NÃO herda
 
-Estas propriedades **não são herdadas automaticamente** — você precisa defini-las diretamente ou forçar a herança com `inherit`:
+Essas aqui eu geralmente preciso definir direto no elemento (ou forçar com `inherit`).
 
 ### 📦 Layout e caixa
 
@@ -78,9 +78,9 @@ Estas propriedades **não são herdadas automaticamente** — você precisa defi
 
 ---
 
-## 🔧 Como forçar a herança?
+## 🔧 Forçar herança
 
-Use a palavra-chave `inherit` para fazer qualquer propriedade herdar o valor do pai:
+`inherit` força pegar o valor do pai:
 
 ```css
 p {
@@ -130,4 +130,4 @@ article {
 
 ---
 
-> ℹ️ **Dica:** Usar a herança com sabedoria ajuda a manter seu CSS mais limpo e fácil de manter. Evite repetir estilos desnecessariamente!
+> ℹ️ Nota: se eu repetir muita coisa, talvez dê pra puxar via herança (ou criar uma classe).

@@ -1,6 +1,6 @@
-# 📦 CSS: Modelo de Caixa (Box Model)
+# 📦 Anotações: box model (modelo de caixa)
 
-No CSS, **todo elemento HTML é tratado como uma caixa retangular**. Esse sistema é chamado de **Modelo de Caixa** (ou _Box Model_). Ele define como o conteúdo de um elemento é **exibido, dimensionado e espaçado**.
+No CSS, todo elemento vira uma “caixa”. O box model é basicamente: conteúdo + padding + border + margin.
 
 ---
 
@@ -30,7 +30,7 @@ Cada elemento é composto por **quatro partes**, de dentro pra fora:
 
 ---
 
-## 🧩 O que é cada parte?
+## 🧩 O que é cada parte? (bem direto)
 
 ### `content`
 
@@ -73,7 +73,7 @@ margin: 10px;
 
 ---
 
-## 📏 Cálculo de tamanho (por padrão)
+## 📏 Cálculo de tamanho (padrão)
 
 Por padrão, o navegador **soma tudo**:
 
@@ -95,7 +95,7 @@ margin: 10px;
 
 ---
 
-## 🔄 Alterar o modelo com `box-sizing`
+## 🔄 `box-sizing`
 
 Você pode mudar esse comportamento com:
 
@@ -134,7 +134,7 @@ O `.card` continuará **com 300px de largura total**, já incluindo o `padding` 
 
 ---
 
-## 🧠 Dica de ouro
+## 🧠 Dica que eu uso sempre
 
 Sempre que possível, use:
 
@@ -144,8 +144,8 @@ Sempre que possível, use:
 }
 ```
 
-Isso evita surpresas e facilita o controle do layout!
+Isso evita muita surpresa no tamanho final.
 
 ---
 
-> 🧾 Este guia foi criado para te ajudar a dominar o modelo de caixa do CSS — um dos pilares do layout web moderno. 🚀
+> 🧾 Nota: isso aqui é um dos pontos que mais dá confusão em layout.

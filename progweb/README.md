@@ -1,8 +1,8 @@
 # 🌐 Aulas de Desenvolvimento Web – IFRS 2025
 
-Este repositório reúne o conteúdo da disciplina de **Programação pra Internet** do IFRS ao longo do ano letivo de 2025.
+Este repositório reúne anotações e materiais de **Programação pra Internet** (IFRS) ao longo do ano letivo de 2025.
 
-Todo o material foi elaborado de forma **autônoma**, com base em **fontes públicas da internet**, servindo como apoio prático e didático durante os estudos.
+O conteúdo foi montado a partir de **fontes públicas** e boas práticas, como apoio de estudo.
 
 🔗 Também está disponível um site com exemplos práticos:  
 **[https://progweb.pages.dev](https://progweb.pages.dev)**
@@ -64,11 +64,11 @@ Todo o material foi elaborado de forma **autônoma**, com base em **fontes públ
   Tutoriais com formas simples e gratuitas de publicar um site.
 
 - [🧩 Extensões recomendadas](dev/Extensoes.md)  
-  Lista de ferramentas úteis para desenvolvimento web no VS Code, e usadas por mim.
+  Lista de ferramentas úteis para desenvolvimento web no VS Code.
 
 - [🐙 Git e Fluxos de Trabalho](dev/Git.md)  
-  Guia completo para usar Git, desde comandos básicos no terminal, GitHub Desktop, até boas práticas, workflows, resolução de conflitos e integração com CI/CD.
+  Anotações sobre Git (comandos, GitHub Desktop, resolução de conflitos e fluxos comuns).
 
 ---
 
-> ℹ️ Este projeto não contou com contribuições diretas do docente na elaboração do código ou da documentação. Todo o conteúdo tem caráter educacional e exploratório.
+> ℹ️ Material de apoio com caráter educacional.

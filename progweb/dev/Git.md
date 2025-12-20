@@ -1,10 +1,10 @@
-# 🧑‍💻 Guia Completo de Git: Terminal & GitHub Desktop
+# 🧑‍💻 Anotações de Git: Terminal & GitHub Desktop
 
-Este guia profissional abrange desde o uso básico de Git no terminal até fluxos de trabalho avançados, resolução de conflitos, CI/CD e comparação entre terminal e GitHub Desktop.
+Resumo do que eu mais uso/consulto: comandos básicos, alguns fluxos comuns, como lidar com conflito e um mini “cheat sheet”.
 
 ---
 
-## 📂 Fluxos de Trabalho (Workflows)
+## 📂 Fluxos de trabalho (workflows)
 
 ### Git Flow vs GitHub Flow vs Trunk-Based Development
 
@@ -25,7 +25,7 @@ Este guia profissional abrange desde o uso básico de Git no terminal até fluxo
 | ├─ hotfix/bug-123
 ```
 
-### Criar Feature Branch
+### Criar feature branch
 
 ```bash
 # baseado no develop ou main
@@ -34,9 +34,9 @@ git checkout -b feature/nova-funcionalidade
 
 ---
 
-## ⚔️ Resolução de Conflitos
+## ⚔️ Conflitos (resumo rápido)
 
-### Terminal: Passo a Passo
+### No terminal (passo a passo)
 
 ```bash
 # Atualizar remoto
@@ -50,7 +50,7 @@ git add .
 git commit -m "Resolve conflitos"
 ```
 
-## 📁 .gitignore Prático
+## 📁 `.gitignore` (na prática)
 
 Exemplo de `.gitignore` para várias linguagens:
 
@@ -71,26 +71,26 @@ __pycache__/
 .vscode/
 ```
 
-> Dica: use templates do GitHub: [https://github.com/github/gitignore](https://github.com/github/gitignore)
+> Dica que salva tempo: templates do GitHub: [https://github.com/github/gitignore](https://github.com/github/gitignore)
 
 ---
 
-## 🔧 Comandos Avançados Úteis
+## 🔧 Comandos que eu acabo usando
 
-- **Stash:** salvar alterações temporárias
+- **Stash:** guardar alterações temporárias
 
   ```bash
   git stash save "WIP: ajuste no CSS"
   git stash pop
   ```
 
-- **Rebase Interativo:** reorganizar commits
+- **Rebase interativo:** reorganizar commits
 
   ```bash
   git rebase -i HEAD~3
   ```
 
-- **Cherry-pick:** aplicar commit específico
+- **Cherry-pick:** aplicar um commit específico
 
   ```bash
   git cherry-pick <commit-hash>
@@ -98,12 +98,12 @@ __pycache__/
 
 ---
 
-## 💻 Aprimorando o GitHub Desktop
+## 💻 GitHub Desktop (atalhos e lembretes)
 
-**Criar Novo Repositório**
+**Criar novo repositório**
 ![Criar Repositório](path/to/new-repo-screenshot.png)
 
-**Gráfico de Branches e Histórico**
+**Gráfico de branches e histórico**
 ![Histórico Git](path/to/history-screenshot.png)
 
 **Fluxo de Pull Request**
@@ -117,9 +117,9 @@ __pycache__/
 
 ---
 
-## 📝 Boas Práticas de Mensagens de Commit
+## 📝 Mensagens de commit (lembrete)
 
-Utilize **Conventional Commits**:
+Eu tento seguir **Conventional Commits**:
 
 ```text
 feat: adiciona login com Google
@@ -127,11 +127,11 @@ fix: corrige cálculo de impostos
 docs: atualiza README.md
 ```
 
-Ferramentas de validação: Commitlint, Husky, Git Hooks.
+Ferramentas que costumam aparecer: Commitlint, Husky, Git hooks.
 
 ---
 
-## 🛠️ Integração com CI/CD (GitHub Actions)
+## 🛠️ CI/CD (GitHub Actions – exemplo)
 
 Exemplo `.github/workflows/main.yml`:
 
@@ -149,7 +149,7 @@ jobs:
 
 ---
 
-## 🔄 Troubleshooting Comum
+## 🔄 Problemas comuns
 
 | Problema                                  | Solução                                    |
 | ----------------------------------------- | ------------------------------------------ |
@@ -159,7 +159,7 @@ jobs:
 
 ---
 
-## 🔀 Fluxo de Pull Request (GitHub)
+## 🔀 Pull request (fluxo rápido)
 
 **Criar e fazer checkout de uma branch:**
 
@@ -174,11 +174,11 @@ git add . && git commit -m "feat: xyz"
 git push -u origin feature/xyz
 ```
 
-**No GitHub:** **New Pull Request** → escolha base `main` → `Squash and merge` → exclua branch
+**No GitHub:** **New Pull Request** → base `main` → `Squash and merge` → excluir branch
 
 ---
 
-## ⚔️ Comparativo: Terminal vs GitHub Desktop
+## ⚔️ Terminal vs GitHub Desktop (diferença na prática)
 
 | Recurso                | Terminal                  | GitHub Desktop              |
 | ---------------------- | ------------------------- | --------------------------- |
@@ -189,7 +189,7 @@ git push -u origin feature/xyz
 
 ---
 
-## 📑 Cheat Sheet Git (Resumo)
+## 📑 Cheat sheet (resumo)
 
 | Ação             | Comando                                 |
 | ---------------- | --------------------------------------- |
@@ -204,7 +204,7 @@ git push -u origin feature/xyz
 
 ---
 
-## 🔗 Ferramentas Complementares
+## 🔗 Ferramentas complementares
 
 - **GitKraken**: cliente gráfico avançado.
 - **Oh My Zsh**: plugins de Git para terminal.

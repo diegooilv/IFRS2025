@@ -1,9 +1,8 @@
-# 🧮 Tipos de `<input>` em HTML
+# 🧮 Anotações: tipos de `<input>` em HTML
 
-A tag `<input>` é uma das mais versáteis do HTML.  
-Com ela, você pode criar campos de texto, botões, seletores de data, arquivos, cor e muito mais!
+`<input>` é uma tag bem versátil pra criar campos de formulário (texto, senha, data, arquivo, cor…).
 
-Cada tipo é definido pelo atributo `type`.
+O tipo do campo é definido pelo atributo `type`.
 
 ---
 
@@ -215,12 +214,10 @@ Um botão de envio com imagem — como um `submit` mais visual.
 
 ---
 
-## 🎓 Conclusão
+## ✅ Resumo
 
-O `<input>` é poderoso, mas fica ainda mais forte quando combinado com CSS e JavaScript.
-
-Dominar seus tipos permite criar **interfaces completas e intuitivas**, com poucos blocos de código.
+O `<input>` cobre a maior parte dos campos de formulário. Com CSS e JavaScript, dá pra melhorar bastante a usabilidade.
 
 ---
 
-> ℹ️ **Observação**: Este conteúdo foi criado com base em materiais de domínio público da web e práticas recomendadas em HTML, com foco educativo, acessível e direto ao ponto. 🧑‍💻✨
+> ℹ️ **Observação**: Material baseado em fontes públicas e boas práticas, reorganizado para fins didáticos.

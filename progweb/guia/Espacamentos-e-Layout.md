@@ -1,12 +1,12 @@
-# 🛠️ Guia Avançado de Espaçamentos e Layout em CSS
+# 🛠️ Anotações: espaçamentos e layout em CSS
 
-Este guia cobre técnicas profissionais para criar layouts responsivos e acessíveis, com ênfase em boas práticas e padrões modernos.
+Resumo do que eu consulto quando travo em layout: box model, unidades, flex/grid, responsividade e umas dicas de acessibilidade.
 
 ---
 
-## 📦 O Modelo de Caixa (Box Model) Visualizado
+## 📦 Box model (visual)
 
-Todo elemento é uma caixa composta por:
+Todo elemento vira uma “caixa” com:
 
 ```
 +-----------------------------+
@@ -24,7 +24,7 @@ Todo elemento é uma caixa composta por:
 +-----------------------------+
 ```
 
-### Exemplo Prático:
+### Exemplo rápido
 
 ```css
 .caixa {
@@ -38,9 +38,9 @@ Todo elemento é uma caixa composta por:
 
 ---
 
-## 📏 Sistema de Unidades Inteligente
+## 📏 Unidades (o que eu mais uso)
 
-### Escala de Espaçamento Baseada em 8px (Padrão Moderno)
+### Escala de espaçamento baseada em 8px
 
 ```css
 :root {
@@ -58,7 +58,7 @@ Todo elemento é uma caixa composta por:
 }
 ```
 
-### Quando Usar Cada Unidade:
+### Quando usar cada unidade
 
 | Unidade | Caso de Uso Ideal               | Exemplo                     |
 | ------- | ------------------------------- | --------------------------- |
@@ -69,7 +69,7 @@ Todo elemento é uma caixa composta por:
 
 ---
 
-## 🧩 Flexbox vs. Grid: Escolha Certa
+## 🧩 Flexbox vs Grid (quando eu escolho)
 
 | Critério          | Flexbox                      | Grid CSS                                   |
 | ----------------- | ---------------------------- | ------------------------------------------ |
@@ -100,11 +100,11 @@ Todo elemento é uma caixa composta por:
 
 ---
 
-## ♿ Acessibilidade em Espaçamentos
+## ♿ Acessibilidade (lembretes)
 
-### Diretrizes Essenciais:
+### Coisas que eu tento não esquecer
 
-1. **Área Clicável Mínima:** 48x48px para botões/toques
+1. **Área clicável mínima:** 48x48px pra botão/toque
 
    ```css
    .botao-acessivel {
@@ -114,10 +114,10 @@ Todo elemento é uma caixa composta por:
    }
    ```
 
-2. **Contraste de Espaçamento:**
+2. **Espaçamento entre coisas clicáveis:**
 
-   - Use margens claras entre elementos interativos
-   - Exemplo para links:
+  - deixar margem/gap claro entre elementos interativos
+  - exemplo (links):
 
    ```css
    a + a {
@@ -127,9 +127,9 @@ Todo elemento é uma caixa composta por:
 
 ---
 
-## 📱 Responsividade Profissional
+## 📱 Responsividade (mobile-first)
 
-### Abordagem Mobile-First com Breakpoints:
+### Breakpoints (exemplo)
 
 ```css
 /* Base (Mobile) */
@@ -157,21 +157,21 @@ Todo elemento é uma caixa composta por:
 
 ---
 
-## 🛠️ Ferramentas Essenciais
+## 🛠️ Ferramentas (pra depurar)
 
-1. **DevTools Browser:**
+1. **DevTools do navegador:**
 
    - Inspecione box model (Elements > Computed)
    - Visualize Grid/Flex overlays
 
-2. **Geradores Online:**
+2. **Geradores online:**
 
    - [CSS Grid Generator](https://cssgrid-generator.netlify.app/)
    - [Flexbox Playground](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexplay/)
 
 ---
 
-## 🏗️ Exemplo Completo de Layout
+## 🏗️ Exemplo de layout (esqueleto)
 
 ```html
 <!DOCTYPE html>
@@ -203,7 +203,7 @@ Todo elemento é uma caixa composta por:
 
 ---
 
-## 📚 Recursos Recomendados
+## 📚 Links que já usei
 
 1. [CSS para Sistemas de Design](https://engineering.monday.com/css-para-sistemas-de-design/)
 2. [Guia Definitivo de Flexbox](https://origamid.com/projetos/flexbox-guia-completo/)

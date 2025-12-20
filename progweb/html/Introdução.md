@@ -1,35 +1,32 @@
-# 🌐 Introdução à Programação Web
+# 🌐 Anotações: introdução à programação web
 
-Seja bem-vindo(a) ao mundo da programação web! 💻✨  
-Antes de escrever códigos, vamos entender o que realmente acontece quando você acessa um site. E tudo começa com... **hipertexto**!
+Antes de escrever código, vale entender o que acontece quando um site carrega. A ideia começa com **hipertexto**.
 
 ---
 
-## 🔗 O que é Hipertexto?
+## 🔗 O que é hipertexto?
 
-Imagine que você está lendo um livro.  
-Mas, de repente, encontra uma palavra que, ao clicar nela, te leva a outra página, ou até outro livro inteiro! 📚✨
+Analogia: lendo um livro e, ao clicar numa palavra, ela leva para outra página (ou outro livro).
 
-Isso é **hipertexto**: uma forma de conectar conteúdos por meio de links.  
+Isso é **hipertexto**: conteúdo conectado por links.
 É o que faz a web ser uma “teia” (web) de informações conectadas.
 
 - Texto comum = você lê do início ao fim.
 - Hipertexto = você **navega** entre partes conectadas.
 
-O HTML, que veremos logo mais, é a **linguagem dos hipertextos**.
+O HTML é a **linguagem do hipertexto**.
 
 ---
 
-## 🌍 Como funciona a Web?
+## 🌍 Como a web funciona?
 
-Pensa na internet como uma cidade cheia de bibliotecas.  
-Você é um visitante curioso (navegador) que manda bilhetes pedindo livros (páginas) para os bibliotecários (servidores).
+Analogia: internet como uma cidade com bibliotecas. O navegador pede “livros” (páginas) para “bibliotecários” (servidores).
 
-- Você digita `gatinhos.com`
-- Seu navegador manda um pedido: “Servidor, me envie o livro da página inicial!”
-- O servidor responde com o conteúdo da página.
+- Digita um endereço (ex.: `gatinhos.com`)
+- O navegador manda um pedido
+- O servidor responde com o conteúdo
 
-Esse processo é possível graças a uma regra de comunicação chamada **HTTP**.
+Esse processo usa regras de comunicação chamadas **HTTP**.
 
 ---
 
@@ -38,7 +35,7 @@ Esse processo é possível graças a uma regra de comunicação chamada **HTTP**
 HTTP = *HyperText Transfer Protocol*  
 Ou seja, **protocolo de transferência de hipertexto**.
 
-Ele define como o seu navegador deve **pedir** páginas e como o servidor deve **responder**.
+Ele define como o navegador **pede** páginas e como o servidor **responde**.
 
 Exemplo de uma troca:
 
@@ -51,8 +48,7 @@ Toda vez que você visita um site, está rolando uma conversa invisível como es
 
 ## 🧠 E o HTML?
 
-O HTML é a “linguagem do hipertexto”.  
-Ele é usado pra construir o conteúdo de uma página web. Por exemplo:
+O HTML é a “linguagem do hipertexto”. Ele descreve o conteúdo da página. Exemplo:
 
 ```html
 <h1>Bem-vindo!</h1>
@@ -78,14 +74,14 @@ Além do HTML, temos:
 
 ---
 
-## 🚀 Próximos Trimestres
+## 🚀 Próximos trimestres
 
-Ao longo do caminho, você vai entender:
+No curso, a sequência típica é:
 
-- Como criar páginas com HTML ✍️  
-- Como deixá-las bonitas com CSS 🎨  
-- Como torná-las vivas com JavaScript ⚙️  
+- Criar páginas com HTML ✍️
+- Estilizar com CSS 🎨
+- Adicionar interação com JavaScript ⚙️
 
 ---
 
-> ℹ️ **Observação**: Este conteúdo foi produzido com base em materiais de domínio público e explicações livres disponíveis na web, reorganizado de forma lúdica e didática com o objetivo de facilitar o aprendizado de iniciantes em programação web. 🤓📘
+> ℹ️ **Observação**: Material baseado em fontes públicas e boas práticas, reorganizado para fins didáticos.

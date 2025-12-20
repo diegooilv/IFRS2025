@@ -1,6 +1,6 @@
-# Manipulando Elementos HTML com JavaScript
+# Anotações: manipulando HTML com JavaScript
 
-Este guia mostra como selecionar, alterar, estilizar, adicionar, remover elementos HTML e escutar eventos usando JavaScript puro.
+Resumo de como selecionar, alterar, estilizar, adicionar/remover elementos HTML e escutar eventos usando JavaScript puro.
 
 ## 📚 Índice
 

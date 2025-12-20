@@ -1,19 +1,18 @@
-# 🏷️ Tags HTML
+# 🏷️ Anotações: tags HTML
 
-HTML é a linguagem que usamos para construir páginas web, lembra?  
-E as peças principais dessa linguagem se chamam **tags**. Vamos entender como elas funcionam! 🧩
+HTML é a linguagem usada para construir páginas web. As peças principais são as **tags**.
 
 ---
 
-## 🧠 O que é uma Tag?
+## 🧠 O que é uma tag?
 
-Pensa que uma página HTML é como uma **caixa de Lego**, e as **tags** são os bloquinhos que você vai encaixando pra montar sua estrutura.
+Analogia: uma página HTML é como uma **caixa de Lego**; as **tags** são os blocos da estrutura.
 
 Cada tag define um pedaço do conteúdo: título, parágrafo, imagem, link, lista… tudo é uma tag!
 
 ---
 
-## 🧱 Como é a estrutura de uma tag?
+## 🧱 Estrutura de uma tag
 
 A maioria das tags tem uma **tag de abertura** e uma **tag de fechamento**, assim:
 
@@ -33,7 +32,7 @@ A maioria das tags tem uma **tag de abertura** e uma **tag de fechamento**, assi
 
 ---
 
-## 🔍 Exemplos das Tags mais comuns
+## 🔍 Tags comuns
 
 | Tag             | Função                       | Exemplo                                      |
 | --------------- | ---------------------------- | -------------------------------------------- |
@@ -50,7 +49,7 @@ A maioria das tags tem uma **tag de abertura** e uma **tag de fechamento**, assi
 
 ---
 
-## 🌐 Exemplo completo de uma mini página
+## 🌐 Exemplo completo (mini página)
 
 ```html
 <!DOCTYPE html>
@@ -67,11 +66,11 @@ A maioria das tags tem uma **tag de abertura** e uma **tag de fechamento**, assi
 </html>
 ```
 
-## 🧠 E o que é HTML Semântico?
+## 🧠 HTML semântico
 
-HTML semântico é quando você **usa as tags certas para representar o significado real do conteúdo**.
+HTML semântico é usar **tags que representam o significado do conteúdo**.
 
-Ou seja: em vez de usar `<div>` pra tudo (como se tudo fosse uma “caixinha genérica”), você usa tags que **descrevem o que está ali**.
+Em vez de usar `<div>` pra tudo (“caixa genérica”), usar tags que **descrevem o que está ali**.
 
 ---
 
@@ -111,12 +110,12 @@ Ou seja: em vez de usar `<div>` pra tudo (como se tudo fosse uma “caixinha gen
 
 ---
 
-### 🦾 Por que usar HTML semântico?
+### 🦾 Por que usar?
 
 - ✅ **Organiza o código**
-- ✅ **Ajuda em acessibilidade** (leitores de tela entendem melhor)
+- ✅ **Ajuda na acessibilidade** (leitores de tela entendem melhor)
 - ✅ **Melhora o SEO** (os buscadores entendem o que é mais relevante)
-- ✅ **Facilita manutenção e trabalho em equipe**
+- ✅ **Facilita manutenção**
 
 ---
 
@@ -137,7 +136,7 @@ Ou seja: em vez de usar `<div>` pra tudo (como se tudo fosse uma “caixinha gen
 
 ---
 
-## 📌 Dica importante
+## 📌 Lembrete
 
 Nem todas as tags **são visíveis** na página!  
 Algumas servem pra dar estrutura e **informações ao navegador**, como:
@@ -170,13 +169,10 @@ Outras ajudam a **organizar** a página:
 
 ---
 
-## 🎓 Conclusão
+## ✅ Resumo
 
-Aprender HTML é como aprender a montar frases com blocos.  
-As **tags são palavras-chave** que dizem ao navegador o que mostrar e como mostrar.
-
-E o melhor: com poucos blocos, você já pode criar coisas incríveis!
+As **tags** dizem ao navegador o que é cada parte do conteúdo e como organizar a estrutura.
 
 ---
 
-> ℹ️ **Observação**: Este conteúdo foi escrito com base em explicações livres sobre HTML disponíveis na web, com o objetivo de facilitar o aprendizado por meio de exemplos e linguagem acessível. 📘✨
+> ℹ️ **Observação**: Material baseado em fontes públicas e boas práticas, reorganizado para fins didáticos.

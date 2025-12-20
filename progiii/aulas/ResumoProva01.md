@@ -1,6 +1,6 @@
 # Resumo para Estudos – Prova 1 de Programação III 🎯
 
-Este resumo foi organizado para otimizar a revisão dos conceitos principais. Utilize esta estrutura para consulta rápida e prática antes da prova.
+Resumo dos conceitos principais pra consulta rápida antes da prova.
 
 ---
 

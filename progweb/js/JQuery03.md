@@ -1,11 +1,11 @@
-## 📝 Captura de dados e evento de formulário (submit)
+## 📝 Anotações: captura de dados e evento `submit`
 
-### 🎯 Objetivos
+Pontos-chave:
 
-- Captar o evento de submissão de formulário com jQuery.
-- Prevenir o comportamento padrão do formulário usando event.preventDefault().
-- Ler valores de inputs com .val().
-- Aplicar validação simples antes do cadastro.
+- Captar o evento de submissão com jQuery.
+- Prevenir reload com `event.preventDefault()`.
+- Ler valores com `.val()`.
+- Validação simples antes do cadastro.
 
 ### 📥 Capturando o submit
 

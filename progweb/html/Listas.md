@@ -1,15 +1,14 @@
-# 📝 Trabalhando com Listas no HTML
+# 📝 Anotações: listas no HTML
 
-Listas são ótimas pra organizar informações, mostrar etapas ou destacar itens.  
-No HTML, existem **dois tipos principais**: ordenadas e não ordenadas. Vamos entender como cada uma funciona!
+Listas ajudam a organizar informações. No HTML, as principais são: **ordenadas** e **não ordenadas**.
 
 ---
 
-## 🔹 `<ul>` – Lista **não ordenada**
+## 🔹 `<ul>` – lista **não ordenada**
 
 `<ul>` vem de **Unordered List** → lista sem ordem definida.
 
-É como uma **lista de supermercado**: não importa a ordem, você só quer os itens.
+Analogia: lista de supermercado (a ordem não importa).
 
 ```html
 <ul>
@@ -24,11 +23,11 @@ No HTML, existem **dois tipos principais**: ordenadas e não ordenadas. Vamos en
 
 ---
 
-## 🔸 `<ol>` – Lista **ordenada**
+## 🔸 `<ol>` – lista **ordenada**
 
 `<ol>` vem de **Ordered List** → lista com ordem.
 
-Use quando a **sequência importa**, como em um passo a passo ou ranking.
+Usar quando a **sequência importa** (passo a passo, ranking).
 
 ```html
 <ol>
@@ -43,7 +42,7 @@ Use quando a **sequência importa**, como em um passo a passo ou ranking.
 
 ---
 
-## 🔁 Relembrando: `<li>` é o item da lista
+## 🔁 Lembrete: `<li>` é o item da lista
 
 A tag `<li>` é usada **dentro de `<ul>` ou `<ol>`** e representa cada item.
 
@@ -77,7 +76,7 @@ Você não usa `<li>` sozinho — ele sempre precisa estar dentro de uma lista!
 
 ---
 
-## 🎨 Dica: você pode personalizar listas com CSS!
+## 🎨 Dica: dá pra personalizar com CSS
 
 Exemplo:
 
@@ -115,7 +114,7 @@ Sim! Você pode fazer **listas dentro de listas** (aninhadas):
 
 ---
 
-## 🎓 Conclusão
+## ✅ Resumo
 
 | Tag | Significado |
 |-----|-------------|
@@ -123,8 +122,8 @@ Sim! Você pode fazer **listas dentro de listas** (aninhadas):
 | `<ol>` | Lista ordenada (números) |
 | `<li>` | Item de lista (usado dentro de `<ul>` ou `<ol>`) |
 
-Com listas, você pode deixar seu conteúdo mais claro, organizado e fácil de ler! ✔️
+Com listas, o conteúdo fica mais claro e organizado.
 
 ---
 
-> ℹ️ **Observação**: Este conteúdo foi criado com base em materiais abertos e boas práticas da web, adaptado para fins educativos e explicativos com uma abordagem leve e lúdica. 🌐✨
+> ℹ️ **Observação**: Material baseado em fontes públicas e boas práticas, reorganizado para fins didáticos.

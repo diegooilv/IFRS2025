@@ -1,10 +1,10 @@
-# 🎯 CSS: Flexbox
+# 🎯 Anotações: Flexbox
 
-O Flexbox (Flexible Box) é um modelo de layout do CSS que **facilita a distribuição de espaço** entre os elementos de um container, mesmo quando o tamanho deles é desconhecido ou dinâmico.
+Flexbox é o que eu uso quando quero alinhar/distribuir itens dentro de um container sem sofrer muito.
 
 ---
 
-## 🧱 Estrutura básica
+## 🧱 Começo básico
 
 ```css
 .container {
@@ -12,11 +12,11 @@ O Flexbox (Flexible Box) é um modelo de layout do CSS que **facilita a distribu
 }
 ```
 
-A propriedade `display: flex` transforma o elemento em um **flex container**, e todos os seus filhos se tornam **itens flexíveis**.
+`display: flex` cria o flex container, e os filhos viram itens flex.
 
 ---
 
-## 🗺️ Eixos principais
+## 🗺️ Eixos (main/cross)
 
 O Flexbox trabalha com **dois eixos**:
 
@@ -32,7 +32,7 @@ O Flexbox trabalha com **dois eixos**:
 
 ---
 
-## 🧩 Propriedades do Container
+## 🧩 Propriedades do container
 
 ### `display: flex`
 
@@ -99,7 +99,7 @@ Permite que os itens quebrem linha.
 
 ---
 
-## 🎛️ Propriedades dos Itens
+## 🎛️ Propriedades dos itens
 
 ### `flex-grow`
 
@@ -191,7 +191,7 @@ Alinha um **único item** no eixo cruzado, sobrescrevendo `align-items`.
 
 ---
 
-## 📝 Resumo rápido
+## 📝 Resumo (pra revisar)
 
 | Propriedade       | Função                                   |
 | ----------------- | ---------------------------------------- |
@@ -205,4 +205,4 @@ Alinha um **único item** no eixo cruzado, sobrescrevendo `align-items`.
 
 ---
 
-> 🚀 Flexbox é ideal para **layouts responsivos**, com distribuição dinâmica de espaço. Após dominar isso, o próximo passo é o **Grid Layout**!
+> Nota: quando vira “grade” 2D (linhas + colunas), eu parto pro Grid.

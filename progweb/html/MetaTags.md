@@ -1,7 +1,8 @@
-# 🧠 Meta Tags no HTML
+# 🧠 Anotações: meta tags no HTML
 
-As **meta tags** são inseridas dentro do `<head>` do HTML. Elas servem para fornecer informações sobre a página para navegadores, mecanismos de busca e redes sociais.  
-Embora invisíveis ao usuário, são fundamentais para **acessibilidade, indexação (SEO)**, compatibilidade e visual em compartilhamentos.
+As **meta tags** ficam no `<head>` e descrevem informações da página para navegador, buscadores e redes sociais.
+
+Elas não aparecem na tela, mas ajudam em **SEO**, compatibilidade e no preview quando o link é compartilhado.
 
 ---
 
@@ -89,20 +90,20 @@ Essas tags controlam como seu site aparece ao ser compartilhado em redes sociais
 
 ---
 
-## 📚 Lista completa de meta tags no W3Schools
+## 📚 Lista (pra consultar)
 
-Para uma visão ainda mais abrangente, veja:
+Se precisar de mais exemplos, dá pra consultar:
 
 🔗 **[Meta Tags - Lista completa (W3Schools)](https://www.w3schools.com/tags/tag_meta.asp)**
 
 ---
 
-## ✅ Conclusão
+## ✅ Resumo
 
-As meta tags são essenciais para tornar seu site:
+Pra lembrar, meta tags ajudam a deixar o site:
 
 - Otimizado para buscadores (SEO)
 - Compatível com diversos dispositivos
-- Bonito ao ser compartilhado em redes sociais
+- Com preview melhor em redes sociais
 
-> Este material foi produzido de forma **autônoma**, com base em **fontes livres e atualizadas da web**.
+> ℹ️ **Observação**: Material baseado em fontes públicas e boas práticas, reorganizado para fins didáticos.

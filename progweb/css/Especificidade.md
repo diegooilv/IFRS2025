@@ -1,16 +1,16 @@
-# 🎯 Especificidade no CSS
+# 🎯 Anotações: especificidade no CSS
 
-A **especificidade** é a forma como o navegador decide **qual regra de estilo aplicar** quando várias regras se aplicam ao mesmo elemento. É como um sistema de pontuação que determina **qual estilo "vence"**.
-
----
-
-## 🧠 Conceito
-
-Quando múltiplos seletores apontam para o mesmo elemento, o navegador usa a **especificidade** para decidir **qual regra tem mais peso**.
+Especificidade = a “pontuação” que decide qual regra ganha quando mais de uma bate no mesmo elemento.
 
 ---
 
-## 🔢 Como é calculada?
+## 🧠 Ideia
+
+Se vários seletores pegam o mesmo elemento, o navegador escolhe o que tem mais peso.
+
+---
+
+## 🔢 Como eu penso no cálculo
 
 A pontuação da especificidade é composta por quatro níveis, **da mais forte para a mais fraca**:
 
@@ -46,7 +46,7 @@ p {
 
 ---
 
-## ⚔️ Empate: quem ganha?
+## ⚔️ Empate
 
 Se duas regras tiverem **mesma especificidade**, vence a que estiver **mais abaixo** no CSS.
 
@@ -63,7 +63,7 @@ h1 {
 
 ---
 
-## 🚨 `!important`: o "último recurso"
+## 🚨 `!important` (último recurso)
 
 Usar `!important` faz com que **a regra seja aplicada, independentemente da especificidade**.
 
@@ -73,11 +73,11 @@ p {
 }
 ```
 
-⚠️ **Evite usar `!important`**, pois quebra a lógica da especificidade e pode causar conflitos difíceis de resolver.
+⚠️ Eu evito `!important` porque depois vira bagunça pra resolver conflito.
 
 ---
 
-## ✅ Boas práticas
+## ✅ Lembretes
 
 - Use **classes** para estilizar vários elementos.
 - Use **IDs apenas para elementos únicos**.
@@ -97,4 +97,4 @@ p {
 
 ---
 
-> 📘 Este material foi elaborado com base em boas práticas e fontes confiáveis da web, para facilitar o entendimento do comportamento do CSS na prática. ✨
+> 📘 Nota: o que mais ajuda aqui é lembrar a tabela (inline > ID > classe > tag).

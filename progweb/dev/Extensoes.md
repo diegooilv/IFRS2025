@@ -1,6 +1,6 @@
-# 📦 Extensões para Desenvolvimento Web no VS Code
+# 📦 Anotações: extensões para desenvolvimento web no VS Code
 
-## 🧩 Lista de Extensões Explicada
+## 🧩 Lista de extensões (com o que cada uma ajuda)
 
 | Extensão                                                     | Função                                                      |
 | ------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -31,6 +31,6 @@
 | `usernamehw.errorlens`                                       | Mostra erros diretamente na linha do código                 |
 | `yzhang.markdown-all-in-one`                                 | TOC automático, atalhos e melhorias para Markdown           |
 
-## 🧙‍♂️ Dica Final
+## 💡 Lembrete
 
-Instalar essas extensões ajuda a manter um fluxo de trabalho limpo, visual e eficiente ao desenvolver sites estáticos ou dinâmicos.
+Essas extensões ajudam no dia a dia (HTML/CSS/JS, Markdown e qualidade de código). Dá pra instalar só o que fizer sentido.

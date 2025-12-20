@@ -203,6 +203,6 @@ Para testar o controlador, execute o arquivo JAR e interaja com a interface:
 
 ## Avisos e Observações
 
-> Este sistema apresenta diversos bugs conhecidos, mas que, no momento, não impactam o uso básico do controlador.
+> Este sistema apresenta bugs conhecidos, mas que não impactam o uso básico do controlador.
 >
-> Tanto o código quanto esta documentação foram desenvolvidos de forma independente, com base no conteúdo teórico apresentado em aula. Não houve participação direta do docente na construção do material.
+> ℹ️ **Observação**: Material baseado em conteúdo de aula, reorganizado para fins didáticos.
